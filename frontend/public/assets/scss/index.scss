@@ -1,0 +1,47 @@
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+@import "./components/custom-slick";
+@import "./main.css";
+@import "./menu.css";
+@import "./megadropdown.css";
+@import "./dashbord_navitaion.css";
+@import "./ace-responsive-menu.css";
+@import "./components/input-range-slider";
+@import "./components/custom_theme.scss";
+@import "./components/dashboard.scss";
+@import "./responsive.css";
+@import "node_modules/react-modal-video/scss/modal-video.scss";
+// new css
+// @import "./css/style.css";
+@import "./css/bootstrap.min.css";
+@import "./css/aos.css";
+@import "./css/fontawesome.css";
+@import "./css/magnific-popup.css";
+@import "./css/mobile.css";
+@import "./css/owlcarousel.min.css";
+@import "./css/sidebar.css";
+@import "./css/slick-slider.css";
+@import "./css/nice-select.css";
+@import "./css/animate.css";
+@import "./css/swiper.min.css";
+@import "./css/main.css";
+@import "./css/others.css";
+
+// newcss end
+.parent-menu-active > .pro-inner-item > .pro-item-content {
+    color: var(--color-primary) !important;
+}
+
+    .parent-menu-active{
+        color: #ff5a5f ;
+        
+        .inactive-mobile-menu{
+            color: #484848 !important;
+    
+        }
+    }
+    // .inactive-mobile-menu{
+    //     color: #484848 !important;
+
+    // }
+
