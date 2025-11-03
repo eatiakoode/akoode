@@ -2,9 +2,9 @@ import dynamic from "next/dynamic";
 import AddAgent from "@/components/dashboard/add-agent";
 
 export const metadata = {
-  title: 'My Properties || WeGrow',
+  title: 'My Properties || akoode',
   description:
-    'WeGrow',
+    'akoode',
 }
 
 const index = () => {

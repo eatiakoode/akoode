@@ -2,9 +2,9 @@ import dynamic from "next/dynamic";
 import MyPropertytype from "@/components/dashboard/my-propertytype";
 
 export const metadata = {
-  title: 'My Properties  || WeGrow - Real Estate ',
+  title: 'My Properties  || akoode - Real Estate ',
   description:
-    'WeGrow - Real Estate ',
+    'akoode - Real Estate ',
 }
 
 const index = () => {

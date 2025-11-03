@@ -6,8 +6,8 @@ import { getTestimonialTableData } from "@/api/frontend/testimonial";
 import { getLocationTableData } from "@/api/frontend/location";
 
 export const metadata = {
-  title: "Best Real Estate Agency in Gurgaon - WEGROW INFRAVENTURES",
-  description: "WEGROW INFRAVENTURES is the best real estate agency in Gurgaon, providing expert solutions for residential, commercial, and investment properties across Gurgaon.",
+  title: "Best Real Estate Agency in Gurgaon - akoode INFRAVENTURES",
+  description: "akoode INFRAVENTURES is the best real estate agency in Gurgaon, providing expert solutions for residential, commercial, and investment properties across Gurgaon.",
 };
 
 export default async function HomePage() {

@@ -22,9 +22,9 @@ import Image from "next/image";
 // import { getBlogBySlug } from "@/api/frontend/blog";
 
 // export const metadata = {
-//   title: 'Blog Details || WeGrow - Real Estate ',
+//   title: 'Blog Details || akoode - Real Estate ',
 //   description:
-//     'WeGrow - Real Estate ',
+//     'akoode - Real Estate ',
 // }
 
 const ListingDynamicDetailsV1 = ({blog}) => {

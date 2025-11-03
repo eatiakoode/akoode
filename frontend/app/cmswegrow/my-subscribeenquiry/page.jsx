@@ -2,9 +2,9 @@ import dynamic from "next/dynamic";
 import MySubscribeEnquiry from "@/components/dashboard/my-subscribeenquiry";
 
 export const metadata = {
-  title: 'My Review || WeGrow - Real Estate ',
+  title: 'My Review || akoode - Real Estate ',
   description:
-    'WeGrow - Real Estate ',
+    'akoode - Real Estate ',
 }
 
 const index = () => {

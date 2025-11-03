@@ -2,9 +2,9 @@ import dynamic from "next/dynamic";
 import Disclaimer from "@/components/disclaimer";
 
 export const metadata = {
-  title: 'Disclaimer || WeGrow',
+  title: 'Disclaimer || akoode',
   description:
-    'WeGrow',
+    'akoode',
 }
 
 const index = () => {

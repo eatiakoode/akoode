@@ -5,9 +5,9 @@ import dynamic from "next/dynamic";
 import NotFound from "@/components/404";
 
 export const metadata = {
-  title: '404 Not Found || WeGrow',
+  title: '404 Not Found || akoode',
   description:
-    'WeGrow',
+    'akoode',
 }
 
 const index = () => {

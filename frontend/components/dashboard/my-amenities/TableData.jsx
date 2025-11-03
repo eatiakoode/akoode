@@ -69,7 +69,7 @@ const TableData = ({amenityList,setAmenityList}) => {
             data-placement="top"
             title="Edit"
           >
-            <button  onClick={() => router.push(`/cmswegrow/edit-amenities/${item._id}`)}>
+            <button  onClick={() => router.push(`/akoodeadmin/edit-amenities/${item._id}`)}>
               <span className="flaticon-edit"></span>
             </button>
           </li>

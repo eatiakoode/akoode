@@ -1,6 +1,6 @@
 "use client"; // Add this at the top
 
-import { getEnquiryTableData,deleteEnquiryAPI } from "@/api/enquiry";
+import { getEnquiryTableData,deletePropertyEnquiryAPI } from "@/api/propertyenquiry";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { toast } from 'react-toastify';
@@ -10,11 +10,11 @@ const TableData = ({enquiryList,setEnquiryList}) => {
   
     
     const deleteEnquiry = async (id) => {
-        const isConfirmed = window.confirm("Are you sure you want to delete this city?");
+        const isConfirmed = window.confirm("Are you sure you want to delete this Enquiry?");
         if (!isConfirmed) return;
     
         try {
-          const data = await deleteEnquiryAPI(id); // 🔹 Call the API function
+          const data = await deletePropertyEnquiryAPI(id); // 🔹 Call the API function
           
           // alert(data.message);
            toast.success(data.message);

@@ -1,0 +1,41 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60">
+	<title>prototype</title>
+	<style>
+		.s0 { fill: #ffffff } 
+	</style>
+	<g>
+		<g>
+			<path class="s0" d="m59 0h-58c-0.6 0-1 0.4-1 1v58c0 0.6 0.4 1 1 1h58c0.6 0 1-0.4 1-1v-58c0-0.6-0.4-1-1-1zm-1 58h-56v-56h56z"/>
+			<path class="s0" d="m5 22h50c0.6 0 1-0.4 1-1v-16c0-0.6-0.4-1-1-1h-50c-0.6 0-1 0.4-1 1v16c0 0.6 0.4 1 1 1zm1-16h48v14h-48z"/>
+			<path class="s0" d="m5 38h20c0.6 0 1-0.4 1-1v-12c0-0.6-0.4-1-1-1h-20c-0.6 0-1 0.4-1 1v12c0 0.6 0.4 1 1 1zm1-12h18v10h-18z"/>
+			<path fill-rule="evenodd" class="s0" d="m28 24h6v2h-6z"/>
+			<path fill-rule="evenodd" class="s0" d="m28 28h28v2h-28z"/>
+			<path fill-rule="evenodd" class="s0" d="m28 32h28v2h-28z"/>
+			<path fill-rule="evenodd" class="s0" d="m28 36h28v2h-28z"/>
+			<path fill-rule="evenodd" class="s0" d="m36 24h6v2h-6z"/>
+			<path class="s0" d="m5 48h6c0.6 0 1-0.4 1-1v-6c0-0.6-0.4-1-1-1h-6c-0.6 0-1 0.4-1 1v6c0 0.6 0.4 1 1 1zm1-6h4v4h-4z"/>
+			<path fill-rule="evenodd" class="s0" d="m14 41h2v2h-2z"/>
+			<path fill-rule="evenodd" class="s0" d="m14 45h12v2h-12z"/>
+			<path fill-rule="evenodd" class="s0" d="m18 41h2v2h-2z"/>
+			<path class="s0" d="m42 47v-6c0-0.6-0.4-1-1-1h-6c-0.6 0-1 0.4-1 1v6c0 0.6 0.4 1 1 1h6c0.6 0 1-0.4 1-1zm-2-1h-4v-4h4z"/>
+			<path fill-rule="evenodd" class="s0" d="m44 41h2v2h-2z"/>
+			<path fill-rule="evenodd" class="s0" d="m44 45h12v2h-12z"/>
+			<path fill-rule="evenodd" class="s0" d="m48 41h2v2h-2z"/>
+			<path fill-rule="evenodd" class="s0" d="m52 41h2v2h-2z"/>
+			<path fill-rule="evenodd" class="s0" d="m22 41h2v2h-2z"/>
+			<path fill-rule="evenodd" class="s0" d="m5 52h2v2h-2z"/>
+			<path fill-rule="evenodd" class="s0" d="m9 52h2v2h-2z"/>
+			<path fill-rule="evenodd" class="s0" d="m13 52h2v2h-2z"/>
+			<path fill-rule="evenodd" class="s0" d="m17 52h2v2h-2z"/>
+			<path fill-rule="evenodd" class="s0" d="m21 52h2v2h-2z"/>
+			<path fill-rule="evenodd" class="s0" d="m25 52h2v2h-2z"/>
+			<path fill-rule="evenodd" class="s0" d="m29 52h2v2h-2z"/>
+			<path fill-rule="evenodd" class="s0" d="m33 52h2v2h-2z"/>
+			<path fill-rule="evenodd" class="s0" d="m37 52h2v2h-2z"/>
+			<path fill-rule="evenodd" class="s0" d="m41 52h2v2h-2z"/>
+			<path fill-rule="evenodd" class="s0" d="m45 52h2v2h-2z"/>
+			<path fill-rule="evenodd" class="s0" d="m49 52h2v2h-2z"/>
+			<path fill-rule="evenodd" class="s0" d="m53 52h2v2h-2z"/>
+		</g>
+	</g>
+</svg>

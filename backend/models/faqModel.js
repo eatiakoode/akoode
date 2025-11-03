@@ -16,11 +16,15 @@ var faqSchema = new mongoose.Schema(
       unique: true,
       index: true,
     },
-    propertyid: {
+    serviceid: {
          type: mongoose.Schema.Types.ObjectId,
-         ref: "Property", 
+         ref: "Services", 
          required: true,
-       },
+    },
+    featuredfaq:{
+        type: Boolean,
+        default: false
+    },
     status: {
       type: Boolean,
       default: true,

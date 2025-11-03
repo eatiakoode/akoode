@@ -38,7 +38,7 @@ const enqueryPropertyMail =  async (req, res) => {
         port: 2525,
         secure: false, // TLS will be used automatically
         auth: {
-          user: "smtp@wegrowinfraventures.com",
+          user: "smtp@akoodeinfraventures.com",
           pass: "DXK!s+c",
         }
       });
@@ -68,7 +68,7 @@ let messagehtml =`<head>
                         </td>
                         <td width="50%" style="width: 80px;" align="center">
                             <a href="${process.env.SITE_URL}" target="_blank">
-                                <img src="https://wegrowinfraventures.com/assets/images/header-logo2.png" alt="WEGROW INFRAVENTURES PRIVATE LIMITED" style="max-width: 100%;height: auto;display: block;">
+                                <img src="https://akoodeinfraventures.com/assets/images/header-logo2.png" alt="akoode INFRAVENTURES PRIVATE LIMITED" style="max-width: 100%;height: auto;display: block;">
                             </a>
                         </td>
                         <td width="25%" style="width: 250px;">
@@ -101,7 +101,7 @@ let messagehtml =`<head>
                 <table width="1000" cellspacing="15" cellpaddig="0">
                     <tr>
                         <td align="left" style=" text-transform: uppercase; font-family:verdana; color: #5b5b5b; font-size: 20px; font-weight: 700;">
-                            Dear WEGROW INFRAVENTURES PRIVATE LIMITED
+                            Dear akoode INFRAVENTURES PRIVATE LIMITED
                         </td>
                     </tr>
                     
@@ -213,7 +213,7 @@ const enqueryPropertyMailSeller =  async (req, res) => {
         port: 2525,
         secure: false, // TLS will be used automatically
         auth: {
-          user: "smtp@wegrowinfraventures.com",
+          user: "smtp@akoodeinfraventures.com",
           pass: "DXK!s+c",
         }
       });
@@ -255,7 +255,7 @@ let messagehtml =`<head>
                         </td>
                         <td width="50%" style="width: 80px;" align="center">
                             <a href="${process.env.SITE_URL}" target="_blank">
-                                <img src="https://wegrowinfraventures.com/assets/images/header-logo2.png" alt="WEGROW INFRAVENTURES PRIVATE LIMITED" style="max-width: 100%;height: auto;display: block;">
+                                <img src="https://akoodeinfraventures.com/assets/images/header-logo2.png" alt="akoode INFRAVENTURES PRIVATE LIMITED" style="max-width: 100%;height: auto;display: block;">
                             </a>
                         </td>
                         <td width="25%" style="width: 250px;">
@@ -365,7 +365,7 @@ let messagehtml =`<head>
       from: `"${name}" <${email}>`,
       to: `${builderemail}`, // Your business or support email
       // to: `eati@akoode.in`, // Your business or support email
-      subject: 'New Enquiry Form WEGROW INFRAVENTURES property',
+      subject: 'New Enquiry Form akoode INFRAVENTURES property',
       html: `${messagehtml}`,
     };
 
@@ -400,7 +400,7 @@ const enqueryContactMail = async (req, res) => {
         port: 2525,
         secure: false, // TLS will be used automatically
         auth: {
-          user: "smtp@wegrowinfraventures.com",
+          user: "smtp@akoodeinfraventures.com",
           pass: "DXK!s+c",
         }
       });
@@ -447,7 +447,7 @@ const enqueryContactMail = async (req, res) => {
                         </td>
                         <td width="50%" style="width: 80px;" align="center">
                             <a href="${process.env.SITE_URL}" target="_blank">
-                                <img src="https://wegrowinfraventures.com/assets/images/header-logo2.png" alt="WEGROW INFRAVENTURES PRIVATE LIMITED" style="max-width: 100%;height: auto;display: block;">
+                                <img src="https://akoodeinfraventures.com/assets/images/header-logo2.png" alt="akoode INFRAVENTURES PRIVATE LIMITED" style="max-width: 100%;height: auto;display: block;">
                             </a>
                         </td>
                         <td width="25%" style="width: 250px;">
@@ -480,7 +480,7 @@ const enqueryContactMail = async (req, res) => {
                 <table width="1000" cellspacing="15" cellpaddig="0">
                     <tr>
                         <td align="left" style=" text-transform: uppercase; font-family:verdana; color: #5b5b5b; font-size: 20px; font-weight: 700;">
-                            Dear WEGROW INFRAVENTURES PRIVATE LIMITED
+                            Dear akoode INFRAVENTURES PRIVATE LIMITED
                         </td>
                     </tr>
                     
@@ -570,7 +570,7 @@ const enqueryBrochureMail = async (req, res) => {
         port: 2525,
         secure: false, // TLS will be used automatically
         auth: {
-          user: "smtp@wegrowinfraventures.com",
+          user: "smtp@akoodeinfraventures.com",
           pass: "DXK!s+c",
         }
       });
@@ -579,7 +579,7 @@ const enqueryBrochureMail = async (req, res) => {
     //     port: 2525,
     //     secure: false, // TLS will be used automatically
     //     auth: {
-    //       user: "smtp@wegrowinfraventures.com",
+    //       user: "smtp@akoodeinfraventures.com",
     //       pass: "DXK!s+c",
     //     }
     //   });
@@ -626,7 +626,7 @@ const enqueryBrochureMail = async (req, res) => {
                         </td>
                         <td width="50%" style="width: 80px;" align="center">
                             <a href="${process.env.SITE_URL}" target="_blank">
-                                <img src="https://wegrowinfraventures.com/assets/images/header-logo2.png" alt="WEGROW INFRAVENTURES PRIVATE LIMITED" style="max-width: 100%;height: auto;display: block;">
+                                <img src="https://akoodeinfraventures.com/assets/images/header-logo2.png" alt="akoode INFRAVENTURES PRIVATE LIMITED" style="max-width: 100%;height: auto;display: block;">
                             </a>
                         </td>
                         <td width="25%" style="width: 250px;">
@@ -659,7 +659,7 @@ const enqueryBrochureMail = async (req, res) => {
                 <table width="1000" cellspacing="15" cellpaddig="0">
                     <tr>
                         <td align="left" style=" text-transform: uppercase; font-family:verdana; color: #5b5b5b; font-size: 20px; font-weight: 700;">
-                            Dear WEGROW INFRAVENTURES PRIVATE LIMITED
+                            Dear akoode INFRAVENTURES PRIVATE LIMITED
                         </td>
                     </tr>
                     
@@ -742,7 +742,7 @@ const enquerySubscribeMail = async (req, res) => {
         port: 2525,
         secure: false, // TLS will be used automatically
         auth: {
-          user: "smtp@wegrowinfraventures.com",
+          user: "smtp@akoodeinfraventures.com",
           pass: "DXK!s+c",
         }
       });
@@ -773,7 +773,7 @@ const enquerySubscribeMail = async (req, res) => {
                         </td>
                         <td width="50%" style="width: 80px;" align="center">
                             <a href="${process.env.SITE_URL}" target="_blank">
-                                <img src="https://wegrowinfraventures.com/assets/images/header-logo2.png" alt="WEGROW INFRAVENTURES PRIVATE LIMITED" style="max-width: 100%;height: auto;display: block;">
+                                <img src="https://akoodeinfraventures.com/assets/images/header-logo2.png" alt="akoode INFRAVENTURES PRIVATE LIMITED" style="max-width: 100%;height: auto;display: block;">
                             </a>
                         </td>
                         <td width="25%" style="width: 250px;">
@@ -806,7 +806,7 @@ const enquerySubscribeMail = async (req, res) => {
                 <table width="1000" cellspacing="15" cellpaddig="0">
                     <tr>
                         <td align="left" style=" text-transform: uppercase; font-family:verdana; color: #5b5b5b; font-size: 20px; font-weight: 700;">
-                            Dear WEGROW INFRAVENTURES PRIVATE LIMITED
+                            Dear akoode INFRAVENTURES PRIVATE LIMITED
                         </td>
                     </tr>
                     
@@ -846,7 +846,7 @@ const enquerySubscribeMail = async (req, res) => {
 </body>`
 
 const mailOptions = {
-      from: `Wegrow <${email}>`,
+      from: `akoode <${email}>`,
       to: 'eati@akoode.in',
       subject: 'New Enquiry Form subscribe',
       html: `${messagehtml}`,
@@ -878,7 +878,7 @@ const enqueryLandingMail = async (req, res) => {
         port: 2525,
         secure: false, // TLS will be used automatically
         auth: {
-          user: "smtp@wegrowinfraventures.com",
+          user: "smtp@akoodeinfraventures.com",
           pass: "DXK!s+c",
         }
       });
@@ -909,7 +909,7 @@ const enqueryLandingMail = async (req, res) => {
                         </td>
                         <td width="50%" style="width: 80px;" align="center">
                             <a href="${process.env.SITE_URL}" target="_blank">
-                                <img src="https://wegrowinfraventures.com/assets/images/header-logo2.png" alt="WEGROW INFRAVENTURES PRIVATE LIMITED" style="max-width: 100%;height: auto;display: block;">
+                                <img src="https://akoodeinfraventures.com/assets/images/header-logo2.png" alt="akoode INFRAVENTURES PRIVATE LIMITED" style="max-width: 100%;height: auto;display: block;">
                             </a>
                         </td>
                         <td width="25%" style="width: 250px;">
@@ -942,7 +942,7 @@ const enqueryLandingMail = async (req, res) => {
                 <table width="1000" cellspacing="15" cellpaddig="0">
                     <tr>
                         <td align="left" style=" text-transform: uppercase; font-family:verdana; color: #5b5b5b; font-size: 20px; font-weight: 700;">
-                            Dear WEGROW INFRAVENTURES PRIVATE LIMITED
+                            Dear akoode INFRAVENTURES PRIVATE LIMITED
                         </td>
                     </tr>
                     

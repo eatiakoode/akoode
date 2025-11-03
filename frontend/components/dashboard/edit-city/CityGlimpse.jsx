@@ -85,7 +85,7 @@ const [error, setError] = useState("");
     try {
       const res = await addCityGlimpseAPI(formData);
       if (citydetail?._id) {
-        router.push(`/cmswegrow/edit-city/${citydetail._id}`);
+        router.push(`/akoodeadmin/edit-city/${citydetail._id}`);
         setInputs([])
       }
       

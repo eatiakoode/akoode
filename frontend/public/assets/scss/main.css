@@ -7940,14 +7940,14 @@ header .get_in_touch span{
 .why_chose_us.style2 .icon {
   background-color: #f7f7f7;
 }
-.about-wegrow{
+.about-akoode{
   background-color: rgba(0, 0, 0, 0.04);
   border-radius: 20px;
   position: relative;
   overflow: hidden;
 }
-.about-wegrow:before {
-    background-image: url(../images/wegrow.webp);
+.about-akoode:before {
+    background-image: url(../images/akoode.webp);
     background-size: cover;
     content: "";
     position: absolute;
@@ -7967,8 +7967,8 @@ header .get_in_touch span{
 .director-desk:not(:first-of-type){
     border-top:1px solid rgba(0, 0, 0, 0.1)
 }
-.about-wegrow h4{color: var(--color-primary);padding: 0px 0 20px 0;}
-.about-wegrow .about_content p:last-child{margin-bottom: 0px;}
+.about-akoode h4{color: var(--color-primary);padding: 0px 0 20px 0;}
+.about-akoode .about_content p:last-child{margin-bottom: 0px;}
 .commited-to-excellence .who-we-are{
     left: -2px;
     top: 0;
@@ -13247,9 +13247,10 @@ legend span {
 }
 
 .sidebar_feature_listing .media img {
-  max-width: 110px;
-  height: 80px;
+  min-width: 100px !important;
+  height: 100px !important;
   border-radius: 6px;
+  max-width: 100px !important;
 }
 
 .sidebar_recent_product .media .media-body .post_title,
@@ -15109,6 +15110,19 @@ top:50%;transform: translateY(-50%);right:15px;left:auto}
   left: 10px;
   position: absolute;
 }
+.feature_property_slider .slick-prev, .feature_property_slider .slick-next {
+  display: block !important;
+  z-index: 2;
+  top:-60px;
+}
+.feature_property_slider .slick-prev{
+  right:70px;
+  left: auto;
+}
+.feature_property_slider .slick-next{
+  right:12px;
+  left: auto;
+}
 
 /*== My Resume Page ==*/
 .portfolio_upload {
@@ -15491,6 +15505,12 @@ section.aboutland h3{
 }
 section.property_detaill_view{
   padding: 0px 0px 80px 0px;
+}
+.feature_property_slider .slick-prev, .feature_property_slider .slick-next {
+  display: block !important;
+  z-index: 2;
+  top:auto;
+  bottom:-40px;
 }
 }
 .message_container .message_input form input.form-control::placeholder {
@@ -17458,7 +17478,7 @@ section.property_detaill_view{
   .fz55 {
     font-size: 40px;
   }
-  .about-wegrow:before{
+  .about-akoode:before{
     display: none;
   }
   .property-detail-item ul li{
@@ -21448,6 +21468,8 @@ button.gm-ui-hover-effect:focus {
     font-size: 20px;
   }
 }
+
+
 
 
 

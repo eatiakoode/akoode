@@ -89,7 +89,7 @@ export default function PrivacyPolicy() {
       <h1 className="mb-4">Privacy Policy</h1>
 
       <p>
-        At <strong>WEGROW INFRAVENTURES PRIVATE LIMITED</strong>, we value your privacy and are committed to protecting your personal information. This Privacy Policy outlines how we collect, use, and safeguard the data you provide to us.
+        At <strong>akoode INFRAVENTURES PRIVATE LIMITED</strong>, we value your privacy and are committed to protecting your personal information. This Privacy Policy outlines how we collect, use, and safeguard the data you provide to us.
       </p>
 
       <h4 className="mt-4">1. Information We Collect</h4>

@@ -2,8 +2,8 @@ import Faq from "@/components/faq";
 import { getFaqTableData } from "@/api/frontend/faq";
 
 export const metadata = {
-  title: "Faq || WeGrow",
-  description: "WeGrow ",
+  title: "Faq || akoode",
+  description: "akoode ",
 };
 
 // ✅ This is now a server component

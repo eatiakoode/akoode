@@ -2,9 +2,9 @@ import dynamic from "next/dynamic";
 import MyLanding from "@/components/dashboard/my-landing";
 
 export const metadata = {
-  title: 'My landing page || WeGrow - Real Estate ',
+  title: 'My landing page || akoode - Real Estate ',
   description:
-    'WeGrow - Real Estate ',
+    'akoode - Real Estate ',
 }
 
 const index = () => {

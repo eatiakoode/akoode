@@ -2,9 +2,9 @@ import dynamic from "next/dynamic";
 import MyPropertyEnquiry from "@/components/dashboard/my-propertyenquiry";
 
 export const metadata = {
-  title: 'My Review || WeGrow - Real Estate ',
+  title: 'My Review || akoode - Real Estate ',
   description:
-    'WeGrow - Real Estate ',
+    'akoode - Real Estate ',
 }
 
 const index = () => {

@@ -2,9 +2,9 @@ import dynamic from "next/dynamic";
 import Privacy from "@/components/privacy-policy";
 
 export const metadata = {
-  title: 'Privacy Policy || WeGrow',
+  title: 'Privacy Policy || akoode',
   description:
-    'WeGrow',
+    'akoode',
 }
 
 const index = () => {

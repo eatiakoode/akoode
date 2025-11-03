@@ -2,9 +2,9 @@ import dynamic from "next/dynamic";
 import MyLocation from "@/components/dashboard/my-location";
 
 export const metadata = {
-  title: 'My Properties || WeGrow - Real Estate ',
+  title: 'My Properties || akoode - Real Estate ',
   description:
-    'WeGrow - Real Estate ',
+    'akoode - Real Estate ',
 }
 
 const index = () => {

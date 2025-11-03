@@ -89,12 +89,12 @@ export default function TermsConditions() {
       <h1 className="mb-4">Terms & Conditions</h1>
 
       <p>
-        Welcome to the website of <strong>WEGROW INFRAVENTURES PRIVATE LIMITED</strong>. By accessing or using our services, you agree to the following terms:
+        Welcome to the website of <strong>akoode INFRAVENTURES PRIVATE LIMITED</strong>. By accessing or using our services, you agree to the following terms:
       </p>
 
       <h4 className="mt-4">1. Role of the Company</h4>
       <p>
-        WEGROW INFRAVENTURES operates as a real estate channel partner, facilitating property transactions between buyers and developers.
+        akoode INFRAVENTURES operates as a real estate channel partner, facilitating property transactions between buyers and developers.
       </p>
 
       <h4 className="mt-4">2. Use of Content</h4>
@@ -109,7 +109,7 @@ export default function TermsConditions() {
 
       <h4 className="mt-4">4. Limitation of Liability</h4>
       <p>
-        WEGROW INFRAVENTURES shall not be liable for any direct or indirect losses resulting from your reliance on information presented on this website or shared through our team.
+        akoode INFRAVENTURES shall not be liable for any direct or indirect losses resulting from your reliance on information presented on this website or shared through our team.
       </p>
 
       <h4 className="mt-4">5. User Conduct</h4>
@@ -119,7 +119,7 @@ export default function TermsConditions() {
 
       <h4 className="mt-4">6. Intellectual Property</h4>
       <p>
-        All branding, logos, and content are the intellectual property of WEGROW INFRAVENTURES or its content providers.
+        All branding, logos, and content are the intellectual property of akoode INFRAVENTURES or its content providers.
       </p>
 
       <h4 className="mt-4">7. Jurisdiction</h4>

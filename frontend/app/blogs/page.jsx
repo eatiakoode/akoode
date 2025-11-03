@@ -5,9 +5,9 @@ import BlogV2 from "@/components/blog-list-2";
 import { getBlogTableData } from "@/api/frontend/blog";
 
 export const metadata = {
-  title: 'Latest Real Estate Blogs | WEGROW INFRAVENTURES',
+  title: 'Latest Real Estate Blogs | akoode INFRAVENTURES',
   description:
-    'Read the latest real estate blogs from WEGROW INFRAVENTURES. Get expert insights, property trends, and market updates from Gurgaon’s trusted real estate agency.',
+    'Read the latest real estate blogs from akoode INFRAVENTURES. Get expert insights, property trends, and market updates from Gurgaon’s trusted real estate agency.',
 }
 
 // ✅ This is now a server component

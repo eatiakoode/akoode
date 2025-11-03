@@ -67,7 +67,7 @@ const TableData = ({categoryList,setCategoryList}) => {
             data-placement="top"
             title="Edit"
           >
-            <button  onClick={() => router.push(`/cmswegrow/edit-category/${item._id}`)}>
+            <button  onClick={() => router.push(`/akoodeadmin/edit-category/${item._id}`)}>
               <span className="flaticon-edit"></span>
             </button>
           </li>

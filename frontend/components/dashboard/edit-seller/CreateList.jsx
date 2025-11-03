@@ -38,16 +38,16 @@ const CreateList = () => {
         const data=await updateSellerAPI(id, seller);
         toast.success(data.message);
         // if(res.status=="success"){
-        //   router.push("/cmswegrow/my-seller");
+        //   router.push("/akoodeadmin/my-seller");
         // }
         
       if(data.status=="success"){
         setTimeout(() => {
-          router.push("/cmswegrow/my-seller");
+          router.push("/akoodeadmin/my-seller");
           }, 1500); 
       }
         // alert("Seller updated successfully!");
-        // router.push("/cmswegrow/my-seller");
+        // router.push("/akoodeadmin/my-seller");
       } catch (error) {
         alert("Failed to update Seller.");
         console.error(error);
@@ -125,7 +125,7 @@ const CreateList = () => {
 
       <div className="col-xl-12">
         <div className="my_profile_setting_input">
-          <button className="btn btn1 float-start" type="button" onClick={() => window.location.href = '/cmswegrow/my-seller'}>Back</button>
+          <button className="btn btn1 float-start" type="button" onClick={() => window.location.href = '/akoodeadmin/my-seller'}>Back</button>
           <button className="btn btn2 float-end">Submit</button>
         </div>
       </div>

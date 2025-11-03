@@ -7,7 +7,7 @@ import Slider from "react-slick";
 const FeatureProperties = ({properties}) => {
   const settings = {
     dots: true,
-    arrows: false,
+    arrows: true,
     fade: true,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -17,7 +17,7 @@ const FeatureProperties = ({properties}) => {
 
   return (
     <>
-      <Slider {...settings} arrows={false}>
+      <Slider {...settings} arrows={true}>
         {properties?.slice(0, 5).map((item) => (
           <div className="item" key={item._id}>
             <div className="feat_property home7">

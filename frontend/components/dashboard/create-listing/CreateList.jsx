@@ -422,7 +422,7 @@ const addProperty = async (e) => {
     const res = await addPropertyAPI(formData);
     toast.success(res.message);
     if(res.status=="success"){
-      router.push("/cmswegrow/my-properties");
+      router.push("/akoodeadmin/my-properties");
     }
     
     // alert(res.message);
@@ -1424,7 +1424,7 @@ const addProperty = async (e) => {
                   
       <div className="col-xl-12">
         <div className="my_profile_setting_input">
-          <button className="btn btn1 float-start" type="button" onClick={() => window.location.href = '/cmswegrow/my-dashboard'}>Back</button>
+          <button className="btn btn1 float-start" type="button" onClick={() => window.location.href = '/akoodeadmin/my-dashboard'}>Back</button>
           <button className="btn btn2 float-end" type="submit" >Submit</button>
         </div>
       </div>

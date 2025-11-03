@@ -28,7 +28,7 @@ const Header = () => {
     >
       <div className="container-fluid p0">
         {/* <!-- Menu Toggle btn--> */}
-        <Link href="/cmswegrow/my-dashboard" className="navbar_brand float-start dn-smd">
+        <Link href="/akoodeadmin/my-dashboard" className="navbar_brand float-start dn-smd">
           <Image
             width={170}
             height={75}
@@ -44,7 +44,7 @@ const Header = () => {
             src="/assets/images/header-logo2.png"
             alt="header-logo2.png"
           />
-          {/* <span>WeGrow</span> */}
+          {/* <span>akoode</span> */}
         </Link>
         {/* site logo brand */}
 

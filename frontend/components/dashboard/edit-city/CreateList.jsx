@@ -103,11 +103,11 @@ const CreateList = () => {
         }
         const data =await updateCityAPI(id, formData);
         // alert("City updated successfully!");
-        // router.push("/cmswegrow/my-cities");
+        // router.push("/akoodeadmin/my-cities");
         toast.success(data.message);
         if(data.status=="success"){
           setTimeout(() => {
-          router.push("/cmswegrow/my-cities");
+          router.push("/akoodeadmin/my-cities");
           }, 1500); 
         }
       } catch (error) {
@@ -252,7 +252,7 @@ const CreateList = () => {
 
       <div className="col-xl-12">
         <div className="my_profile_setting_input">
-          <button className="btn btn1 float-start" type="button"  onClick={() => window.location.href = '/cmswegrow/my-cities'}>Back</button>
+          <button className="btn btn1 float-start" type="button"  onClick={() => window.location.href = '/akoodeadmin/my-cities'}>Back</button>
           <button className="btn btn2 float-end">Submit</button>
         </div>
       </div>

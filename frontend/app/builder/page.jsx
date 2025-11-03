@@ -2,9 +2,9 @@ import dynamic from "next/dynamic";
 import BlogDetails from "@/components/blog-details";
 
 export const metadata = {
-  title: 'Builder Details || WeGrow ',
+  title: 'Builder Details || akoode ',
   description:
-    'WeGrow',
+    'akoode',
 }
 
 const index = () => {

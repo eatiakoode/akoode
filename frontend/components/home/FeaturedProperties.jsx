@@ -25,10 +25,10 @@ const FeaturedProperties = ({ setPropertySelectedComp, setShowBox,properties }) 
       
   const settings = {
     dots: true,
-    arrows: false,
+    arrows: true,
     infinite: properties.length > 2,
     slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToScroll: 1,
     autoplay: false,
     speed: 1200,
     responsive: [
@@ -44,7 +44,7 @@ const FeaturedProperties = ({ setPropertySelectedComp, setShowBox,properties }) 
         breakpoint: 576,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 3,
+          slidesToScroll: 1,
           infinite: properties.length > 1,
         },
       },
@@ -221,7 +221,7 @@ const FeaturedProperties = ({ setPropertySelectedComp, setShowBox,properties }) 
   return (
   <>
     {properties.length > 2 ? (
-      <Slider {...settings} arrows={false}>
+      <Slider {...settings} arrows={true}>
         {content}
       </Slider>
     ) : (

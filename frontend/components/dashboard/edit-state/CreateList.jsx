@@ -56,11 +56,11 @@ const CreateList = () => {
         };
         const data = await updateStateAPI(id, updatedState);
         // alert("State updated successfully!");
-        // router.push("/cmswegrow/my-state");
+        // router.push("/akoodeadmin/my-state");
         toast.success(data.message);
         if(data.status=="success"){
           setTimeout(() => {
-          router.push("/cmswegrow/my-state");
+          router.push("/akoodeadmin/my-state");
           }, 1500); 
         }
       } catch (error) {
@@ -147,7 +147,7 @@ const CreateList = () => {
 
       <div className="col-xl-12">
         <div className="my_profile_setting_input">
-          <button className="btn btn1 float-start" type="button"  onClick={() => window.location.href = '/cmswegrow/my-state'}>Back</button>
+          <button className="btn btn1 float-start" type="button"  onClick={() => window.location.href = '/akoodeadmin/my-state'}>Back</button>
           <button className="btn btn2 float-end">Submit</button>
         </div>
       </div>

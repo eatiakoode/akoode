@@ -13,66 +13,66 @@ const SidebarMenu = () => {
   const pathname = usePathname()
 
   const myCountry = [
-    { id: 1, name: "Add Country", route: "/cmswegrow/add-country" },
-    { id: 2, name: "Country List", route: "/cmswegrow/my-country" }
+    { id: 1, name: "Add Country", route: "/akoodeadmin/add-country" },
+    { id: 2, name: "Country List", route: "/akoodeadmin/my-country" }
   ];
   const myState = [
-    { id: 1, name: "Add State", route: "/cmswegrow/add-state" },
-    { id: 2, name: "State List", route: "/cmswegrow/my-state" }
+    { id: 1, name: "Add State", route: "/akoodeadmin/add-state" },
+    { id: 2, name: "State List", route: "/akoodeadmin/my-state" }
   ];
   const myCity = [
-    { id: 1, name: "Add City", route: "/cmswegrow/add-city" },
-    { id: 2, name: "City List", route: "/cmswegrow/my-cities" }
+    { id: 1, name: "Add City", route: "/akoodeadmin/add-city" },
+    { id: 2, name: "City List", route: "/akoodeadmin/my-cities" }
   ];
  
   const myLocation = [
-    { id: 1, name: "Add Location", route: "/cmswegrow/add-location" },
-    { id: 2, name: "Location List", route: "/cmswegrow/my-location" }
+    { id: 1, name: "Add Location", route: "/akoodeadmin/add-location" },
+    { id: 2, name: "Location List", route: "/akoodeadmin/my-location" }
   ];
   const myAmenity = [
-    { id: 1, name: "Add Amenity", route: "/cmswegrow/add-amenities" },
-    { id: 2, name: "Amenity List", route: "/cmswegrow/my-amenities" }
+    { id: 1, name: "Add Amenity", route: "/akoodeadmin/add-amenities" },
+    { id: 2, name: "Amenity List", route: "/akoodeadmin/my-amenities" }
   ];
   const myPropertytype = [
-    { id: 1, name: "Add Property type", route: "/cmswegrow/add-propertytype" },
-    { id: 2, name: "Property type List", route: "/cmswegrow/my-propertytype" }
+    { id: 1, name: "Add Property type", route: "/akoodeadmin/add-propertytype" },
+    { id: 2, name: "Property type List", route: "/akoodeadmin/my-propertytype" }
   ];
   const myBuilder = [
-    { id: 1, name: "Add Builder", route: "/cmswegrow/add-builder" },
-    { id: 2, name: "Builder List", route: "/cmswegrow/my-builder" }
+    { id: 1, name: "Add Builder", route: "/akoodeadmin/add-builder" },
+    { id: 2, name: "Builder List", route: "/akoodeadmin/my-builder" }
   ];
   const myAgent = [
-    { id: 1, name: "Add Agent", route: "/cmswegrow/add-agent" },
-    { id: 2, name: "Agent List", route: "/cmswegrow/my-agent" }
+    { id: 1, name: "Add Agent", route: "/akoodeadmin/add-agent" },
+    { id: 2, name: "Agent List", route: "/akoodeadmin/my-agent" }
   ];
   
   const myProperties = [
-    { id: 1, name: "Add Property", route: "/cmswegrow/create-listing" },
-    { id: 2, name: "Property List", route: "/cmswegrow/my-properties" }
+    { id: 1, name: "Add Property", route: "/akoodeadmin/create-listing" },
+    { id: 2, name: "Property List", route: "/akoodeadmin/my-properties" }
   ];
   const myBlog = [
-    { id: 1, name: "Add Blog category", route: "/cmswegrow/add-blogcategory" },
-    { id: 2, name: "Blog category List", route: "/cmswegrow/my-blogcategory" },
-    { id: 3, name: "Add Blog", route: "/cmswegrow/add-blog" },
-    { id: 4, name: "Blog List", route: "/cmswegrow/my-blog" },
+    { id: 1, name: "Add Blog category", route: "/akoodeadmin/add-blogcategory" },
+    { id: 2, name: "Blog category List", route: "/akoodeadmin/my-blogcategory" },
+    { id: 3, name: "Add Blog", route: "/akoodeadmin/add-blog" },
+    { id: 4, name: "Blog List", route: "/akoodeadmin/my-blog" },
     
   ];
   const myPropertypage = [
-    { id: 1, name: "Add Property page", route: "/cmswegrow/add-propertypage" },
-    { id: 2, name: "Property page List", route: "/cmswegrow/my-propertypage" }
+    { id: 1, name: "Add Property page", route: "/akoodeadmin/add-propertypage" },
+    { id: 2, name: "Property page List", route: "/akoodeadmin/my-propertypage" }
   ];
   const myTestimonial = [
-    { id: 1, name: "Add Testimonial", route: "/cmswegrow/add-testimonial" },
-    { id: 2, name: "Testimonial List", route: "/cmswegrow/my-testimonial" }
+    { id: 1, name: "Add Testimonial", route: "/akoodeadmin/add-testimonial" },
+    { id: 2, name: "Testimonial List", route: "/akoodeadmin/my-testimonial" }
   ];
   
   const myFaq = [
-    { id: 1, name: "Add FAQ", route: "/cmswegrow/add-faq" },
-    { id: 2, name: "FAQ List", route: "/cmswegrow/my-faq" }
+    { id: 1, name: "Add FAQ", route: "/akoodeadmin/add-faq" },
+    { id: 2, name: "FAQ List", route: "/akoodeadmin/my-faq" }
   ];
   const reviews = [
-    { id: 1, name: "My Reviews", route: "/cmswegrow/my-review" },
-    { id: 2, name: "Visitor Reviews", route: "/cmswegrow/my-review" },
+    { id: 1, name: "My Reviews", route: "/akoodeadmin/my-review" },
+    { id: 2, name: "Visitor Reviews", route: "/akoodeadmin/my-review" },
   ];
   const manageAccount = [
     {
@@ -102,7 +102,7 @@ const SidebarMenu = () => {
               src={`${process.env.NEXT_PUBLIC_API_URL}public/assets/images/logo.svg`}
               alt="logo.svg"
             />
-            {/* <span>WeGrow</span> */}
+            {/* <span>akoode</span> */}
           </Link>
         </li>
         {/* End header */}
@@ -117,7 +117,7 @@ const SidebarMenu = () => {
                   : ""
               }`}
             >
-              <Link href="/cmswegrow/my-dashboard">
+              <Link href="/akoodeadmin/my-dashboard">
                 <i className="flaticon-layers"></i>
                 <span> Dashboard</span>
               </Link>

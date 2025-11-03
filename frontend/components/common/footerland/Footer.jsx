@@ -71,7 +71,7 @@ const Footer = ({  showBox,setShowBox }) => {
                 src={`${process.env.NEXT_PUBLIC_API_URL}public/assets/images/logo.svg`}
                 alt="image"
               />
-          {/* <span>WeGrow</span> */}
+          {/* <span>akoode</span> */}
           </Link>
           <p>
           we pride ourselves on helping you find the perfect property that meets your budget. Specializing in projects across Gurgaon and Delhi NCR, we offer a tailored approach to home buying and property investment.
@@ -112,7 +112,7 @@ const Footer = ({  showBox,setShowBox }) => {
           <h4>Contact Us</h4>
           <ul className="list-unstyled">
             <li>
-              <a href="mailto:Info@wegrowinfraventures.com">Info@wegrowinfraventures.com</a>
+              <a href="mailto:Info@akoodeinfraventures.com">Info@akoodeinfraventures.com</a>
             </li>
             <li>
               <a href="#">TOWER-2, DLF CORPORATE GREENS, 1205, Southern Peripheral Rd,</a>

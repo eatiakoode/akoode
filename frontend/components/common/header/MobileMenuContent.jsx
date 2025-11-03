@@ -335,7 +335,7 @@ const MobileMenuContent = () => {
               src="/assets/images/header-logo2.png"
               alt="header-logo.png"
             />
-            {/* <span className="brand-text">WeGrow</span> */}
+            {/* <span className="brand-text">akoode</span> */}
           </Link>
           {/* End .logo */}
 
@@ -567,16 +567,16 @@ const MobileMenuContent = () => {
 
           <MenuItem className="mobile-social-icons mt-3">
             <div className="d-flex gap-3 ps-2">
-              <a href="https://www.facebook.com/WeGrowInfraventurespvtltd/" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.facebook.com/akoodeInfraventurespvtltd/" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-facebook-f"></i>
               </a>
-              <a href="https://x.com/wegrowinfra/" target="_blank" rel="noopener noreferrer">
+              <a href="https://x.com/akoodeinfra/" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-twitter"></i>
               </a>
-              <a href="https://www.instagram.com/wegrowinfraventures/" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/akoodeinfraventures/" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-instagram"></i>
               </a>
-              <a href="https://www.linkedin.com/company/wegrow-infraventures-pvt-ltd/" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/company/akoode-infraventures-pvt-ltd/" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-linkedin-in"></i>
               </a>
             </div>

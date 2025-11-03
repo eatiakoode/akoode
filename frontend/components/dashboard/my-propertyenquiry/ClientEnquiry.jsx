@@ -7,7 +7,11 @@ const AuthorReview = () => {
 
   useEffect(() => {
     const fetchEnquiryData = async () => {
-      const data = await getPropertyEnquiryTableData();
+      const filter = {
+        limit: 1000,
+        page:  1
+      }
+      const data = await getPropertyEnquiryTableData(filter);
       setEnquiryList(data || []);
     };
     fetchEnquiryData();

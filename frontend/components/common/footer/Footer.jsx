@@ -117,177 +117,252 @@ const Footer = ({  showBox,setShowBox }) => {
     
   return (
     <>
-    
-        <div className="text-lg-end">
-          <div className="most_trust_content">
-            <p>For jobs email at hr@akoode.in or call 0124-4197516</p>
-          </div>
-          <div className="most_trust_badge">
-            <Image
-              src="/images/Clutch-Badge-Blue.svg"
-              alt="An AI Powered Corporation on Clutch"
-              width={100}
-              height={50}
-            />
-            <span>Most trusted AI Powered Corporation Company on Clutch</span>
-          </div>
-        </div>
-
-        <div className="row g-4 pb-5">
-          <div className="col-xl-6 col-md-6">
-            <div className="footer-short-info rounded-20 d-flex flex-column align-items-start">
-              <h4>India Office -</h4>
-              <div>
-                <div className="icon d-flex align-items-center justify-content-center rounded-pill flex-shrink-0">
-                  <Image
-                    src="/images/location1.svg"
-                    alt="footer-short-icon"
-                    width={30}
-                    height={30}
-                  />
-                </div>
-                <div className="text">
-                  <Link href="#">
-                    Tower B4, Spaze iTech Park, UN 616, Sohna - Gurgaon Rd,
-                    Block S, Sector 49, Gurugram, Haryana 122018
-                  </Link>
-                </div>
-              </div>
-              <div>
-                <div className="icon d-flex align-items-center justify-content-center rounded-pill flex-shrink-0">
-                  <Image
-                    src="/images/email1.svg"
-                    alt="footer-short-icon"
-                    width={30}
-                    height={30}
-                  />
-                </div>
-                <div className="text">
-                  <Link href="mailto:info@akoode.com">info@akoode.com</Link>
-                </div>
-              </div>
-              <div>
-                <div className="icon d-flex align-items-center justify-content-center rounded-pill flex-shrink-0">
-                  <Image
-                    src="/images/phn1.svg"
-                    alt="footer-short-icon"
-                    width={30}
-                    height={30}
-                  />
-                </div>
-                <div className="text">
-                  <Link href="tel:+91-9899300017">+91-9899300017</Link>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-xl-6 col-md-6">
-            <div className="footer-short-info rounded-20 d-flex flex-column align-items-start">
-              <h4>USA Office -</h4>
-              <div>
-                <div className="icon d-flex align-items-center justify-content-center rounded-pill flex-shrink-0">
-                  <Image
-                    src="/images/location1.svg"
-                    alt="footer-short-icon"
-                    width={30}
-                    height={30}
-                  />
-                </div>
-                <div className="text">
-                  <Link href="#">
-                    10816 South Olmsted St W Jenks, OK 74037, USA
-                  </Link>
-                </div>
-              </div>
-              <div>
-                <div className="icon d-flex align-items-center justify-content-center rounded-pill flex-shrink-0">
-                  <Image
-                    src="/images/email1.svg"
-                    alt="footer-short-icon"
-                    width={30}
-                    height={30}
-                  />
-                </div>
-                <div className="text">
-                  <Link href="mailto:info@akoode.com">info@akoode.com</Link>
-                </div>
-              </div>
-              <div>
-                <div className="icon d-flex align-items-center justify-content-center rounded-pill flex-shrink-0">
-                  <Image
-                    src="/images/phn1.svg"
-                    alt="footer-short-icon"
-                    width={30}
-                    height={30}
-                  />
-                </div>
-                <div className="text">
-                  <Link href="tel:1-7122141784">1-712 214 1784</Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="row">
-          <div className="col-lg-5 col-md-6">
-            <div className="footer-logo1">
-              <Image src="/images/logo.svg" alt="logo" width={150} height={60} />
-              <div className="space16"></div>
-              <p>
-                Akoode Technology is a leading software development company
-                based in Gurgaon, India, and the USA, recognized for its
-                excellence and reliability...
-              </p>
-              <div className="space24"></div>
+      <div className="col-sm-6 col-md-6 col-lg-3 col-xl-3 pr0 pl0">
+        <div className="footer_about_widget">
+          <Link href="/" className="navbar_brand dn-smd">
               <Image
-                src="/images/dmca-badge.png"
+                width={170}
+                height={75}
+                className="logo1 img-fluid"
+                // src="/assets/images/logo.svg"
+                src={`${process.env.NEXT_PUBLIC_API_URL}public/assets/images/logo.svg`}
                 alt="image"
-                width={100}
-                height={50}
               />
-            </div>
-          </div>
-
-          <div className="col-lg-2 col-md-6">
-            <div className="space30 d-md-none d-block"></div>
-            <div className="vl-footer-widget">
-              <h3>Quick Links</h3>
-              <ul>
-                <li><Link href="#">About Us</Link></li>
-                <li><Link href="#">Case Studies</Link></li>
-                <li><Link href="#">Our Clients</Link></li>
-                <li><Link href="#">Blogs</Link></li>
-                <li><Link href="#">Career</Link></li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="col-lg-5 col-md-6">
-            <div className="vl-footer-widget">
-              <div className="space30 d-lg-none d-block"></div>
-              <h3>Our Services</h3>
-              <ul className="service-wiget">
-                <li><Link href="#">Artificial Intelligence</Link></li>
-                <li><Link href="#">Digital Transformation</Link></li>
-                <li><Link href="#">Software Development</Link></li>
-                <li><Link href="#">Mobile App Development</Link></li>
-                <li><Link href="#">Web Development</Link></li>
-                <li><Link href="#">eCommerce Solution</Link></li>
-                <li><Link href="#">IOT Development</Link></li>
-                <li><Link href="#">BigData & Data Analytics</Link></li>
-                <li><Link href="#">Cloud and DevOps</Link></li>
-                <li><Link href="#">Blockchain Development</Link></li>
-                <li><Link href="#">Staff Augmentation</Link></li>
-                <li><Link href="#">360 Degree Digital Marketing</Link></li>
-              </ul>
-            </div>
-          </div>
+          {/* <span>akoode</span> */}
+          </Link>
+          <p>
+          we pride ourselves on helping you find the perfect property that meets your budget. Specializing in projects across Gurgaon and Delhi NCR, we offer a tailored approach to home buying and property investment.
+          </p>
         </div>
+      </div>
+      {/* End .col */}
 
-        
-     
+      <div className="col-sm-6 col-md-6 col-lg-3 col-xl-3">
+        <div className="footer_qlink_widget">
+          <h4>Quick Links</h4>
+          <ul className="list-unstyled">
+            <li>
+              <Link href="/">Home</Link>
+            </li>
+            <li>
+              <Link href="/about-us">About Us</Link>
+            </li>
+            <li>
+              <Link href="/blogs">Blog</Link>
+            </li>
+            <li>
+              <Link href="/faq">FAQs</Link>
+            </li>
+            <li>
+              <Link href="/news-and-insights">News & Insights</Link>
+            </li>
+            <li>
+              <Link href="/terms-conditions">Term & Conditions</Link>
+            </li>
+            <li>
+              <Link href="/privacy-policy">Privacy Policy</Link>
+            </li>
+            <li>
+              <Link href="/disclaimer">Disclaimer</Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+      {/* End .col */}
+
+      <div className="col-sm-6 col-md-6 col-lg-3 col-xl-3">
+        <div className="footer_contact_widget">
+          <h4>Contact Us</h4>
+          <ul className="list-unstyled">
+            <li>
+              <a href="mailto:Info@akoodeinfraventures.com">Info@akoodeinfraventures.com</a>
+            </li>
+            <li>
+             TOWER-2, DLF CORPORATE GREENS, 1205, Southern Peripheral Rd,
+            </li>
+            <li>
+              Sector 74A, Gurugram, Haryana 122004
+            </li>
+            <li>
+              <a href="tel:+91 74219-22000">+91 74219-22000</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      {/* End .col */}
+
+      <div className="col-sm-6 col-md-6 col-lg-3 col-xl-3">
+        <div className="footer_social_widget">
+          <h4>Follow us</h4>
+          <ul className="mb30">
+            <Social />
+          </ul>
+          <h4>Subscribe</h4>
+          <SubscribeForm />
+        </div>
+      </div>
+      <div className="compare_properties">
+        <div
+          className="compare_wrapper"
+          onMouseEnter={() => setShowBox(true)}
+          onMouseLeave={() => setShowBox(false)}
+        >
+          {/* Always render with d-none during SSR */}
+          <div
+            className={`compare_section row ${
+              hydrated ? (showBox ? "d-flex" : "d-none") : "d-none"
+            }`}
+          >
+            {properties.length === 0 && (
+              <span className="text-danger">Add for compare</span>
+            )}
+
+            {properties.map((item) => (
+              <div className="item col-4" key={item._id}>
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    deleteCompareProperty(item._id);
+                  }}
+                >
+                  <span className="flaticon-close"></span>
+                </a>
+
+                <Image
+                  width={343}
+                  height={220}
+                  className="img-whp w-100 h-100 cover"
+                  src={
+                    item.featuredimageurl
+                      ? `${process.env.NEXT_PUBLIC_API_URL}${item.featuredimageurl.url?item.featuredimageurl.url:item.featuredimageurl}`
+                      : `${process.env.NEXT_PUBLIC_API_URL}public/assets/images/thumbnail.webp`
+                  }
+                  alt={`${item.featuredimageurl?.name?item.featuredimageurl?.name:item.title}`}
+                  unoptimized
+                />
+                <Link href={`/property-detail/${item.slug}`} className="fp_price">
+                  {item.price}
+                </Link>
+                <p className="text-thm">{item.title}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* <div
+            className={`countcompare ${
+              hydrated && properties.length > 0 ? "d-flex" : "d-none"
+            }`}
+          >
+            <Link href={`/compare`} className="countcomparelink">
+              Compare ({propertycompare?.length || 0})
+            </Link>
+          </div> */}
+           {hydrated && properties.length > 0 && (
+            <div className="countcompare d-flex">
+              <Link href={`/compare`} className="countcomparelink">
+                Compare ({propertycompare?.length || 0})
+              </Link>
+            </div>
+          )}
+        </div>
+      </div>  
+      {/* Popup Modal */}
+     <div className={`form_grid modal fade ${showPopup ? 'show d-block' : ''}`} tabIndex="-1" role="dialog" style={{ backgroundColor: 'rgba(0,0,0,0.6)' }}>
+  <div className="contact_form modal-dialog modal-dialog-centered" role="document">
+    <div className="modal-content">
+      
+      {/* Left: Image Side */}
+      <div className="modal-image-side">
+        <img src="/assets/images/buildings.webp" alt="Image" className="img-fluid"/>
+      </div>
+
+      {/* Right: Form Side */}
+      <div className="modal-form-side">
+        <button type="button" className="btn-close" onClick={() => setShowPopup(false)} aria-label="Close"></button>
+        <h5 className="modal-title">Get in Touch</h5>
+        <div className="modal-body">
+          <form
+            // onSubmit={(e) => {
+            //   e.preventDefault();
+            //   alert("Form submitted!");
+            //   setShowPopup(false);
+            // }}
+            onSubmit={handleSubmit(onSubmit)}
+          >
+            <div className="mb-3">
+              <label className="form-label">Name</label>
+             <input
+              id="form_name"
+              name="form_name"
+              className="form-control"
+              // required="required"
+              type="text"
+              placeholder="Name"
+              // value={name} onChange={(e) => setName(e.target.value)}
+              {...register('name', { required: 'Name is required' })}
+            />
+            
+          {errors.name && <p className="text-danger">{errors.name.message}</p>}
+            </div>
+            <div className="mb-3">
+              <label className="form-label">Email</label>
+               <input
+              id="form_email"
+              // name="form_email"
+              className="form-control email"
+              // required="required"
+              type="email"
+              placeholder="Email"
+              // value={email} onChange={(e) => setEmail(e.target.value)}
+             {...register('email', {
+              required: 'Email is required',
+              pattern: {
+                value: /^\S+@\S+$/i,
+                message: 'Invalid email address',
+              },
+            })}
+              
+            />
+            {errors.email && <span className="text-danger">{errors.email.message}</span>}
+            </div>
+            <div className="mb-3">
+              <label className="form-label">Phone</label>
+              <input
+              id="form_phone"
+              name="form_phone"
+              className="form-control required phone"
+              // required="required"
+              type="phone"
+              placeholder="Phone"
+             {...register('phone', {
+                required: 'Phone number is required',
+                pattern: {
+                  value: /^[0-9]{10}$/,
+                  message: 'Enter a valid 10-digit phone number',
+                },
+                maxLength: {
+                  value: 10,
+                  message: 'Phone number must be 10 digits',
+                },
+                minLength: {
+                  value: 10,
+                  message: 'Phone number must be 10 digits',
+                },
+              })}
+              maxLength={10}
+            />
+            {errors.phone && <span className="text-danger">{errors.phone.message}</span>}
+            </div>
+             <button type="submit"  disabled={isSubmitting}  className="btn btn-lg btn-thm w-100">{isSubmitting ? 'Sending...' : 'Submit'}</button>
+            
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
 
 
 

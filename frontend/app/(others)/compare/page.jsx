@@ -2,9 +2,9 @@ import dynamic from "next/dynamic";
 import Compare from "@/components/compare";
 
 export const metadata = {
-  title: 'Compare || WeGrow',
+  title: 'Compare || akoode',
   description:
-    'WeGrow',
+    'akoode',
 }
 
 const index = () => {

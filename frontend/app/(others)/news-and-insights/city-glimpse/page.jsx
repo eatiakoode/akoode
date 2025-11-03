@@ -2,7 +2,7 @@ import dynamic from "next/dynamic";
 import CityGlimpse from "@/components/city-glimpse";
 
 export const metadata = {
-  title: 'City Glimpse || WeGrow - Real Estate Insights',
+  title: 'City Glimpse || akoode - Real Estate Insights',
   description: 'Stay updated with property pricing trends and real estate market rates across India.',
 }
 

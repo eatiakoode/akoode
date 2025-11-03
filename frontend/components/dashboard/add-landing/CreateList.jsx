@@ -249,11 +249,11 @@ const addLanding = async (e) => {
 
 
     const data = await addLandingpageAPI(formData);
-    // router.push("/cmswegrow/my-landing");
+    // router.push("/akoodeadmin/my-landing");
     toast.success(data.message);
     if(data.status=="success"){
       setTimeout(() => {
-          router.push("/cmswegrow/my-landing");
+          router.push("/akoodeadmin/my-landing");
           }, 1500); 
     }
     // alert(res.message);
@@ -661,7 +661,7 @@ const addLanding = async (e) => {
                   
       <div className="col-xl-12">
         <div className="my_profile_setting_input">
-          <button className="btn btn1 float-start" type="button" onClick={() => window.location.href = '/cmswegrow/my-dashboard'}>Back</button>
+          <button className="btn btn1 float-start" type="button" onClick={() => window.location.href = '/akoodeadmin/my-dashboard'}>Back</button>
           <button type="submit" className="btn btn2 float-end" disabled={isSubmitting} >{isSubmitting ? 'Sending...' : 'Submit'}</button>
         </div>
       </div>

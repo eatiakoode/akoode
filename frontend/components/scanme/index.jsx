@@ -33,7 +33,7 @@ const index = () => {
               <div className="col-lg-8 offset-lg-2">
                 <div className="main-title text-center">
                   <h2 className="mt0 color-main">Let’s Get Social</h2>
-                  <h2 className="mt0 mb0">Follow WEGROW INFRAVENTURES Online</h2>
+                  <h2 className="mt0 mb0">Follow akoode INFRAVENTURES Online</h2>
                 </div>
               </div>
             </div>
@@ -44,7 +44,7 @@ const index = () => {
                       <ul className="list-unstyled d-flex flex-column justify-content-center gap-3 h-100">
                         <li>
                         <a
-                          href="https://wegrowinfraventures.com/"
+                          href="https://akoodeinfraventures.com/"
                           className="social-icon website"
                           target="_blank"
                           rel="noopener noreferrer"
@@ -55,7 +55,7 @@ const index = () => {
                       </li>
                       <li>
                         <a
-                          href="https://www.facebook.com/WeGrowInfraventurespvtltd/"
+                          href="https://www.facebook.com/akoodeInfraventurespvtltd/"
                           className="social-icon facebook"
                           target="_blank"
                           rel="noopener noreferrer"
@@ -66,7 +66,7 @@ const index = () => {
                       </li>
                       <li>
                         <a
-                          href="https://x.com/wegrowinfra/"
+                          href="https://x.com/akoodeinfra/"
                           className="social-icon twitter"
                           target="_blank"
                           rel="noopener noreferrer"
@@ -77,7 +77,7 @@ const index = () => {
                       </li>
                       <li>
                         <a
-                          href="https://www.linkedin.com/company/wegrow-infraventures-pvt-ltd/"
+                          href="https://www.linkedin.com/company/akoode-infraventures-pvt-ltd/"
                           className="social-icon linkedin"
                           target="_blank"
                           rel="noopener noreferrer"
@@ -99,7 +99,7 @@ const index = () => {
                       </li>
                       <li>
                         <a
-                          href="https://www.instagram.com/wegrowinfraventures/"
+                          href="https://www.instagram.com/akoodeinfraventures/"
                           className="social-icon instagram"
                           target="_blank"
                           rel="noopener noreferrer"
@@ -116,7 +116,7 @@ const index = () => {
               <div className="col-lg-6 col-12">
                  <div className="map-responsive w-100">
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112301.12049947218!2d76.84535169726564!3d28.40688249999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d3de859be2c61%3A0x69df6543869bfd1f!2sWEGROW%20INFRAVENTURES%20PRIVATE%20LIMITED!5e0!3m2!1sen!2sin!4v1748611964804!5m2!1sen!2sin"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112301.12049947218!2d76.84535169726564!3d28.40688249999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d3de859be2c61%3A0x69df6543869bfd1f!2sakoode%20INFRAVENTURES%20PRIVATE%20LIMITED!5e0!3m2!1sen!2sin!4v1748611964804!5m2!1sen!2sin"
                       width="100%"
                       height="100%"
                       style={{ border: 0 }}
