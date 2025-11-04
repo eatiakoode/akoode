@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { useRouter, useParams } from "next/navigation";
 import { addFaqAPI } from "@/api/faq";
-import { getPropertyTableData } from "@/api/property";
+import { getServicesTableData } from "@/api/services";
 import { toast } from 'react-toastify';
 const CreateList = () => {
   const router = useRouter();
@@ -11,28 +11,29 @@ const CreateList = () => {
    const [title, setTitle] = useState("");
    const [description, setDescription] = useState("");
     const [error, setError] = useState("");
-    const [properties, setProperties] = useState([]);
-    const [selectedProperty, setSelectedProperty] = useState("");
+    const [services, setServices] = useState([]);
+    const [selectedService, setSelectedService] = useState("");
+    const [featuredfaq, setFeaturedfaq] = useState([]);
 
     // upload profile
     
   useEffect(() => {
-      const fetchProperties = async () => {
+      const fetchServices = async () => {
         try {
           const filter = {
     limit: 1000,
     page: 1
   }
-          const response = await getPropertyTableData(filter);
-         
+          const response = await getServicesTableData(filter);
+         console.log(response);
   
-          setProperties(response?.items || []);
+          setServices(response?.items || []);
         } catch (err) {
-          console.error("Error fetching property:", err);
+          console.error("Error fetching service:", err);
         }
       };
   
-      fetchProperties();
+      fetchServices();
     }, []);
     const handleTitleChange = (e) => {
       setTitle(e.target.value);
@@ -58,7 +59,8 @@ const CreateList = () => {
         const formData = {
           "title": title,
           "description": description,
-          "propertyid":selectedProperty};
+          "serviceid":selectedService,
+          "featuredfaq": featuredfaq};
         
         const data = await addFaqAPI(formData); // Use FormData here
        
@@ -72,7 +74,7 @@ const CreateList = () => {
     
         setTitle("");
         setDescription("");
-        setLogo(null);
+        setSelectedService("");
       } catch (error) {
         setError(error.message);
       }
@@ -93,24 +95,36 @@ const CreateList = () => {
       {/* End .col */}
       <div className="col-lg-6 col-xl-6">
           <div className="my_profile_setting_input ui_kit_select_search form-group">
-            <label htmlFor="propertySelect">Select Property</label>
+            <label htmlFor="serviceSelect">Select Service</label>
             <select
-              id="propertySelect"
+              id="serviceSelect"
               className="selectpicker form-select"
-              value={selectedProperty}
-              onChange={(e) => setSelectedProperty(e.target.value)} 
+              value={selectedService}
+              onChange={(e) => setSelectedService(e.target.value)} 
               data-live-search="true"
               data-width="100%"
             >
-              <option value="">-- Select Property --</option>
-              {properties.map((property) => (
-                <option key={property._id} value={property._id}>
-                  {property.title}
+              <option value="">-- Select Service --</option>
+              {services.map((service) => (
+                <option key={service._id} value={service._id}>
+                  {service.title}
                 </option>
               ))}
             </select>
           </div>
         </div>
+        <div className="col-lg-6 col-xl-4">
+        <div className="my_profile_setting_input form-group">
+          <label htmlFor="featuredfaq">Featured Faq</label>
+          <input type="checkbox"
+              className="form-check-input"
+              id="featuredfaq"
+              name="featuredfaq"
+              value={featuredfaq}
+              checked={featuredfaq === true}
+              onChange={(e) => setFeaturedfaq(e.target.checked)} />
+        </div>
+      </div>
       <div className="col-lg-12">
           <div className="my_profile_setting_textarea form-group">
             <label htmlFor="FaqDescription">Description</label>

@@ -16,6 +16,24 @@
       return []; // Return an empty array in case of an error
     }
   }
+  export async function getFaqTableDataFeatured() {
+    // Fake delay
+    await new Promise((resolve) => setTimeout(resolve, 10));
+    
+  
+    try {
+      const response = await fetch(process.env.NEXT_PUBLIC_FRONTEND_API_URL+"api/faq/list?featured=true", {
+        next: { revalidate: 40 } // ISR: update every 60s
+      }); // Replace with actual API endpoint
+      if (!response.ok) {
+        throw new Error("Failed to fetch products");
+      }
+      return await response.json();
+    } catch (error) {
+      console.error("Error fetching products:", error);
+      return []; // Return an empty array in case of an error
+    }
+  }
 
 
   export const getFaqById = async (id: string) => {

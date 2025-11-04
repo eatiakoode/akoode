@@ -15,7 +15,7 @@ const index = ({properties,enqueryProperty,enqueryLanding,enquery}) => {
       {/* <!--  Mobile Menu --> */}
       <MobileMenu />
 
-      <div className="dashboard_sidebar_menu">
+      <div className="dashboard_sidebar_menu eati">
         <div
           className="offcanvas offcanvas-dashboard offcanvas-start"
           tabIndex="-1"

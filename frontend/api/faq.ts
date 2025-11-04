@@ -1,4 +1,4 @@
-export const addFaqAPI = async (title) => {
+export const addFaqAPI = async (faqData) => {
   // const token = localStorage.getItem("token"); // 🔹 Retrieve token
 // console.log("token")
   // const token =process.env.NEXT_PUBLIC_TOKEN;
@@ -20,10 +20,10 @@ const token =userData.token
       "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,
     },
-    body: JSON.stringify( title ),
+    body: JSON.stringify( faqData ),
   });
 
-  if (!response.status) {
+  if (!response.ok) {
     const errorData = await response.json();
     throw new Error(errorData.message || "Failed to add Faq");
   }
@@ -129,9 +129,9 @@ const token =userData.token
     body: JSON.stringify(faq),
   });
 
-  if (!response.status) {
+  if (!response.ok) {
     const errorData = await response.json();
-    throw new Error(errorData.message || "Failed to add faq");
+    throw new Error(errorData.message || "Failed to update faq");
   }
 
   return response.json();

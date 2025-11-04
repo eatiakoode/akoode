@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { toast, ToastContainer } from 'react-toastify';
 
 const CopyRight = () => {
     return (
@@ -11,7 +10,6 @@ const CopyRight = () => {
   </div>
 </div>
 </div> 
-<ToastContainer /> 
 </>
  );
 };

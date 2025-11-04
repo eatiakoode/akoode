@@ -559,26 +559,42 @@ const MobileMenuContent = () => {
           <MenuItem className="mobile-phone-call mt-3">
             <div className="d-flex align-items-start justify-content-start gap-0">
               <span className="flaticon-call pe-2"></span>
-              <a href="tel:+917421922000" className="text-decoration-none text-dark">
+              <span 
+                className="text-decoration-none text-dark cursor-pointer"
+                onClick={() => window.open('tel:+917421922000', '_self')}
+                style={{ cursor: 'pointer' }}
+              >
                 <span className="flaticon-telephone pe-1"></span> +91 742-192-2000
-              </a>
+              </span>
             </div>
           </MenuItem>
 
           <MenuItem className="mobile-social-icons mt-3">
             <div className="d-flex gap-3 ps-2">
-              <a href="https://www.facebook.com/akoodeInfraventurespvtltd/" target="_blank" rel="noopener noreferrer">
+              <span 
+                onClick={() => window.open('https://www.facebook.com/akoodeInfraventurespvtltd/', '_blank')}
+                style={{ cursor: 'pointer' }}
+              >
                 <i className="fab fa-facebook-f"></i>
-              </a>
-              <a href="https://x.com/akoodeinfra/" target="_blank" rel="noopener noreferrer">
+              </span>
+              <span 
+                onClick={() => window.open('https://x.com/akoodeinfra/', '_blank')}
+                style={{ cursor: 'pointer' }}
+              >
                 <i className="fab fa-twitter"></i>
-              </a>
-              <a href="https://www.instagram.com/akoodeinfraventures/" target="_blank" rel="noopener noreferrer">
+              </span>
+              <span 
+                onClick={() => window.open('https://www.instagram.com/akoodeinfraventures/', '_blank')}
+                style={{ cursor: 'pointer' }}
+              >
                 <i className="fab fa-instagram"></i>
-              </a>
-              <a href="https://www.linkedin.com/company/akoode-infraventures-pvt-ltd/" target="_blank" rel="noopener noreferrer">
+              </span>
+              <span 
+                onClick={() => window.open('https://www.linkedin.com/company/akoode-infraventures-pvt-ltd/', '_blank')}
+                style={{ cursor: 'pointer' }}
+              >
                 <i className="fab fa-linkedin-in"></i>
-              </a>
+              </span>
             </div>
           </MenuItem>
 

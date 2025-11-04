@@ -38,7 +38,7 @@ export async function getPropertyEnquiryTableData(filter) {
   
 
   try {
-    const response = await fetch(process.env.NEXT_PUBLIC_ADMIN_API_URL+"api/propertyenquiry?limit="+filter.limit+"&skip="+filter.page,
+    const response = await fetch(process.env.NEXT_PUBLIC_ADMIN_API_URL+"api/propertyenquiry?limit="+(filter?.limit ? filter.limit : "1000")+"&skip="+(filter?.page ? filter.page : "1"),
         {
           next: { revalidate: 60 }
         }); // Replace with actual API endpoint

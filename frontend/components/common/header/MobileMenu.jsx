@@ -1,3 +1,5 @@
+'use client'
+
 import Link from "next/link";
 import MobileMenuContent from "./MobileMenuContent";
 import Image from "next/image";

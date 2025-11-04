@@ -1,6 +1,7 @@
 'use client'
 
 import Link from "next/link";
+import { useState } from "react";
 
 import {
   isParentPageActive,
@@ -10,11 +11,21 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const SidebarMenu = () => {
+  const [openMenu, setOpenMenu] = useState(null);
+
+  const toggleMenu = (menu) => {
+    setOpenMenu(openMenu === menu ? null : menu);
+  };
+  
   const pathname = usePathname()
 
-  const myCountry = [
-    { id: 1, name: "Add Country", route: "/akoodeadmin/add-country" },
-    { id: 2, name: "Country List", route: "/akoodeadmin/my-country" }
+  const myCasestudy = [
+    { id: 1, name: "Add Casestudy", route: "/akoodeadmin/add-casestudy" },
+    { id: 2, name: "Casestudy List", route: "/akoodeadmin/my-casestudy" }
+  ];
+  const myServices = [
+    { id: 1, name: "Add Services", route: "/akoodeadmin/add-services" },
+    { id: 2, name: "Services List", route: "/akoodeadmin/my-services" }
   ];
   const myState = [
     { id: 1, name: "Add State", route: "/akoodeadmin/add-state" },
@@ -89,10 +100,10 @@ const SidebarMenu = () => {
   ];
   const enquerylist = [
     { id: 1, name: "My enquery list", route: "/akoodeadmin/my-enquiry" },
-    { id: 2, name: "My property enquery list", route: "/akoodeadmin/my-propertyenquiry" },
-    { id: 3, name: "My landing enquery list", route: "/akoodeadmin/my-landingenquiry" },
-    { id: 4, name: "My Subscribe enquery list", route: "/akoodeadmin/my-subscribeenquiry" },
-    { id: 5, name: "My brochure enquery list", route: "/akoodeadmin/my-brochureenquiry" },
+    { id: 2, name: "My job enquery list", route: "/akoodeadmin/my-jobenquiry" },
+    // { id: 3, name: "My landing enquery list", route: "/akoodeadmin/my-landingenquiry" },
+    // { id: 4, name: "My Subscribe enquery list", route: "/akoodeadmin/my-subscribeenquiry" },
+    // { id: 5, name: "My brochure enquery list", route: "/akoodeadmin/my-brochureenquiry" },
   ];
   const manageAccount = [
     {
@@ -113,16 +124,47 @@ const SidebarMenu = () => {
   return (
     <>
       <ul className="sidebar-menu">
-        <li className="sidebar_header header">
-           <Link href="/akoodeadmin/my-dashboard">
-            <Image
-              width={170}
-              height={65}
-              // src="/assets/images/logo.svg"
-              src={`${process.env.NEXT_PUBLIC_API_URL}public/assets/images/logo.svg`}
-              alt="logo.svg"
-            />
-            {/* <span>akoode</span> */}
+        <li className="sidebar_header header" >
+           <Link href="/akoodeadmin/my-dashboard" style={{ display: 'block', textAlign: 'center', textDecoration: 'none' }}>
+            <div style={{ 
+              width: '200px', 
+              height: '70px', 
+              // backgroundColor: 'white', 
+              // border: '2px solid #3498db', 
+              borderRadius: '5px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              margin: '0 auto',
+              position: 'relative'
+            }}>
+              {/* Try to load the logo image */}
+              <img
+                width={180}
+                height={50}
+                src="/images/logo.svg"
+                alt="Akoode Logo"
+                onError={(e) => {
+                  console.log('Logo failed to load:', e.target.src);
+                  e.target.style.display = 'none';
+                  const fallback = e.target.nextSibling;
+                  if (fallback) fallback.style.display = 'block';
+                }}
+                onLoad={() => {
+                  console.log('Logo loaded successfully');
+                  const fallback = document.querySelector('.logo-fallback');
+                  if (fallback) fallback.style.display = 'none';
+                }}
+                style={{ 
+                  maxWidth: '100%', 
+                  height: 'auto',
+                  display: 'block'
+                }}
+              />
+              {/* Fallback text logo */}
+              
+            </div>
+            
           </Link>
         </li>
         {/* End header */}
@@ -174,25 +216,7 @@ const SidebarMenu = () => {
           <span>Manage Listings</span>
           <ul>
          
-            <li
-              className={`treeview ${
-                isParentPageActive(myCountry, pathname) ? "active" : ""
-              }`}
-            >
-              <a data-bs-toggle="collapse" href="#my-country">
-                <i className="flaticon-home"></i> <span>My Country</span>
-                <i className="fa fa-angle-down pull-right"></i>
-              </a>
-              <ul className="treeview-menu collapse" id="my-country">
-                {myCountry.map((item) => (
-                  <li key={item.id}>
-                    <Link href={item.route}>
-                      <i className="fa fa-circle"></i> {item.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </li>
+            {/*
             <li
               className={`treeview ${
                 isParentPageActive(myState, pathname) ? "active" : ""
@@ -326,7 +350,7 @@ const SidebarMenu = () => {
                   </li>
                 ))}
               </ul>
-            </li>
+            </li> */}
             {/* <li
               className={`treeview ${
                 isParentPageActive(myAgent, pathname) ? "active" : ""
@@ -346,7 +370,7 @@ const SidebarMenu = () => {
                 ))}
               </ul>
             </li> */}
-            <li
+            {/* <li
               className={`treeview ${
                 isParentPageActive(mySeller, pathname) ? "active" : ""
               }`}
@@ -364,9 +388,9 @@ const SidebarMenu = () => {
                   </li>
                 ))}
               </ul>
-            </li>
+            </li> */}
             {/* end properties */}
-            <li
+            {/* <li
               className={`treeview ${
                 isParentPageActive(myProperties, pathname) ? "active" : ""
               }`}
@@ -384,30 +408,69 @@ const SidebarMenu = () => {
                   </li>
                 ))}
               </ul>
-            </li>
+            </li> */}
             {/* end properties */}
 
             <li
-              className={`treeview ${
-                isParentPageActive(myBlog, pathname) ? "active" : ""
-              }`}
-            >
-              <a data-bs-toggle="collapse" href="#my-blog">
-                <i className="flaticon-home"></i> <span>My Blog</span>
-                <i className="fa fa-angle-down pull-right"></i>
-              </a>
-              <ul className="treeview-menu collapse" id="my-blog">
-                {myBlog.map((item) => (
-                  <li key={item.id}>
-                    <Link href={item.route}>
-                      <i className="fa fa-circle"></i> {item.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </li>
-            {/* end blog */}
-            <li
+  className={`treeview ${isParentPageActive(myBlog, pathname) ? "active" : ""}`}
+  onClick={() => toggleMenu("blog")}
+  style={{ cursor: "pointer" }}
+>
+  <a data-bs-toggle="collapse" href="#my-blog">
+    <i className="flaticon-home"></i> <span>My Blog</span>
+    <i className={`fa fa-angle-${openMenu === "blog" ? "up" : "down"} pull-right`}></i>
+  </a>
+  <ul className={`treeview-menu collapse ${openMenu === "blog" ? "show" : ""}`} id="my-blog">
+    {myBlog.map((item) => (
+      <li key={item.id}>
+        <Link href={item.route}>
+          <i className="fa fa-circle"></i> {item.name}
+        </Link>
+      </li>
+    ))}
+  </ul>
+</li>
+<li
+  className={`treeview ${isParentPageActive(myServices, pathname) ? "active" : ""}`}
+  onClick={() => toggleMenu("services")}
+  style={{ cursor: "pointer" }}
+>
+  <a data-bs-toggle="collapse" href="#my-services">
+    <i className="flaticon-home"></i> <span>My Services</span>
+    <i className={`fa fa-angle-${openMenu === "services" ? "up" : "down"} pull-right`}></i>
+  </a>
+  <ul className={`treeview-menu collapse ${openMenu === "services" ? "show" : ""}`} id="my-services">
+    {myServices.map((item) => (
+      <li key={item.id}>
+        <Link href={item.route}>
+          <i className="fa fa-circle"></i> {item.name}
+        </Link>
+      </li>
+    ))}
+  </ul>
+</li>
+<li
+  className={`treeview ${isParentPageActive(myCasestudy, pathname) ? "active" : ""}`}
+  onClick={() => toggleMenu("casestudy")}
+  style={{ cursor: "pointer" }}
+>
+  <a data-bs-toggle="collapse" href="#my-casestudy">
+    <i className="flaticon-home"></i> <span>My Casestudy</span>
+    <i className={`fa fa-angle-${openMenu === "casestudy" ? "up" : "down"} pull-right`}></i>
+  </a>
+  <ul className={`treeview-menu collapse ${openMenu === "casestudy" ? "show" : ""}`} id="my-casestudy">
+    {myCasestudy.map((item) => (
+      <li key={item.id}>
+        <Link href={item.route}>
+          <i className="fa fa-circle"></i> {item.name}
+        </Link>
+      </li>
+    ))}
+  </ul>
+</li>
+
+
+            {/* <li
               className={`treeview ${
                 isParentPageActive(myTestimonial, pathname) ? "active" : ""
               }`}
@@ -425,10 +488,10 @@ const SidebarMenu = () => {
                   </li>
                 ))}
               </ul>
-            </li>
+            </li> */}
             {/* end Testimonial */}
 
-            <li
+            {/* <li
               className={`treeview ${
                 isParentPageActive(myPropertypage, pathname) ? "active" : ""
               }`}
@@ -446,18 +509,18 @@ const SidebarMenu = () => {
                   </li>
                 ))}
               </ul>
-            </li>
+            </li> */}
             {/* end Propertypage */}
             <li
-              className={`treeview ${
-                isParentPageActive(myFaq, pathname) ? "active" : ""
-              }`}
+              className={`treeview ${isParentPageActive(myFaq, pathname) ? "active" : ""}`}
+              onClick={() => toggleMenu("faq")}
+              style={{ cursor: "pointer" }}
             >
               <a data-bs-toggle="collapse" href="#my-faq">
                 <i className="flaticon-home"></i> <span>My FAQ</span>
-                <i className="fa fa-angle-down pull-right"></i>
+                <i className={`fa fa-angle-${openMenu === "faq" ? "up" : "down"} pull-right`}></i>
               </a>
-              <ul className="treeview-menu collapse" id="my-faq">
+              <ul className={`treeview-menu collapse ${openMenu === "faq" ? "show" : ""}`} id="my-faq">
                 {myFaq.map((item) => (
                   <li key={item.id}>
                     <Link href={item.route}>
@@ -467,37 +530,19 @@ const SidebarMenu = () => {
                 ))}
               </ul>
             </li>
+            
             {/* end Propertypage */}
-            {/* end Propertypage */}
+            
             <li
-              className={`treeview ${
-                isParentPageActive(myLandingpage, pathname) ? "active" : ""
-              }`}
-            >
-              <a data-bs-toggle="collapse" href="#my-myLandingpage">
-                <i className="flaticon-home"></i> <span>My Landing page</span>
-                <i className="fa fa-angle-down pull-right"></i>
-              </a>
-              <ul className="treeview-menu collapse" id="my-myLandingpage">
-                {myLandingpage.map((item) => (
-                  <li key={item.id}>
-                    <Link href={item.route}>
-                      <i className="fa fa-circle"></i> {item.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </li>
-            <li
-              className={`treeview ${
-                isParentPageActive(enquerylist, pathname) ? "active" : ""
-              }`}
+               className={`treeview ${isParentPageActive(enquerylist, pathname) ? "active" : ""}`}
+               onClick={() => toggleMenu("enquiry")}
+               style={{ cursor: "pointer" }}
             >
               <a data-bs-toggle="collapse" href="#my-enquerylist">
                 <i className="flaticon-home"></i> <span>My enquery</span>
-                <i className="fa fa-angle-down pull-right"></i>
+                <i className={`fa fa-angle-${openMenu === "enquiry" ? "up" : "down"} pull-right`}></i>
               </a>
-              <ul className="treeview-menu collapse" id="my-enquerylist">
+              <ul className={`treeview-menu collapse ${openMenu === "enquiry" ? "show" : ""}`} id="my-enquerylist">
                 {enquerylist.map((item) => (
                   <li key={item.id}>
                     <Link href={item.route}>
