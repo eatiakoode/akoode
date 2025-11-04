@@ -2,9 +2,9 @@ import dynamic from "next/dynamic";
 import Terms from "@/components/terms-conditions";
 
 export const metadata = {
-  title: 'Terms & Conditions || WeGrow',
+  title: 'Terms & Conditions || akoode',
   description:
-    'WeGrow',
+    'akoode',
 }
 
 const index = () => {

@@ -72,22 +72,288 @@ const photoUploadMiddleware = uploadPhoto.fields([
 //   limits: { fileSize: 1000000 },
 // });
 const photoUploadMiddleware1 = uploadPhoto.any(); // accept any form field name
+const processCasestudy = async (req, res, next) => {
+  const processedFilenames = [];
+  
+  if (!req.processnew ) return [];
 
-const productImgResize = async (req, res, next) => {
-  if (!req.files) return next();
-  await Promise.all(
-    req.files.map(async (file) => {
-      await sharp(file.path)
-        .resize(750, 450)
-        .toFormat("jpeg")
-        .jpeg({ quality: 90 })
-        .toFile(`public/images/products/${file.filename}`);
-      fs.unlinkSync(file.path);
-    })
-  );
-  next();
+  var file=req.processnew
+      // const filename = `process-${Date.now()}-${file.originalname}.jpeg`;
+      // const filename = file.filename;
+      
+      // const outputPath = path.join("public", "images", "casestudyprocess", filename);
+      // await sharp(file.path)
+      //   .resize(750, 450)
+      //   .toFormat("jpeg")
+      //   .jpeg({ quality: 90 })
+      //   .toFile(outputPath);
+
+      // // Optional: delete original file after processing
+      // fs.unlinkSync(file.path);
+  
+    const outputDir = path.join("public", "images", "casestudyprocess");
+    if (!fs.existsSync(outputDir)) {
+      fs.mkdirSync(outputDir, { recursive: true });
+    }
+  
+    // await Promise.all(
+      // files.map(async (file) => {
+        const ext = path.extname(file.originalname).toLowerCase();
+        const isSvg = ext === '.svg';
+  
+        const filename = file.filename;
+        const outputPath = path.join(outputDir, filename);
+  
+        
+          fs.copyFileSync(file.path, outputPath);
+          
+        fs.unlinkSync(file.path);
+  
+        processedFilenames.push({
+          index: parseInt(file.fieldname.match(/\[(\d+)]/)[1]), // extract index from fieldname
+          filename,
+          url: `public/images/casestudyprocess/${filename}`,
+        });
+      // })
+    // );
+
+      
+ 
+  return processedFilenames;
+};
+const processCasestudyGet= async (req, res, next) => {
+  const processedFilenames = [];
+  
+  if (!req.processnewget ) return [];
+
+  var file=req.processnewget
+      // const filename = `process-${Date.now()}-${file.originalname}.jpeg`;
+      // const filename = file.filename;
+      
+      // const outputPath = path.join("public", "images", "casestudyprocess", filename);
+      // await sharp(file.path)
+      //   .resize(750, 450)
+      //   .toFormat("jpeg")
+      //   .jpeg({ quality: 90 })
+      //   .toFile(outputPath);
+
+      // // Optional: delete original file after processing
+      // fs.unlinkSync(file.path);
+  
+    const outputDir = path.join("public", "images", "casestudyprocess");
+    if (!fs.existsSync(outputDir)) {
+      fs.mkdirSync(outputDir, { recursive: true });
+    }
+  
+    // await Promise.all(
+      // files.map(async (file) => {
+        const ext = path.extname(file.originalname).toLowerCase();
+        const isSvg = ext === '.svg';
+  
+        const filename = file.filename;
+        const outputPath = path.join(outputDir, filename);
+  
+        
+          fs.copyFileSync(file.path, outputPath);
+          
+        fs.unlinkSync(file.path);
+  
+        processedFilenames.push({
+          index: parseInt(file.fieldname.match(/\[(\d+)]/)[1]), // extract index from fieldname
+          filename,
+          url: `public/images/casestudyprocess/${filename}`,
+        });
+      // })
+    // );
+
+      
+ 
+  return processedFilenames;
 };
 
+
+const servicesServices = async (req, res, next) => {
+  const processedFilenames = [];
+  
+  if (!req.servicesnew ) return [];
+
+  var file=req.servicesnew
+    const outputDir = path.join("public", "images", "services");
+    if (!fs.existsSync(outputDir)) {
+      fs.mkdirSync(outputDir, { recursive: true });
+    }
+    
+        const ext = path.extname(file.originalname).toLowerCase();
+        const isSvg = ext === '.svg';
+  
+        const filename = file.filename;
+        const outputPath = path.join(outputDir, filename);
+  
+        
+          fs.copyFileSync(file.path, outputPath);
+          
+        fs.unlinkSync(file.path);
+  
+        processedFilenames.push({
+          index: parseInt(file.fieldname.match(/\[(\d+)]/)[1]), // extract index from fieldname
+          filename,
+          url: `public/images/services/${filename}`,
+        });
+  return processedFilenames;
+};
+const casestudyImgResize = async (req, res, next) => {
+  const processedFilenames = [];
+  
+    const outputDir = path.join("public", "images", "casestudys");
+    if (!fs.existsSync(outputDir)) {
+      fs.mkdirSync(outputDir, { recursive: true });
+    }
+  
+    await Promise.all(
+      req.map(async (file) => {
+        const ext = path.extname(file.originalname).toLowerCase();
+        const isSvg = ext === '.svg';
+  
+        const filename = file.filename;
+        const outputPath = path.join(outputDir, filename);
+  
+        
+          fs.copyFileSync(file.path, outputPath);
+          
+        fs.unlinkSync(file.path);
+  
+        processedFilenames.push(filename);
+      })
+    );
+  
+    return processedFilenames;
+};
+
+const servicesImgResize = async (req, res, next) => {
+  const processedFilenames = [];
+  
+    const outputDir = path.join("public", "images", "services");
+    if (!fs.existsSync(outputDir)) {
+      fs.mkdirSync(outputDir, { recursive: true });
+    }
+  
+    await Promise.all(
+      req.map(async (file) => {
+        const ext = path.extname(file.originalname).toLowerCase();
+        const isSvg = ext === '.svg';
+  
+        const filename = file.filename;
+        const outputPath = path.join(outputDir, filename);
+  
+        
+          fs.copyFileSync(file.path, outputPath);
+          
+        fs.unlinkSync(file.path);
+  
+        processedFilenames.push(filename);
+      })
+    );
+  
+    return processedFilenames;
+};
+const processServices = async (req, res, next) => {
+  const processedFilenames = [];
+  
+  if (!req.processnew ) return [];
+
+  var file=req.processnew
+      // const filename = `process-${Date.now()}-${file.originalname}.jpeg`;
+      // const filename = file.filename;
+      
+      // const outputPath = path.join("public", "images", "casestudyprocess", filename);
+      // await sharp(file.path)
+      //   .resize(750, 450)
+      //   .toFormat("jpeg")
+      //   .jpeg({ quality: 90 })
+      //   .toFile(outputPath);
+
+      // // Optional: delete original file after processing
+      // fs.unlinkSync(file.path);
+  
+    const outputDir = path.join("public", "images", "servicesprocess");
+    if (!fs.existsSync(outputDir)) {
+      fs.mkdirSync(outputDir, { recursive: true });
+    }
+  
+    // await Promise.all(
+      // files.map(async (file) => {
+        const ext = path.extname(file.originalname).toLowerCase();
+        const isSvg = ext === '.svg';
+  
+        const filename = file.filename;
+        const outputPath = path.join(outputDir, filename);
+  
+        
+          fs.copyFileSync(file.path, outputPath);
+          
+        fs.unlinkSync(file.path);
+  
+        processedFilenames.push({
+          index: parseInt(file.fieldname.match(/\[(\d+)]/)[1]), // extract index from fieldname
+          filename,
+          url: `public/images/servicesprocess/${filename}`,
+        });
+      // })
+    // );
+
+      
+ 
+  return processedFilenames;
+};
+const processServicesGet= async (req, res, next) => {
+  const processedFilenames = [];
+  
+  if (!req.processnewget ) return [];
+
+  var file=req.processnewget
+      // const filename = `process-${Date.now()}-${file.originalname}.jpeg`;
+      // const filename = file.filename;
+      
+      // const outputPath = path.join("public", "images", "casestudyprocess", filename);
+      // await sharp(file.path)
+      //   .resize(750, 450)
+      //   .toFormat("jpeg")
+      //   .jpeg({ quality: 90 })
+      //   .toFile(outputPath);
+
+      // // Optional: delete original file after processing
+      // fs.unlinkSync(file.path);
+  
+    const outputDir = path.join("public", "images", "servicesprocess");
+    if (!fs.existsSync(outputDir)) {
+      fs.mkdirSync(outputDir, { recursive: true });
+    }
+  
+    // await Promise.all(
+      // files.map(async (file) => {
+        const ext = path.extname(file.originalname).toLowerCase();
+        const isSvg = ext === '.svg';
+  
+        const filename = file.filename;
+        const outputPath = path.join(outputDir, filename);
+  
+        
+          fs.copyFileSync(file.path, outputPath);
+          
+        fs.unlinkSync(file.path);
+  
+        processedFilenames.push({
+          index: parseInt(file.fieldname.match(/\[(\d+)]/)[1]), // extract index from fieldname
+          filename,
+          url: `public/images/servicesprocess/${filename}`,
+        });
+      // })
+    // );
+
+      
+ 
+  return processedFilenames;
+};
 const blogImgResize = async (req) => {
  const processedFilenames = [];
   
@@ -583,34 +849,6 @@ const cityImgResize = async (req) => {
   return processedFilenames;
 };
 
-
-const locationImgResize = async (req) => {
-
-  if (!req.files || !Array.isArray(req.files)) return;
-
-  const processedFilenames = [];
-
-  await Promise.all(
-    req.files.map(async (file) => {
-      // const filename = `builder-${Date.now()}-${file.originalname}.jpeg`;
-      const filename =file.filename
-      const outputPath = path.join("public", "images", "location", filename);
-
-      await sharp(file.path)
-        .resize(755, 355)
-        .toFormat("jpeg")
-        .jpeg({ quality: 90 })
-        .toFile(outputPath);
-
-      fs.unlinkSync(file.path); // delete original uploaded file
-
-
-      processedFilenames.push(filename);
-    })
-  );
-
-  return processedFilenames;
-};
 const processFloorPlanImagesAdd = async (req) => {
   // const processedFilenames = [];
 
@@ -686,32 +924,6 @@ const processFloorPlanImagesAdd = async (req) => {
     return processedFilenames;
 };
 
-// const processFloorPlanImages = async (req) => {
-//   const processedFilenames = [];
-//   if (!req.planimage ) return [];
-
-  
-//   var file=req.planimage
- 
-//       const filename = `floorplan-${Date.now()}-${file.originalname}.jpeg`;
-//       const outputPath = path.join("public", "images", "propertyplan", filename);
-//       await sharp(file.path)
-//         .resize(750, 450)
-//         .toFormat("jpeg")
-//         .jpeg({ quality: 90 })
-//         .toFile(outputPath);
-
-//       // Optional: delete original file after processing
-//       // fs.unlinkSync(file.path);
-
-//       processedFilenames.push({
-//         index: parseInt(file.fieldname.match(/\[(\d+)]/)[1]), // extract index from fieldname
-//         filename,
-//         url: `public/images/propertyplan/${filename}`,
-//       });
- 
-//   return processedFilenames;
-// };
 
 const processFloorPlanImages = async (req) => {
   const processedFilenames = [];
@@ -1328,4 +1540,4 @@ const processUploadedPDFsadd = async (req) => {
 
   return processedFilenames;
 };
-module.exports = { uploadPhoto, productImgResize, blogImgResize,builderImgResize,featuredImageResize,sitePlanResize,masterPlanResize,photoUploadMiddleware,testimonialImgResize,propertySelectedImgsResize ,cityImgResize,processFloorPlanImages,photoUploadMiddleware1,processFloorPlanImagesGet,amenityImgResize,bannerImageResize,aboutImageResize,gallerySelectedImgsResize,groupFilesByFieldname,groupFilesByFieldname2,processLandingPlanGet,processLandingPlan,processUploadedPDFs,processFloorPlanImagesAdd,featuredImageResizeAdd,featuredImageResizeAddSite,propertySelectedImgsResizeadd,processUploadedPDFsadd,featuredImageResizeAddMaster,locationImgResize,categoryImgResize};
+module.exports = { uploadPhoto, blogImgResize,builderImgResize,featuredImageResize,sitePlanResize,masterPlanResize,photoUploadMiddleware,testimonialImgResize,propertySelectedImgsResize ,cityImgResize,processFloorPlanImages,photoUploadMiddleware1,processFloorPlanImagesGet,amenityImgResize,bannerImageResize,aboutImageResize,gallerySelectedImgsResize,groupFilesByFieldname,groupFilesByFieldname2,processLandingPlanGet,processLandingPlan,processUploadedPDFs,processFloorPlanImagesAdd,featuredImageResizeAdd,featuredImageResizeAddSite,propertySelectedImgsResizeadd,processUploadedPDFsadd,featuredImageResizeAddMaster,categoryImgResize,casestudyImgResize,processCasestudy,processCasestudyGet,servicesImgResize,processServices,processServicesGet,servicesServices};

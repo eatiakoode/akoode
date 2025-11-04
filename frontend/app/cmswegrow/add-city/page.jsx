@@ -2,9 +2,9 @@ import dynamic from "next/dynamic";
 import AddCity from "@/components/dashboard/add-city";
 
 export const metadata = {
-  title: 'My Properties || WeGrow',
+  title: 'My Properties || akoode',
   description:
-    'WeGrow',
+    'akoode',
 }
 
 const index = () => {

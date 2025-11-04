@@ -2,9 +2,9 @@ import dynamic from "next/dynamic";
 import AddPropertytype from "@/components/dashboard/add-propertytype";
 
 export const metadata = {
-  title: 'My Properties || WeGrow',
+  title: 'My Properties || akoode',
   description:
-    'WeGrow',
+    'akoode',
 }
 
 const index = () => {

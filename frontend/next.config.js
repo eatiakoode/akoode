@@ -15,7 +15,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'http',
-        hostname: 'api.wegrowinfraventures.com',
+        hostname: 'api.akoodeinfraventures.com',
         port: '5000',
         pathname: '/**',
       },

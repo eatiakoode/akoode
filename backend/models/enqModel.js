@@ -14,15 +14,20 @@ var enqSchema = new mongoose.Schema({
       type: String,
       required: true,
     },
-    subject: {
+    serviceid: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Service", 
+      required: true,
+  },
+    budget: {
       type: String,
       required: true,
     },
-    date: {
-      type: Date,
+    message: {
+      type: String,
       required: true,
     },
-    message: {
+    mailsource: {
       type: String,
       required: true,
     },

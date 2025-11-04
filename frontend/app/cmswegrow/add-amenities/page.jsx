@@ -2,9 +2,9 @@ import dynamic from "next/dynamic";
 import AddAmenities from "@/components/dashboard/add-amenities";
 
 export const metadata = {
-  title: 'My Properties || WeGrow',
+  title: 'My Properties || akoode',
   description:
-    'WeGrow',
+    'akoode',
 }
 
 const index = () => {

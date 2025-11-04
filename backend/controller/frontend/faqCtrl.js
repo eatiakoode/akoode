@@ -22,7 +22,15 @@ const getFaq = asyncHandler(async (req, res) => {
 });
 const getallFaq = asyncHandler(async (req, res) => {
   try {
-    const getallFaq = await Faq.find({"status":true}).lean();
+    
+    let query = {};
+    // let query ={"status":true}
+    query["status"] =true;
+    
+    if(req.query.featured){
+      query["featuredfaq"] = req.query.featured;      
+    }
+    const getallFaq = await Faq.find(query).lean();
     const message={
       "status":"success",
       "message":"Data Add sucessfully",

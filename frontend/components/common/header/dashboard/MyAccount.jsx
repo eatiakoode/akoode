@@ -13,7 +13,7 @@ const MyAccount = () => {
   const router = useRouter();
   const handleLogout = () => {
     localStorage.removeItem('user');
-    router.push('/cmswegrow');
+    router.push('/akoodeadmin');
   };
   const pathname = usePathname()
   const profileMenuItems = [

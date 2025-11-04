@@ -5,9 +5,9 @@ import { getCategoryById } from "@/api/frontend/category";
 import { getLocationById } from "@/api/frontend/location";
 
 // export const metadata = {
-//   title: 'WeGrow - Real Estate ',
+//   title: 'akoode - Real Estate ',
 //   description:
-//     'WeGrow - Real Estate ',
+//     'akoode - Real Estate ',
 // }
 export async function generateMetadata({ searchParams }) {
   let categorydata = null;
@@ -33,20 +33,20 @@ export async function generateMetadata({ searchParams }) {
     
     if (categorydata) {
       return {
-        title: categorydata.metatitle? categorydata.metatitle : 'WEGROW INFRAVENTURES - Property List',
-        description: categorydata.metadescription?.slice(0, 200) ? categorydata.metadescription :  'WEGROW INFRAVENTURES - Property List.',
+        title: categorydata.metatitle? categorydata.metatitle : 'akoode INFRAVENTURES - Property List',
+        description: categorydata.metadescription?.slice(0, 200) ? categorydata.metadescription :  'akoode INFRAVENTURES - Property List.',
         
       };
     } if (locationdata) {
       return {
-        title: locationdata.metatitle? locationdata.metatitle : 'WEGROW INFRAVENTURES - Property List',
-        description: locationdata.metadescription?.slice(0, 200) ? locationdata.metadescription :  'WEGROW INFRAVENTURES - Property List.',
+        title: locationdata.metatitle? locationdata.metatitle : 'akoode INFRAVENTURES - Property List',
+        description: locationdata.metadescription?.slice(0, 200) ? locationdata.metadescription :  'akoode INFRAVENTURES - Property List.',
         
       };
     } else {
       return {
-        title: 'WEGROW INFRAVENTURES - Property List ',
-        description:'WEGROW INFRAVENTURES - Property List ',
+        title: 'akoode INFRAVENTURES - Property List ',
+        description:'akoode INFRAVENTURES - Property List ',
       };
     }
   } catch (error) {

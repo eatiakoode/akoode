@@ -59,13 +59,14 @@ const hashtags = property.metatitle;
         ...data,
         propertyid:property._id, // ✅ manually add the date
       };
-       router.push("/thank-you");
+      //  router.push("/thank-you");
         const res = await addBrochureEnquiryAPI(payload);
+        setShowIframe(true);
         if(res.status=="success"){
           setSuccessmsg(res.message)
           setName("")
           setPhone("")
-          setShowIframe(true);
+          
         }
   
         setError({});

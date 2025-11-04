@@ -2,9 +2,9 @@ import dynamic from "next/dynamic";
 import AddPropertypage from "@/components/dashboard/add-propertypage";
 
 export const metadata = {
-  title: 'Create Listing || WeGrow',
+  title: 'Create Listing || akoode',
   description:
-    'WeGrow',
+    'akoode',
 }
 
 const index = () => {

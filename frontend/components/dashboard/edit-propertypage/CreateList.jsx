@@ -275,11 +275,11 @@ const updatePropertypage = async (e) => {
 
     const data = await updatePropertypageAPI(id,payload);
     // alert(res.message);
-    // router.push("/cmswegrow/my-propertypage");
+    // router.push("/akoodeadmin/my-propertypage");
     toast.success(data.message);
     if(data.status=="success"){
       setTimeout(() => {
-      router.push("/cmswegrow/my-propertypage");
+      router.push("/akoodeadmin/my-propertypage");
       }, 1500); 
     }
 
@@ -579,7 +579,7 @@ const updatePropertypage = async (e) => {
                   
       <div className="col-xl-12">
         <div className="my_profile_setting_input">
-          <button className="btn btn1 float-start" type="button" onClick={() => window.location.href = '/cmswegrow/my-propertypage'}>Back</button>
+          <button className="btn btn1 float-start" type="button" onClick={() => window.location.href = '/akoodeadmin/my-propertypage'}>Back</button>
           <button className="btn btn2 float-end" type="submit" >Submit</button>
         </div>
       </div>

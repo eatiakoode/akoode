@@ -2,9 +2,9 @@ import dynamic from "next/dynamic";
 import MyProfile from "@/components/dashboard/my-profile";
 
 export const metadata = {
-  title: 'My Profile || WeGrow - Real Estate ',
+  title: 'My Profile || akoode - Real Estate ',
   description:
-    'WeGrow - Real Estate ',
+    'akoode - Real Estate ',
 }
 
 const index = () => {

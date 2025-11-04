@@ -10,7 +10,7 @@ const TableData = ({enquiryList,setEnquiryList}) => {
   
     
     const deleteEnquiry = async (id) => {
-        const isConfirmed = window.confirm("Are you sure you want to delete this city?");
+        const isConfirmed = window.confirm("Are you sure you want to delete this Enquiry?");
         if (!isConfirmed) return;
     
         try {
@@ -29,9 +29,9 @@ const TableData = ({enquiryList,setEnquiryList}) => {
     "Name",
     "Email",
     "Phone",
-    "Subject",
+    "Service",
+    "Budget",
     "Message",
-    "Meeting Date Time",
     "Date",
     "Action",
   ];
@@ -43,16 +43,14 @@ const TableData = ({enquiryList,setEnquiryList}) => {
       {/* End td */}
       <td>{item.email}</td>
       <td>{item.phone}</td>
-       <td>{item.subject}</td>
+       <td>{item.serviceid?.title}</td>
+        <td>{item.budget}</td>
         <td>{item.message}</td>
-        <td> {new Date(item.date).toLocaleString('en-US', {
-            month: 'short',
-            day: '2-digit',
-            year: 'numeric',
-            hour: '2-digit',
-            minute: '2-digit',
-            hour12: true // optional, set to false for 24-hour format
-          })}</td>
+        <td> {new Date(item.createdAt).toLocaleDateString('en-US', {
+          month: 'short',
+          day: '2-digit',
+          year: 'numeric',
+        })}</td>
         <td>{new Date(item.createdAt).toLocaleDateString('en-US', {
           month: 'short',
           day: '2-digit',

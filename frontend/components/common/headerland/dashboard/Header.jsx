@@ -44,7 +44,7 @@ const Header = () => {
             src="/assets/images/header-logo2.png"
             alt="header-logo2.png"
           />
-          {/* <span>WeGrow</span> */}
+          {/* <span>akoode</span> */}
         </Link>
         {/* site logo brand */}
 

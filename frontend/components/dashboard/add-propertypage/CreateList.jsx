@@ -212,12 +212,12 @@ const addPropertypage = async (e) => {
 
 
     const data = await addPropertypageAPI(payload);
-    // router.push("/cmswegrow/my-propertypage");
+    // router.push("/akoodeadmin/my-propertypage");
     toast.success(data.message);
    
     if(data.status=="success"){
          setTimeout(() => {
-          router.push("/cmswegrow/my-propertypage");
+          router.push("/akoodeadmin/my-propertypage");
           }, 1500); 
       }
     // alert(res.message);
@@ -500,7 +500,7 @@ const addPropertypage = async (e) => {
                   
       <div className="col-xl-12">
         <div className="my_profile_setting_input">
-          <button className="btn btn1 float-start" type="button" onClick={() => window.location.href = '/cmswegrow/my-dashboard'}>Back</button>
+          <button className="btn btn1 float-start" type="button" onClick={() => window.location.href = '/akoodeadmin/my-dashboard'}>Back</button>
           <button type="submit" className="btn btn2 float-end" disabled={isSubmitting} >{isSubmitting ? 'Sending...' : 'Submit'}</button>
         </div>
       </div>

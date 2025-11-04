@@ -3,9 +3,9 @@ import LandingPage from "@/components/landing-page";
 import { getLandingpageBySlug } from "@/api/frontend/landingpage";
 
 // export const metadata = {
-//   title: 'Landing Page || WeGrow - Real Estate',
+//   title: 'Landing Page || akoode - Real Estate',
 //   description:
-//     'WeGrow - Real Estate',
+//     'akoode - Real Estate',
 // }
 export async function generateMetadata({ params }) {
   try {
@@ -15,14 +15,14 @@ export async function generateMetadata({ params }) {
 
     if (!blog) {
       return {
-        title: 'Property Not Found | WeGrow',
+        title: 'Property Not Found | akoode',
         description: 'The requested blog was not found.',
       };
     }
 
     return {
-      title: blog.metatitle? blog.metatitle : blog.title || 'Property Details | WeGrow',
-      description: blog.metadescription?.slice(0, 200) ? blog.metadescription : blog.description?.slice(0, 200)|| 'Read more on WeGrow blog.',
+      title: blog.metatitle? blog.metatitle : blog.title || 'Property Details | akoode',
+      description: blog.metadescription?.slice(0, 200) ? blog.metadescription : blog.description?.slice(0, 200)|| 'Read more on akoode blog.',
       // openGraph: {
       //   title: blog.title,
       //   description: blog.description?.slice(0, 150),

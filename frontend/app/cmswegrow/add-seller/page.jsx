@@ -2,9 +2,9 @@ import dynamic from "next/dynamic";
 import AddSeller from "@/components/dashboard/add-seller";
 
 export const metadata = {
-  title: 'My Seller || WeGrow',
+  title: 'My Seller || akoode',
   description:
-    'WeGrow',
+    'akoode',
 }
 
 const index = () => {

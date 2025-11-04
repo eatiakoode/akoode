@@ -17,7 +17,7 @@ module.exports = [
     office: "134 456 3210",
     mobile: "891 456 9874",
     fax: "342 654 1258",
-    email: "pakulla@WeGrow.com",
+    email: "pakulla@akoode.com",
     city: "New York",
   },
   {
@@ -38,7 +38,7 @@ module.exports = [
     office: "134 456 3210",
     mobile: "891 456 9874",
     fax: "342 654 1258",
-    email: "pakulla@WeGrow.com",
+    email: "pakulla@akoode.com",
     city: "Atlanta",
   },
   {
@@ -59,7 +59,7 @@ module.exports = [
     office: "134 456 3210",
     mobile: "891 456 9874",
     fax: "342 654 1258",
-    email: "pakulla@WeGrow.com",
+    email: "pakulla@akoode.com",
     city: "Florida",
   },
   {
@@ -80,7 +80,7 @@ module.exports = [
     office: "134 456 3210",
     mobile: "891 456 9874",
     fax: "342 654 1258",
-    email: "pakulla@WeGrow.com",
+    email: "pakulla@akoode.com",
     city: "Los Angeles",
   },
   {
@@ -101,7 +101,7 @@ module.exports = [
     office: "134 456 3210",
     mobile: "891 456 9874",
     fax: "342 654 1258",
-    email: "pakulla@WeGrow.com",
+    email: "pakulla@akoode.com",
     city: "Miami",
   },
   
@@ -123,7 +123,7 @@ module.exports = [
     office: "134 456 3210",
     mobile: "891 456 9874",
     fax: "342 654 1258",
-    email: "pakulla@WeGrow.com",
+    email: "pakulla@akoode.com",
     city: "Orlando",
   }
 ];

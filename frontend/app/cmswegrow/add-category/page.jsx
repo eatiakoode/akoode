@@ -2,9 +2,9 @@ import dynamic from "next/dynamic";
 import AddCategory from "@/components/dashboard/add-category";
 
 export const metadata = {
-  title: 'My Category || WeGrow',
+  title: 'My Category || akoode',
   description:
-    'WeGrow',
+    'akoode',
 }
 
 const index = () => {

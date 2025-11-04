@@ -39,7 +39,7 @@ export async function getLandingEnquiryTableData(filter) {
 
   try {
    const response = await fetch(
-        process.env.NEXT_PUBLIC_ADMIN_API_URL + "api/landingenquiry?limit="+filter.limit+"&skip="+filter.page,
+        process.env.NEXT_PUBLIC_ADMIN_API_URL + "api/landingenquiry?limit="+(filter?.limit ? filter.limit : "1000")+"&skip="+(filter?.page ? filter.page : "1"),
         {
           next: { revalidate: 60 }
         }

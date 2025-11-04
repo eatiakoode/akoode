@@ -5,9 +5,9 @@ import { getPropertyEnquiryTableData } from "@/api/propertyenquiry";
 import { getLandingEnquiryTableData } from "@/api/landingenquiry";
 import { getEnquiryTableData } from "@/api/enquiry";
 export const metadata = {
-  title: 'Dashboard || Wegrow - Real Estate React Template',
+  title: 'Dashboard || akoode - Real Estate React Template',
   description:
-    'Wegrow - Real Estate React Template',
+    'akoode - Real Estate React Template',
 }
 export default async function MyDashboardPage() {
   try {
@@ -18,7 +18,7 @@ export default async function MyDashboardPage() {
   }
     const [propertyRes, enqueryCountProperty, enqueryCountLanding, enqueryCount] = await Promise.all([
       getPropertyTableData(filter),
-      getPropertyEnquiryTableData(),
+      getPropertyEnquiryTableData(filter),
       getLandingEnquiryTableData(),
       getEnquiryTableData(),
     ]);

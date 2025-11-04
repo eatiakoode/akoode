@@ -4,7 +4,7 @@ const Seo = ({ pageTitle, font }) => (
   <>
     {/* <Head>
       <title>
-        {pageTitle && `${pageTitle} || WeGrow - Real Estate }`}
+        {pageTitle && `${pageTitle} || akoode - Real Estate }`}
       </title>
       <meta httpEquiv="x-ua-compatible" content="ie=edge" />
       <meta
@@ -13,7 +13,7 @@ const Seo = ({ pageTitle, font }) => (
       />
       <meta
         name="description"
-        content="WeGrow - Real Estate "
+        content="akoode - Real Estate "
       />
       <meta name="ibthemes" content="ATFN" />
       <meta

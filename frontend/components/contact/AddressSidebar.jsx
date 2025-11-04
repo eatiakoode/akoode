@@ -20,7 +20,7 @@ const AddressSidebar = () => {
       </div>
       <div className="content_list">
         <h5>Mail</h5>
-        <p>Info@wegrowinfraventures.com</p>
+        <p>Info@akoodeinfraventures.com</p>
       </div>
       <h5>Follow Us</h5>
       <ul className="contact_form_social_area">

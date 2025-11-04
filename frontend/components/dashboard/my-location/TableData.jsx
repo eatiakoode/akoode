@@ -74,7 +74,7 @@ const TableData = ({locationList,setLocationList}) => {
             data-placement="top"
             title="Edit"
           >
-            <button  onClick={() => router.push(`/cmswegrow/edit-location/${item._id}`)}>
+            <button  onClick={() => router.push(`/akoodeadmin/edit-location/${item._id}`)}>
               <span className="flaticon-edit"></span>
             </button>
           </li>
