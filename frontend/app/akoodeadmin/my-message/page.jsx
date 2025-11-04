@@ -1,0 +1,17 @@
+import MyMessage from "@/components/dashboard/my-message";
+
+export const metadata = {
+  title: 'My Message || akoode - Real Estate ',
+  description:
+    'akoode - Real Estate ',
+}
+
+const index = () => {
+  return (
+    <>
+      <MyMessage />
+    </>
+  );
+};
+
+export default index;

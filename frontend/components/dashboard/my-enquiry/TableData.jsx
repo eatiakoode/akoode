@@ -50,12 +50,8 @@ const TableData = ({enquiryList,setEnquiryList}) => {
           month: 'short',
           day: '2-digit',
           year: 'numeric',
-        })}</td>
-        <td>{new Date(item.createdAt).toLocaleDateString('en-US', {
-          month: 'short',
-          day: '2-digit',
-          year: 'numeric',
-        })}</td>
+          })}</td>
+        
       {/* End td */}
 
      

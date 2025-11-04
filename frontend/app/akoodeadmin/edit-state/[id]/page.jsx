@@ -1,0 +1,17 @@
+import EditState from "@/components/dashboard/edit-state";
+
+export const metadata = {
+  title: 'My Properties || akoode - Real Estate',
+  description:
+    'akoode - Real Estate',
+}
+
+const index = () => {
+  return (
+    <>
+      <EditState />
+    </>
+  );
+};
+
+export default index;

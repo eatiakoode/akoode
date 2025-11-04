@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter, useParams } from "next/navigation";
 import { getFaqById, updateFaqAPI } from "../../../api/faq";
-import { getPropertyTableData } from "../../../api/property";
+import { getServicesTableData } from "../../../api/services";
 import { toast } from 'react-toastify';
 
 const CreateList = () => {
@@ -16,8 +16,8 @@ const CreateList = () => {
     const [loading, setLoading] = useState(true);
     const [description, setDescription] = useState("");
     const [error, setError] = useState("");  
-    const [properties, setProperties] = useState([]);
-    const [selectedProperty, setSelectedProperty] = useState("");
+    const [services, setServices] = useState([]);
+    const [selectedService, setSelectedService] = useState("");
     useEffect(() => {
       if (!id) return;      
       const fetchFaq = async () => {
@@ -28,7 +28,7 @@ const CreateList = () => {
           setTitle(data.data.title)
           setStatus(data.data.status)
           setDescription(data.data.description)
-          setSelectedProperty(data.data.propertyid)
+          setSelectedService(data.data.serviceid)
           
         } catch (error) {
           console.error("Error fetching Faq:", error);
@@ -38,22 +38,22 @@ const CreateList = () => {
       };
   
       fetchFaq();
-      const fetchProperties = async () => {
+      const fetchServices = async () => {
               try {
                  const filter = {
     limit: 1000,
     page:  1
   }
-                const response = await getPropertyTableData(filter);
+                const response = await getServicesTableData(filter);
                 
         
-                setProperties(response?.items || []);
+                setServices(response?.items || []);
               } catch (err) {
-                console.error("Error fetching property:", err);
+                console.error("Error fetching service:", err);
               }
             };
         
-            fetchProperties();
+            fetchServices();
     }, [id]);
   
     const handleSubmit = async (e) => {
@@ -62,7 +62,7 @@ const CreateList = () => {
         const formData = {
           "title": title,
           "description": description,
-          "propertyid":selectedProperty};
+          "serviceid":selectedService};
         const data =await updateFaqAPI(id, formData);
         // alert("Faq updated successfully!");
         // router.push("/akoodeadmin/my-faq");
@@ -102,19 +102,19 @@ const CreateList = () => {
       {/* End .col */}
       <div className="col-lg-6 col-xl-6">
           <div className="my_profile_setting_input ui_kit_select_search form-group">
-            <label htmlFor="propertySelect">Select Property</label>
+            <label htmlFor="serviceSelect">Select Service</label>
             <select
-              id="propertySelect"
+              id="serviceSelect"
               className="selectpicker form-select"
-              value={selectedProperty}
-              onChange={(e) => setSelectedProperty(e.target.value)} 
+              value={selectedService}
+              onChange={(e) => setSelectedService(e.target.value)} 
               data-live-search="true"
               data-width="100%"
             >
-              <option value="">-- Select Property --</option>
-              {properties.map((property) => (
-                <option key={property._id} value={property._id}>
-                  {property.title}
+              <option value="">-- Select Service --</option>
+              {services.map((service) => (
+                <option key={service._id} value={service._id}>
+                  {service.title}
                 </option>
               ))}
             </select>

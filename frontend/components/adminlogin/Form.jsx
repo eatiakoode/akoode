@@ -4,10 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { addAdminLoginAPI } from "../../api/adminlogin";
 import { useRouter, useParams } from "next/navigation";
-// import { toast } from 'react-toastify';
-// import Modal from '../components/Modal';
-// npm install react-toastify
-import { toast, ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 
 const Form = () => {
@@ -121,7 +118,6 @@ const Form = () => {
       <button type="submit" className="btn btn-log w-100 btn-thm">
         Log In
       </button>
-      <ToastContainer />
      
       {/* login button */}
 

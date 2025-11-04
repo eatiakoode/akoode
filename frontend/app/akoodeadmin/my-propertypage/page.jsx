@@ -1,0 +1,17 @@
+import MyPropertypage from "@/components/dashboard/my-propertypage";
+
+export const metadata = {
+  title: 'My Properties || akoode - Real Estate ',
+  description:
+    'akoode - Real Estate ',
+}
+
+const index = () => {
+  return (
+    <>
+      <MyPropertypage />
+    </>
+  );
+};
+
+export default index;
