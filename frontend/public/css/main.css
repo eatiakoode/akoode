@@ -3448,6 +3448,7 @@ transition: all 0.4s;
   top: 0;
   left: -70px;
   z-index: -1;
+  background-color: #ffffff;
   /* transform: rotate(180deg); */
 }
 .shape-image img{width: 100%;}
@@ -6105,6 +6106,7 @@ transition: all 0.4s;
 .vl-blog-4-area-inner {
   position: relative;
   z-index: 1;
+  background-color: #ffffff;
 }
 .vl-blog-4-area-inner .elements39 {
   position: absolute;
@@ -11507,6 +11509,7 @@ top: auto;
 .faq5-section-area {
   position: relative;
   z-index: 1;
+  background-color: #ffffff;
   /* margin-top: -336px; */
 }
 .faq5-section-area .row{
@@ -13281,7 +13284,7 @@ top: auto;
 .case1-section-area {
   position: relative;
   z-index: 1;
-  /* background: #EFF1FF; */
+  background: #EFF1FF;
 }
 .case1-section-area .case-works-section-area {
   position: relative;
@@ -14392,4 +14395,192 @@ top: auto;
   transition: width 0.4s ease;
 }
 
+.text-center{
+  color: #000000 !important;
+}
+
 /*============= CASE STUDY CSS AREA ENDS ===============*//*# sourceMappingURL=main.css.map */
+/*============= CLIENT-START ===============*/
+.clients-section {
+      background-color: #f8f9fa;
+      padding: 80px 0;
+    }
+
+    /* Left Column */
+    .clients-content h2 {
+      font-weight: 700;
+      font-size: 2.2rem;
+      color: #212529;
+      margin-bottom: 1.2rem;
+    }
+
+    .clients-content p {
+      color: #555;
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    /* Button */
+    .clients-btn {
+      display: inline-flex;
+      align-items: center;
+      font-weight: 500;
+      font-size: 1rem;
+      color: #0d6efd;
+      text-decoration: none;
+      border: 2px solid #0d6efd;
+      border-radius: 50px;
+      padding: 10px 20px;
+      transition: all 0.3s ease;
+    }
+
+    .clients-btn:hover {
+      background-color: #0d6efd;
+      color: #fff;
+    }
+
+    .clients-btn i {
+      margin-left: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .clients-btn:hover i {
+      transform: translateX(4px);
+    }
+
+    /* Right Logos Area */
+    .clients-logos {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .clients-logos img {
+      max-width: 180px;
+      opacity: 0.8;
+      filter: grayscale(100%);
+      background-color: var(--ztc-bg-bg-1);
+      padding: 10px;
+      border:1px dashed rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .clients-logos img:hover {
+      opacity: 1;
+      filter: grayscale(0);
+      transform: scale(1.05);
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .clients-content {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      .clients-btn {
+        margin: 0 auto;
+      }
+    }
+/*============= CLIENT-END ===============*/
+/*============= AWARD-START ===============*/
+.awards-section {
+      background: var(--ztc-text-text-2);
+      color: #fff;
+      padding: 80px 0;
+    }
+
+    /* Headings & Text */
+    .awards-content h2 {
+      font-weight: 700;
+      font-size: 2.2rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .awards-content p {
+      font-size: 1rem;
+      color: #dcdcdc;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    /* Button */
+    .awards-btn {
+      display: inline-flex;
+      align-items: center;
+      font-weight: 500;
+      font-size: 1rem;
+      color: #fff;
+      text-decoration: none;
+      border: 2px solid #fcd535;
+      border-radius: 50px;
+      padding: 10px 20px;
+      transition: all 0.3s ease;
+    }
+
+    .awards-btn:hover {
+      background-color: #fcd535;
+      color: #0d1b3d;
+      text-decoration: none;
+    }
+
+    .awards-btn i {
+      margin-left: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .awards-btn:hover i {
+      transform: translateX(4px);
+    }
+
+    /* Logos Area */
+    .awards-logos>div {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+    }
+    .awards-logos>div:last-child{
+      padding-top: 20px;
+    }
+
+    .awards-logos img {
+      max-width: 150px;
+      opacity: 1;
+      filter: none;
+      transition: all 0.3s ease;
+    }
+    .awards-logos div:first-of-type img {
+      border-radius: 10px;
+    }
+       
+
+    .awards-logos img:hover {
+      opacity: 1;
+      filter: brightness(1) invert(0);
+      transform: scale(1.05);
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 992px) {
+      .awards-content {
+        text-align: center;
+        margin-top: 40px;
+      }
+      .awards-btn {
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .awards-logos {
+        gap: 25px;
+      }
+      .awards-logos img {
+        max-width: 90px;
+      }
+    }
+/*============= AWARD-END ===============*/

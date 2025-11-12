@@ -3,6 +3,19 @@
 // const path = require("path");
 // const fs = require("fs");
 var nodemailer = require('nodemailer');
+
+const createTransporter = () =>
+  nodemailer.createTransport({
+    service: 'gmail',
+    // host: process.env.SMTP_HOST,
+    // port: Number(process.env.SMTP_PORT) || 587,
+    // secure: String(process.env.SMTP_SECURE).toLowerCase() === 'true',
+    auth: {
+      user: process.env.SMTP_EMAIL,
+      pass: process.env.SMTP_PASSWORD,
+    },
+  });
+
 const enqueryPropertyMail =  async (req, res) => {
   const { name, email,phone,budget, message,propertyname,buildername,builderemail } = req.body;
 
@@ -33,15 +46,7 @@ const enqueryPropertyMail =  async (req, res) => {
     //   logger: true,            // log to console
     //   debug: true,             // include SMTP traffic in logs
     // });
-    let transporter = nodemailer.createTransport({
-        host: "smtp.mailgun.org",
-        port: 2525,
-        secure: false, // TLS will be used automatically
-        auth: {
-          user: "smtp@akoodeinfraventures.com",
-          pass: "DXK!s+c",
-        }
-      });
+    const transporter = createTransporter();
 let messagehtml =`<head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <style>
@@ -68,7 +73,7 @@ let messagehtml =`<head>
                         </td>
                         <td width="50%" style="width: 80px;" align="center">
                             <a href="${process.env.SITE_URL}" target="_blank">
-                                <img src="https://akoodeinfraventures.com/assets/images/header-logo2.png" alt="akoode INFRAVENTURES PRIVATE LIMITED" style="max-width: 100%;height: auto;display: block;">
+                                <img src="assets/images/logo.svg" alt="Akoode Technologies" style="max-width: 100%;height: auto;display: block;">
                             </a>
                         </td>
                         <td width="25%" style="width: 250px;">
@@ -101,7 +106,7 @@ let messagehtml =`<head>
                 <table width="1000" cellspacing="15" cellpaddig="0">
                     <tr>
                         <td align="left" style=" text-transform: uppercase; font-family:verdana; color: #5b5b5b; font-size: 20px; font-weight: 700;">
-                            Dear akoode INFRAVENTURES PRIVATE LIMITED
+                            Dear Akoode Technologies
                         </td>
                     </tr>
                     
@@ -208,15 +213,7 @@ const enqueryPropertyMailSeller =  async (req, res) => {
     //     pass: 'dqixhlddcbwsbgjx',
     //   },
     // });
-     let transporter = nodemailer.createTransport({
-        host: "smtp.mailgun.org",
-        port: 2525,
-        secure: false, // TLS will be used automatically
-        auth: {
-          user: "smtp@akoodeinfraventures.com",
-          pass: "DXK!s+c",
-        }
-      });
+    const transporter = createTransporter();
 
     // const transporter = nodemailer.createTransport({
     //   host: 'smtp.gmail.com',
@@ -255,7 +252,7 @@ let messagehtml =`<head>
                         </td>
                         <td width="50%" style="width: 80px;" align="center">
                             <a href="${process.env.SITE_URL}" target="_blank">
-                                <img src="https://akoodeinfraventures.com/assets/images/header-logo2.png" alt="akoode INFRAVENTURES PRIVATE LIMITED" style="max-width: 100%;height: auto;display: block;">
+                                <img src="assets/images/logo.svg" alt="Akoode Technologies" style="max-width: 100%;height: auto;display: block;">
                             </a>
                         </td>
                         <td width="25%" style="width: 250px;">
@@ -395,15 +392,7 @@ const enqueryContactMail = async (req, res) => {
     //     pass: process.env.SMTP_PASSWORD,
     //   },
     // });
-    let transporter = nodemailer.createTransport({
-        host: "smtp.mailgun.org",
-        port: 2525,
-        secure: false, // TLS will be used automatically
-        auth: {
-          user: "smtp@akoodeinfraventures.com",
-          pass: "DXK!s+c",
-        }
-      });
+    const transporter = createTransporter();
 
     // 2. Prepare email content
     // const mailOptions = {
@@ -447,7 +436,7 @@ const enqueryContactMail = async (req, res) => {
                         </td>
                         <td width="50%" style="width: 80px;" align="center">
                             <a href="${process.env.SITE_URL}" target="_blank">
-                                <img src="https://akoodeinfraventures.com/assets/images/header-logo2.png" alt="akoode INFRAVENTURES PRIVATE LIMITED" style="max-width: 100%;height: auto;display: block;">
+                                <img src="${process.env.SITE_URL}assets/images/logo.svg" alt="Akoode Technologies" style="max-width: 100%;height: auto;display: block;">
                             </a>
                         </td>
                         <td width="25%" style="width: 250px;">
@@ -480,7 +469,7 @@ const enqueryContactMail = async (req, res) => {
                 <table width="1000" cellspacing="15" cellpaddig="0">
                     <tr>
                         <td align="left" style=" text-transform: uppercase; font-family:verdana; color: #5b5b5b; font-size: 20px; font-weight: 700;">
-                            Dear akoode INFRAVENTURES PRIVATE LIMITED
+                            Dear Akoode Technologies
                         </td>
                     </tr>
                     
@@ -527,7 +516,7 @@ const enqueryContactMail = async (req, res) => {
                     </tr>
                     <tr>
                         <td align="center" style=" text-transform: uppercase; font-family:verdana; color: #5b5b5b; font-size: 28px; font-weight: 700;">
-                         Buying a property is more than a transaction
+                         Thank you for reaching out to Akoode Technologies
                         </td>
                     </tr>
                 </table>
@@ -565,15 +554,7 @@ const enqueryBrochureMail = async (req, res) => {
     //     pass: process.env.SMTP_PASSWORD,
     //   },
     // });
-    let transporter = nodemailer.createTransport({
-        host: "smtp.mailgun.org",
-        port: 2525,
-        secure: false, // TLS will be used automatically
-        auth: {
-          user: "smtp@akoodeinfraventures.com",
-          pass: "DXK!s+c",
-        }
-      });
+    const transporter = createTransporter();
     // let transporter = nodemailer.createTransport({
     //     host: "smtp.mailgun.org",
     //     port: 2525,
@@ -626,7 +607,7 @@ const enqueryBrochureMail = async (req, res) => {
                         </td>
                         <td width="50%" style="width: 80px;" align="center">
                             <a href="${process.env.SITE_URL}" target="_blank">
-                                <img src="https://akoodeinfraventures.com/assets/images/header-logo2.png" alt="akoode INFRAVENTURES PRIVATE LIMITED" style="max-width: 100%;height: auto;display: block;">
+                                <img src="assets/images/logo.svg" alt="Akoode Technologies" style="max-width: 100%;height: auto;display: block;">
                             </a>
                         </td>
                         <td width="25%" style="width: 250px;">
@@ -659,7 +640,7 @@ const enqueryBrochureMail = async (req, res) => {
                 <table width="1000" cellspacing="15" cellpaddig="0">
                     <tr>
                         <td align="left" style=" text-transform: uppercase; font-family:verdana; color: #5b5b5b; font-size: 20px; font-weight: 700;">
-                            Dear akoode INFRAVENTURES PRIVATE LIMITED
+                            Dear Akoode Technologies
                         </td>
                     </tr>
                     
@@ -737,15 +718,7 @@ const enquerySubscribeMail = async (req, res) => {
     //   },
     // });
 
-    let transporter = nodemailer.createTransport({
-        host: "smtp.mailgun.org",
-        port: 2525,
-        secure: false, // TLS will be used automatically
-        auth: {
-          user: "smtp@akoodeinfraventures.com",
-          pass: "DXK!s+c",
-        }
-      });
+    const transporter = createTransporter();
 
     let messagehtml =`<head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -773,7 +746,7 @@ const enquerySubscribeMail = async (req, res) => {
                         </td>
                         <td width="50%" style="width: 80px;" align="center">
                             <a href="${process.env.SITE_URL}" target="_blank">
-                                <img src="https://akoodeinfraventures.com/assets/images/header-logo2.png" alt="akoode INFRAVENTURES PRIVATE LIMITED" style="max-width: 100%;height: auto;display: block;">
+                                <img src="assets/images/logo.svg" alt="Akoode Technologies" style="max-width: 100%;height: auto;display: block;">
                             </a>
                         </td>
                         <td width="25%" style="width: 250px;">
@@ -806,7 +779,7 @@ const enquerySubscribeMail = async (req, res) => {
                 <table width="1000" cellspacing="15" cellpaddig="0">
                     <tr>
                         <td align="left" style=" text-transform: uppercase; font-family:verdana; color: #5b5b5b; font-size: 20px; font-weight: 700;">
-                            Dear akoode INFRAVENTURES PRIVATE LIMITED
+                            Dear Akoode Technologies
                         </td>
                     </tr>
                     
@@ -873,15 +846,7 @@ const enqueryLandingMail = async (req, res) => {
     //     pass: process.env.SMTP_PASSWORD,
     //   },
     // });
-    let transporter = nodemailer.createTransport({
-        host: "smtp.mailgun.org",
-        port: 2525,
-        secure: false, // TLS will be used automatically
-        auth: {
-          user: "smtp@akoodeinfraventures.com",
-          pass: "DXK!s+c",
-        }
-      });
+    const transporter = createTransporter();
 
     let messagehtml =`<head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -909,7 +874,7 @@ const enqueryLandingMail = async (req, res) => {
                         </td>
                         <td width="50%" style="width: 80px;" align="center">
                             <a href="${process.env.SITE_URL}" target="_blank">
-                                <img src="https://akoodeinfraventures.com/assets/images/header-logo2.png" alt="akoode INFRAVENTURES PRIVATE LIMITED" style="max-width: 100%;height: auto;display: block;">
+                                <img src="assets/images/logo.svg" alt="Akoode Technologies" style="max-width: 100%;height: auto;display: block;">
                             </a>
                         </td>
                         <td width="25%" style="width: 250px;">
@@ -942,7 +907,7 @@ const enqueryLandingMail = async (req, res) => {
                 <table width="1000" cellspacing="15" cellpaddig="0">
                     <tr>
                         <td align="left" style=" text-transform: uppercase; font-family:verdana; color: #5b5b5b; font-size: 20px; font-weight: 700;">
-                            Dear akoode INFRAVENTURES PRIVATE LIMITED
+                            Dear Akoode Technologies
                         </td>
                     </tr>
                     

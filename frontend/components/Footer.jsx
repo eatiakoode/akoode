@@ -104,9 +104,9 @@ export default function Footer() {
               <ul className="service-wiget">
                 <li><a href="#">Artificial Intelligence</a></li>
                 <li><a href="#">Digital Transformation</a></li>
-                <li><a href="/software-development">Software Development</a></li>
+                <li><a href="/services/software-development">Software Development</a></li>
                 <li><a href="#">Mobile App Development</a></li>
-                <li><a href="/web-development-technology">Web Development</a></li>
+                <li><a href="/services/web-development-technology">Web Development</a></li>
                 <li><a href="#">eCommerce Solution</a></li>
                 <li><a href="#">IOT Development</a></li>
                 <li><a href="#">BigData & Data Analytics</a></li>

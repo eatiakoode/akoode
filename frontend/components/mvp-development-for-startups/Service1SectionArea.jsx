@@ -7,7 +7,7 @@ export default function Service1SectionArea() {
       icon: "/images/software-development/custom-component.svg",
       title: "Custom MVP Development",
       description: "We design and build Minimum Viable Products tailored to your startup's idea and target audience. Our team focuses on core features, rapid development, and scalable architecture to validate concepts quickly. By delivering a functional MVP, we help startups test market fit, gather feedback, and reduce risks before investing in full-scale product development.",
-      link: "/deep-learning-and-data-science",
+      link: "/services/deep-learning-and-data-science",
       number: "01"
     },
     {
@@ -15,7 +15,7 @@ export default function Service1SectionArea() {
       icon: "/images/software-development/ui-ux.svg",
       title: "MVP UI/UX Design",
       description: "We create intuitive and engaging user interfaces for MVPs, ensuring an exceptional user experience with minimal features. Our design approach prioritizes usability, responsiveness, and simplicity, enabling startups to attract early adopters, validate assumptions, and maximize user engagement without overcomplicating the product.",
-      link: "/integrated-intelligence-services",
+      link: "/services/integrated-intelligence-services",
       number: "02"
     },
     {
@@ -23,7 +23,7 @@ export default function Service1SectionArea() {
       icon: "/images/mvp/prototype.svg",
       title: "Prototype Development",
       description: "We build interactive prototypes to visualize your startup idea before full development. Prototypes help demonstrate functionality, gather early feedback, and guide feature prioritization. By testing concepts early, startups can refine product strategy, identify potential issues, and improve the chances of market success while saving time and development costs.",
-      link: "/computer-vision-technology",
+      link: "/services/computer-vision-technology",
       number: "03"
     },
     {
@@ -31,7 +31,7 @@ export default function Service1SectionArea() {
       icon: "/images/mvp/deployment.svg",
       title: "Rapid MVP Deployment",
       description: "We deploy MVPs quickly using agile methodologies and cloud platforms, ensuring startups can launch in the market faster. Our approach prioritizes speed without compromising quality, enabling early testing, user feedback collection, and iterative improvements that accelerate product evolution and support business growth.",
-      link: "/3d-and-metaverse-based",
+      link: "/services/3d-and-metaverse-based",
       number: "04"
     },
     {
@@ -39,7 +39,7 @@ export default function Service1SectionArea() {
       icon: "/images/enterprise-application-development/integration.svg",
       title: "MVP Integration Services",
       description: "We integrate MVPs with essential third-party tools such as payment gateways, analytics, and CRM systems. This ensures a functional, connected product ecosystem, enabling startups to operate efficiently, monitor user behavior, and optimize workflows while keeping the initial development lean and cost-effective.",
-      link: "/pioneering-generative-ai-integration",
+      link: "/services/pioneering-generative-ai-integration",
       number: "05"
     },
     {
@@ -47,7 +47,7 @@ export default function Service1SectionArea() {
       icon: "/images/enterprise-application-development/support.svg",
       title: "Post-MVP Support & Iteration",
       description: "We provide continuous support, monitoring, and iterative improvements for MVPs after launch. By analyzing user feedback, fixing issues, and optimizing performance, we help startups refine their products, enhance usability, and prepare for full-scale development while minimizing risks and ensuring long-term growth.",
-      link: "/pioneering-generative-ai-integration",
+      link: "/services/pioneering-generative-ai-integration",
       number: "06"
     }
   ]

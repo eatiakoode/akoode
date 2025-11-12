@@ -1,98 +1,112 @@
-import { useEffect } from 'react'
+// import { useEffect } from 'react'
 import libraryLoader from '../../utils/libraryLoader'
 
 export default function TestimonialSection() {
-  useEffect(() => {
-    const initializeSliders = () => {
-      // Initialize testimonial slider (Slick)
-      if (window.$.fn.slick) {
-        const sliderElement = $('.slider-galeria');
+  // useEffect(() => {
+  //   const initializeSliders = () => {
+  //     // Initialize testimonial slider (Slick)
+  //     if (window.$.fn.slick) {
+  //       const sliderElement = $('.slider-galeria');
         
-        if (sliderElement.length > 0) {
-          // Destroy existing slider if it exists
-          if (sliderElement.hasClass('slick-initialized')) {
-            sliderElement.slick('unslick');
-          }
+  //       if (sliderElement.length > 0) {
+  //         // Destroy existing slider if it exists
+  //         if (sliderElement.hasClass('slick-initialized')) {
+  //           sliderElement.slick('unslick');
+  //         }
           
-          sliderElement.slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-            autoplay: true,
-            autoplaySpeed: 2000,
-            fade: true,
-            cssEase: 'linear'
-          });
-        }
-      }
+  //         sliderElement.slick({
+  //           slidesToShow: 1,
+  //           slidesToScroll: 1,
+  //           arrows: false,
+  //           autoplay: true,
+  //           autoplaySpeed: 2000,
+  //           fade: true,
+  //           cssEase: 'linear'
+  //         });
+  //       }
+  //     }
 
-      // Initialize video gallery (Owl Carousel)
-      if (window.$.fn.owlCarousel) {
-        const videoElement = $('.video-galeria');
+  //     // Initialize video gallery (Owl Carousel)
+  //     if (window.$.fn.owlCarousel) {
+  //       const videoElement = $('.video-galeria');
         
-        if (videoElement.length > 0) {
-          // Destroy existing carousel if it exists
-          if (videoElement.hasClass('owl-loaded')) {
-            videoElement.trigger('destroy.owl.carousel');
-          }
+  //       if (videoElement.length > 0) {
+  //         // Destroy existing carousel if it exists
+  //         if (videoElement.hasClass('owl-loaded')) {
+  //           videoElement.trigger('destroy.owl.carousel');
+  //         }
           
-          videoElement.owlCarousel({
-            loop: true,
-            margin: 10,
-            nav: true,
-            dots: false,
-            items: 1,
-            navText: ["<i class='fa-solid fa-angle-left'></i>", "<i class='fa-solid fa-angle-right'></i>"],
-            autoplay: false,
-            smartSpeed: 3000,
-            autoplayTimeout: 3000,
-            responsiveClass: true,
-            responsive: {
-              0:{
-                items:1,                
-              },
-              600:{
-                items:1,
-              },
-              1024:{
-                items:2,
-              },
-              1280:{
-                items:3,
-              }
-            }
-          });
-        }
-      }
+  //         videoElement.owlCarousel({
+  //           loop: true,
+  //           margin: 10,
+  //           nav: true,
+  //           dots: false,
+  //           items: 1,
+  //           navText: ["<i class='fa-solid fa-angle-left'></i>", "<i class='fa-solid fa-angle-right'></i>"],
+  //           autoplay: false,
+  //           smartSpeed: 3000,
+  //           autoplayTimeout: 3000,
+  //           responsiveClass: true,
+  //           responsive: {
+  //             0:{
+  //               items:1,                
+  //             },
+  //             600:{
+  //               items:1,
+  //             },
+  //             1024:{
+  //               items:2,
+  //             },
+  //             1280:{
+  //               items:3,
+  //             }
+  //           }
+  //         });
+  //       }
+  //     }
 
-      // Initialize video popup (Magnific Popup)
-      if (window.$.fn.magnificPopup) {
-        $(".popup-youtube").magnificPopup({
-          type: "iframe",
-        });
-      }
-    };
+  //     // Initialize video popup (Magnific Popup)
+  //     if (window.$.fn.magnificPopup) {
+  //       $(".popup-youtube").magnificPopup({
+  //         type: "iframe",
+  //       });
+  //     }
+  //   };
 
-    // Use the library loader for better performance
-    libraryLoader.initializeComponent(
-      'TestimonialSection',
-      ['jquery', 'slick', 'owlCarousel', 'magnificPopup'],
-      initializeSliders
-    );
+  //   // Use the library loader for better performance
+  //   libraryLoader.initializeComponent(
+  //     'TestimonialSection',
+  //     ['jquery', 'slick', 'owlCarousel', 'magnificPopup'],
+  //     initializeSliders
+  //   );
 
-    // Cleanup function
-    return () => {
-      if (typeof window !== 'undefined' && window.$) {
-        // Destroy sliders on cleanup
-        if (window.$.fn.slick) {
-          $('.slider-galeria').slick('unslick');
-        }
-        if (window.$.fn.owlCarousel) {
-          $('.video-galeria').trigger('destroy.owl.carousel');
-        }
-      }
-    };
-  }, []);
+  //   // Cleanup function
+  //   return () => {
+  //     if (typeof window !== 'undefined' && window.$) {
+  //       // Destroy sliders on cleanup
+  //       if (window.$.fn.slick) {
+  //         const sliderElement = $('.slider-galeria');
+  //         if (sliderElement.length > 0 && sliderElement.hasClass('slick-initialized')) {
+  //           try {
+  //             sliderElement.slick('unslick');
+  //           } catch (error) {
+  //             console.error('Error destroying slick slider:', error);
+  //           }
+  //         }
+  //       }
+  //       if (window.$.fn.owlCarousel) {
+  //         const videoElement = $('.video-galeria');
+  //         if (videoElement.length > 0 && videoElement.hasClass('owl-loaded')) {
+  //           try {
+  //             videoElement.trigger('destroy.owl.carousel');
+  //           } catch (error) {
+  //             console.error('Error destroying owl carousel:', error);
+  //           }
+  //         }
+  //       }
+  //     }
+  //   };
+  // }, []);
 
   return (
     <div className="testimonial1-section-area sp1">

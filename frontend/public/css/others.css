@@ -219,6 +219,7 @@ body{
     margin-bottom: 20px;
     position: relative;
     padding-left: 50px;
+    color: #000000;
 }
 .technology1-section-area.case1-section-area .logo-icon-listing h2:before{
     position: absolute;
@@ -251,6 +252,7 @@ body{
 .technology1-section-area.case1-section-area .logo-icon-listing ul li span{
     font-weight: 600;
     font-size: 16px;
+    color: #000000;
 }
 
 /**********************showcase********************************/
@@ -1078,4 +1080,8 @@ h2.text-anime-style-3{font-size: 24px;line-height: 32px;}
     font-style: normal;
     font-weight: var(--ztc-weight-medium);
     line-height: 26px;
+}
+
+.Toastify{
+  padding: 0px!important;
 }

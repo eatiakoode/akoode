@@ -1,8 +1,8 @@
 'use client'
 import Categories from "./Categories";
 import FeaturedListings from "../listing/FeaturedListings";
-import SearchBox from "./SearchBox";
-import TagList from "./TagList";
+// import SearchBox from "./SearchBox";
+// import TagList from "./TagList";
 import { countPropertiesByType } from "@/api/frontend/propertytype";
 import { getPropertyFeatureData } from "@/api/frontend/property";
 

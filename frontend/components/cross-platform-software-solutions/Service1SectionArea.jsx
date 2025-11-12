@@ -7,7 +7,7 @@ export default function Service1SectionArea() {
       icon: "/images/software-development/custom-component.svg",
       title: "Custom Cross-Platform App Development",
       description: "We design and build cross-platform applications that run seamlessly on multiple devices and operating systems. Our solutions focus on performance, scalability, and user experience, enabling businesses to reach a wider audience, reduce development costs, and maintain consistent functionality across web, mobile, and desktop platforms.",
-      link: "/deep-learning-and-data-science",
+      link: "/services/deep-learning-and-data-science",
       number: "01"
     },
     {
@@ -15,7 +15,7 @@ export default function Service1SectionArea() {
       icon: "/images/software-development/ui-ux.svg",
       title: "UI/UX Design for Cross-Platform Apps",
       description: "We create intuitive and responsive user interfaces for cross-platform applications. By prioritizing usability, consistency, and visual appeal, we ensure a seamless user experience across all devices, enhancing engagement, adoption, and overall satisfaction.",
-      link: "/integrated-intelligence-services",
+      link: "/services/integrated-intelligence-services",
       number: "02"
     },
     {
@@ -23,7 +23,7 @@ export default function Service1SectionArea() {
       icon: "/images/mvp/hybrid.svg",
       title: "Hybrid & Cross-Platform Frameworks",
       description: "We leverage modern frameworks like React Native, Flutter, and Xamarin to build high-performance cross-platform applications. These frameworks enable faster development, cost efficiency, and code reusability while maintaining native-like performance and user experience across platforms.",
-      link: "/computer-vision-technology",
+      link: "/services/computer-vision-technology",
       number: "03"
     },
     {
@@ -31,7 +31,7 @@ export default function Service1SectionArea() {
       icon: "/images/enterprise-application-development/integration.svg",
       title: "Third-Party Integrations",
       description: "Our cross-platform solutions seamlessly integrate with third-party tools such as payment gateways, analytics, CRMs, and cloud services. This ensures smooth data flow, interoperability, and enhanced functionality, allowing businesses to operate efficiently and provide a unified experience to users.",
-      link: "/3d-and-metaverse-based",
+      link: "/services/3d-and-metaverse-based",
       number: "04"
     },
     {
@@ -39,7 +39,7 @@ export default function Service1SectionArea() {
       icon: "/images/software-development/cloud.svg",
       title: "Cloud-Based Deployment",
       description: "We deploy cross-platform applications on reliable cloud platforms like AWS, Azure, and Google Cloud. Our approach ensures scalability, high availability, real-time updates, and secure access, providing businesses with cost-effective, reliable, and robust software solutions.",
-      link: "/pioneering-generative-ai-integration",
+      link: "/services/pioneering-generative-ai-integration",
       number: "05"
     },
     {
@@ -47,7 +47,7 @@ export default function Service1SectionArea() {
       icon: "/images/software-development/maintenance.svg",
       title: "Maintenance & Support",
       description: "We provide continuous support and maintenance for cross-platform applications. Our team ensures bug fixes, performance optimization, security updates, and feature enhancements, helping businesses maintain consistent functionality, reliability, and a seamless user experience across all platforms.",
-      link: "/pioneering-generative-ai-integration",
+      link: "/services/pioneering-generative-ai-integration",
       number: "06"
     }
   ]

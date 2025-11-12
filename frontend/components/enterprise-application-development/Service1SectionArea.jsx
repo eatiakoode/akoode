@@ -7,7 +7,7 @@ export default function Service1SectionArea() {
       icon: "/images/software-development/custom-component.svg",
       title: "Custom Enterprise Software Development",
       description: "We design and develop enterprise-grade applications tailored to your business needs. From concept to deployment, our solutions ensure seamless integration with existing systems, scalability to support growth, and a strong focus on security. Whether it's a workflow management platform, CRM, ERP, or industry-specific application, we deliver software that simplifies complex processes and drives operational excellence.",
-      link: "/deep-learning-and-data-science",
+      link: "/services/deep-learning-and-data-science",
       number: "01"
     },
     {
@@ -15,7 +15,7 @@ export default function Service1SectionArea() {
       icon: "/images/software-development/enterprise.svg",
       title: "Enterprise Mobility Solutions",
       description: "We build secure, mobile-first enterprise applications that empower your workforce with access to business-critical data anytime, anywhere. From field service apps to mobile dashboards, our mobility solutions are designed to be intuitive, responsive, and scalable. By enabling smooth communication across devices and ensuring strict security compliance, we help organizations boost efficiency, enhance collaboration, and support faster decision-making in today's digital workplace.",
-      link: "/integrated-intelligence-services",
+      link: "/services/integrated-intelligence-services",
       number: "02"
     },
     {
@@ -23,7 +23,7 @@ export default function Service1SectionArea() {
       icon: "/images/enterprise-application-development/application.svg",
       title: "Legacy Application Modernization",
       description: "We modernize legacy enterprise applications by migrating them to modern architectures and cloud platforms. Our solutions improve performance, enhance usability, and reduce maintenance costs while preserving core business logic. With modernization, outdated systems transform into scalable, reliable, and efficient applications that better support your enterprise growth.",
-      link: "/computer-vision-technology",
+      link: "/services/computer-vision-technology",
       number: "03"
     },
     {
@@ -31,7 +31,7 @@ export default function Service1SectionArea() {
       icon: "/images/enterprise-application-development/integration.svg",
       title: "Enterprise Integration Services",
       description: "We unify your IT ecosystem by integrating CRM, ERP, HRMS, finance, and other critical systems into a streamlined infrastructure. Using APIs, middleware, and cloud technologies, our solutions enable seamless data flow and interoperability. This eliminates silos, improves collaboration, and provides real-time insights to support faster, smarter decision-making.",
-      link: "/3d-and-metaverse-based",
+      link: "/services/3d-and-metaverse-based",
       number: "04"
     },
     {
@@ -39,7 +39,7 @@ export default function Service1SectionArea() {
       icon: "/images/enterprise-application-development/cloud.svg",
       title: "Cloud-Based Enterprise Solutions",
       description: "We build scalable, secure, and cost-effective enterprise applications on the cloud. From private and hybrid setups to SaaS platforms, our cloud-native solutions enhance agility, reduce costs, and ensure high availability. With disaster recovery and real-time scalability, we help enterprises achieve reliable performance while maintaining strong security standards.",
-      link: "/pioneering-generative-ai-integration",
+      link: "/services/pioneering-generative-ai-integration",
       number: "05"
     },
     {
@@ -47,7 +47,7 @@ export default function Service1SectionArea() {
       icon: "/images/enterprise-application-development/support.svg",
       title: "Enterprise Application Support & Maintenance",
       description: "We provide continuous monitoring, maintenance, and support to keep enterprise applications secure, reliable, and high-performing. Our team ensures smooth operations with proactive troubleshooting, optimization, and updates, helping businesses adapt to change while ensuring uninterrupted functionality and long-term sustainability.",
-      link: "/pioneering-generative-ai-integration",
+      link: "/services/pioneering-generative-ai-integration",
       number: "06"
     }
   ]

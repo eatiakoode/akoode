@@ -5,29 +5,31 @@ var enqSchema = new mongoose.Schema({
     name: {
       type: String,
       required: true,
+      trim: true,
+      // maxlength: 100,
     },
+    // lastName: {
+    //   type: String,
+    //   required: true,
+    //   trim: true,
+    //   maxlength: 100,
+    // },
     email: {
       type: String,
-      required: true,
+      // required: true,
     },
     phone: {
       type: String,
       required: true,
     },
-    serviceid: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Service", 
-      required: true,
-  },
-    budget: {
+    serviceType: {
       type: String,
       required: true,
+      trim: true,
+      // If you want to lock it down later, uncomment and set enums:
+      // enum: ["Web Development", "Mobile App", "UI/UX", "SEO", "Other"],
     },
     message: {
-      type: String,
-      required: true,
-    },
-    mailsource: {
       type: String,
       required: true,
     },

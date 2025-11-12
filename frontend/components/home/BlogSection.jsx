@@ -1,3 +1,4 @@
+
 export default function BlogSection({ bloglist = [] }) {
   // Ensure bloglist is an array and has data
   const safeBloglist = Array.isArray(bloglist) ? bloglist : [];
@@ -112,7 +113,7 @@ export default function BlogSection({ bloglist = [] }) {
           <div className="col-lg-12">
             <div className="space18"></div>
             <div className="btn-area1 text-center">
-              <a href="/blogs" className="vl-btn2">Read More Blog And News <i className="fa-solid fa-arrow-right"></i></a>
+              <a href="/blog" className="vl-btn2">Read More Blog And News <i className="fa-solid fa-arrow-right"></i></a>
             </div>
           </div>
         </div>

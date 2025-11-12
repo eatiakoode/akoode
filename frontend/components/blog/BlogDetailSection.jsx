@@ -35,7 +35,7 @@ export default function BlogDetailSection() {
               </p>
               <p>
                 If you want to stay relevant in the changing world and continue to go further, then there can be no better option than contacting the best{' '}
-                <a href="/ios-app-development">iOS app development company in Gurgaon.</a>
+                <a href="/services/ios-app-development">iOS app development company in Gurgaon.</a>
               </p>
               <div className="space18"></div>
               <h3>Why are iOS app development companies important?</h3>
@@ -94,7 +94,7 @@ export default function BlogDetailSection() {
               <div className="space32"></div>
               <h3>
                 Benefits of connecting to an{' '}
-                <a href="/android-app-development">mobile app development company</a>
+                <a href="/services/android-app-development">mobile app development company</a>
               </h3>
               <div className="space16"></div>
               <p>

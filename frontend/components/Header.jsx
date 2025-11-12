@@ -141,60 +141,60 @@ export default function Header() {
                         <a href="#">Services</a>
                         <ul className="sub-menu">
                           <li>
-                            <a href="/artificial-intelligence">Artificial Intelligence</a>
+                            <a href="/services/artificial-intelligence">Artificial Intelligence</a>
                             <ul className="sub-menu menu1">
-                              <li><a href="/deep-learning-and-data-science">Deep Learning & Data Science</a></li>
-                              <li><a href="/integrated-intelligence-services">Integrated Intelligence Services</a></li>
-                              <li><a href="/computer-vision-technology">Computer Vision Technology Services</a></li>
-                              <li><a href="/3d-and-metaverse-based">3D and Metaverse - based</a></li>
-                              <li><a href="/pioneering-generative-ai-integration">Generative AI Integration Solutions</a></li>
+                              <li><a href="/services/deep-learning-and-data-science">Deep Learning & Data Science</a></li>
+                              <li><a href="/services/integrated-intelligence-services">Integrated Intelligence Services</a></li>
+                              <li><a href="/services/computer-vision-technology">Computer Vision Technology Services</a></li>
+                              <li><a href="/services/3d-and-metaverse-based">3D and Metaverse - based</a></li>
+                              <li><a href="/services/pioneering-generative-ai-integration">Generative AI Integration Solutions</a></li>
                             </ul>
                           </li>
                           <li><a href="javascript:void(0)">Digital Transformation</a></li>
                           <li>
-                            <a href="/software-development">Software Development</a>
+                            <a href="/services/software-development">Software Development</a>
                             <ul className="sub-menu menu1">
-                              <li><a href="/end-to-end-tailored-software-solutions">End-to-end tailored software solutions</a></li>
-                              <li><a href="/enterprise-application-development">Enterprise application development</a></li>
-                              <li><a href="/saas-product-development">SaaS product development</a></li>
-                              <li><a href="/mvp-development-for-startups">MVP development for startups</a></li>
-                              <li><a href="/cross-platform-software-solutions">Cross-platform software solutions</a></li>
+                              <li><a href="/services/end-to-end-tailored-software-solutions">End-to-end tailored software solutions</a></li>
+                              <li><a href="/services/enterprise-application-development">Enterprise application development</a></li>
+                              <li><a href="/services/saas-product-development">SaaS product development</a></li>
+                              <li><a href="/services/mvp-development-for-startups">MVP development for startups</a></li>
+                              <li><a href="/services/cross-platform-software-solutions">Cross-platform software solutions</a></li>
                             </ul>
                           </li>
                           <li>
                             <a href="javascript:void(0)">Mobile App Development</a>
                             <ul className="sub-menu menu1">
-                              <li><a href="/ios-app-development">IOS Development</a></li>
-                              <li><a href="/android-app-development">Android Development</a></li>
-                              <li><a href="/native-app-development">Native Development</a></li>
-                              <li><a href="/hybrid-app-development">Hybrid App Development</a></li>
+                              <li><a href="/services/ios-app-development">IOS Development</a></li>
+                              <li><a href="/services/android-app-development">Android Development</a></li>
+                              <li><a href="/services/native-app-development">Native Development</a></li>
+                              <li><a href="/services/hybrid-app-development">Hybrid App Development</a></li>
                             </ul>
                           </li>
                           <li>
                             <a href="javascript:void(0)">Web Development</a>
                             <ul className="sub-menu menu1">
-                              <li><a href="/web-development-technology">Website Development Technologies</a></li>
-                              <li><a href="/custom-website-development">Custom Website Development</a></li>
-                              <li><a href="/dynamic-website-development">Dynamic Website Development</a></li>
-                              <li><a href="/static-website-development">Static Website Development</a></li>
-                              <li><a href="/full-stack-website-development">Full Stack Website Development</a></li>
-                              <li><a href="/ai-powered-website-development">Ai Powered Website Development</a></li>
+                              <li><a href="/services/web-development-technology">Website Development Technologies</a></li>
+                              <li><a href="/services/custom-website-development">Custom Website Development</a></li>
+                              <li><a href="/services/dynamic-website-development">Dynamic Website Development</a></li>
+                              <li><a href="/services/static-website-development">Static Website Development</a></li>
+                              <li><a href="/services/full-stack-website-development">Full Stack Website Development</a></li>
+                              <li><a href="/services/ai-powered-website-development">Ai Powered Website Development</a></li>
                             </ul>
                           </li>
                           <li>
                             <a href="javascript:void(0)">eCommerce Solution</a>
                             <ul className="sub-menu menu1">
-                              <li><a href="/magento-development-company-india">Magento Development</a></li>
-                              <li><a href="/opencart-development-company-india">Opencart Development</a></li>
-                              <li><a href="/shopify-development-company-india">Shopify Development</a></li>
-                              <li><a href="/woocommerce-development-company-india">WooCommerce Development</a></li>
+                              <li><a href="/services/magento-development-company-india">Magento Development</a></li>
+                              <li><a href="/services/opencart-development-company-india">Opencart Development</a></li>
+                              <li><a href="/services/shopify-development-company-india">Shopify Development</a></li>
+                              <li><a href="/services/woocommerce-development-company-india">WooCommerce Development</a></li>
                             </ul>
                           </li>
                           <li><a href="javascript:void(0)">IOT Development</a></li>
                           <li><a href="javascript:void(0)">BigData & Data Analytics</a></li>
                           <li><a href="javascript:void(0)">Cloud and DevOps</a></li>
                           <li><a href="javascript:void(0)">Blockchain Development</a></li>
-                          <li><a href="/staff-augmentation-services">Staff Augmentation Services</a></li>
+                          <li><a href="/services/staff-augmentation-services">Staff Augmentation Services</a></li>
                           <li><a href="javascript:void(0)">360 Degree Digital Marketing</a></li>
                         </ul>
                       </li>
@@ -264,60 +264,60 @@ export default function Header() {
                         <a href="#">Services</a>
                         <ul className="sub-menu">
                           <li>
-                            <a href="/artificial-intelligence">Artificial Intelligence</a>
+                            <a href="/services/artificial-intelligence">Artificial Intelligence</a>
                             <ul className="sub-menu menu1">
-                              <li><a href="/deep-learning-and-data-science">Deep Learning & Data Science</a></li>
-                              <li><a href="/integrated-intelligence-services">Integrated Intelligence Services</a></li>
-                              <li><a href="/computer-vision-technology">Computer Vision Technology Services</a></li>
-                              <li><a href="/3d-and-metaverse-based">3D and Metaverse - based</a></li>
-                              <li><a href="/pioneering-generative-ai-integration">Generative AI Integration Solutions</a></li>
+                              <li><a href="/services/deep-learning-and-data-science">Deep Learning & Data Science</a></li>
+                              <li><a href="/services/integrated-intelligence-services">Integrated Intelligence Services</a></li>
+                              <li><a href="/services/computer-vision-technology">Computer Vision Technology Services</a></li>
+                              <li><a href="/services/3d-and-metaverse-based">3D and Metaverse - based</a></li>
+                              <li><a href="/services/pioneering-generative-ai-integration">Generative AI Integration Solutions</a></li>
                             </ul>
                           </li>
                           <li><a href="javascript:void(0)">Digital Transformation</a></li>
                           <li>
-                            <a href="/software-development">Software Development</a>
+                            <a href="/services/software-development">Software Development</a>
                             <ul className="sub-menu menu1">
-                              <li><a href="/end-to-end-tailored-software-solutions">End-to-end tailored software solutions</a></li>
-                              <li><a href="/enterprise-application-development">Enterprise application development</a></li>
-                              <li><a href="/saas-product-development">SaaS product development</a></li>
-                              <li><a href="/mvp-development-for-startups">MVP development for startups</a></li>
-                              <li><a href="/cross-platform-software-solutions">Cross-platform software solutions</a></li>
+                              <li><a href="/services/end-to-end-tailored-software-solutions">End-to-end tailored software solutions</a></li>
+                              <li><a href="/services/enterprise-application-development">Enterprise application development</a></li>
+                              <li><a href="/services/saas-product-development">SaaS product development</a></li>
+                              <li><a href="/services/mvp-development-for-startups">MVP development for startups</a></li>
+                              <li><a href="/services/cross-platform-software-solutions">Cross-platform software solutions</a></li>
                             </ul>
                           </li>
                           <li>
                             <a href="javascript:void(0)">Mobile App Development</a>
                             <ul className="sub-menu menu1">
-                              <li><a href="/ios-app-development">IOS Development</a></li>
-                              <li><a href="/android-app-development">Android Development</a></li>
-                              <li><a href="/native-app-development">Native Development</a></li>
-                              <li><a href="/hybrid-app-development">Hybrid App Development</a></li>
+                              <li><a href="/services/ios-app-development">IOS Development</a></li>
+                              <li><a href="/services/android-app-development">Android Development</a></li>
+                              <li><a href="/services/native-app-development">Native Development</a></li>
+                              <li><a href="/services/hybrid-app-development">Hybrid App Development</a></li>
                             </ul>
                           </li>
                           <li>
                             <a href="javascript:void(0)">Web Development</a>
                             <ul className="sub-menu menu1">
-                              <li><a href="/web-development-technology">Website Development Technologies</a></li>
-                              <li><a href="/custom-website-development">Custom Website Development</a></li>
-                              <li><a href="/dynamic-website-development">Dynamic Website Development</a></li>
-                              <li><a href="/static-website-development">Static Website Development</a></li>
-                              <li><a href="/full-stack-website-development">Full Stack Website Development</a></li>
-                              <li><a href="/ai-powered-website-development">Ai Powered Website Development</a></li>
+                              <li><a href="/services/web-development-technology">Website Development Technologies</a></li>
+                              <li><a href="/services/custom-website-development">Custom Website Development</a></li>
+                              <li><a href="/services/dynamic-website-development">Dynamic Website Development</a></li>
+                              <li><a href="/services/static-website-development">Static Website Development</a></li>
+                              <li><a href="/services/full-stack-website-development">Full Stack Website Development</a></li>
+                              <li><a href="/services/ai-powered-website-development">Ai Powered Website Development</a></li>
                             </ul>
                           </li>
                           <li>
                             <a href="javascript:void(0)">eCommerce Solution</a>
                             <ul className="sub-menu menu1">
-                              <li><a href="/magento-development-company-india">Magento Development</a></li>
-                              <li><a href="/opencart-development-company-india">Opencart Development</a></li>
-                              <li><a href="/shopify-development-company-india">Shopify Development</a></li>
-                              <li><a href="/woocommerce-development-company-india">WooCommerce Development</a></li>
+                              <li><a href="/services/magento-development-company-india">Magento Development</a></li>
+                              <li><a href="/services/opencart-development-company-india">Opencart Development</a></li>
+                              <li><a href="/services/shopify-development-company-india">Shopify Development</a></li>
+                              <li><a href="/services/woocommerce-development-company-india">WooCommerce Development</a></li>
                             </ul>
                           </li>
                           <li><a href="javascript:void(0)">IOT Development</a></li>
                           <li><a href="javascript:void(0)">BigData & Data Analytics</a></li>
                           <li><a href="javascript:void(0)">Cloud and DevOps</a></li>
                           <li><a href="javascript:void(0)">Blockchain Development</a></li>
-                          <li><a href="/staff-augmentation-services">Staff Augmentation Services</a></li>
+                          <li><a href="/services/staff-augmentation-services">Staff Augmentation Services</a></li>
                           <li><a href="javascript:void(0)">360 Degree Digital Marketing</a></li>
                         </ul>
                       </li>

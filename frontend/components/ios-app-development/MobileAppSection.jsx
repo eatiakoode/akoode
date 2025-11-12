@@ -1,3 +1,5 @@
+'use client'
+
 import { useEffect, useState } from 'react'
 
 export default function MobileAppSection({ 
@@ -35,13 +37,11 @@ export default function MobileAppSection({
 
       // Check if swiper element exists
       const swiperElement = document.querySelector('.mySwiper');
-      const paginationElement = document.querySelector('.swiper-pagination');
       const nextButton = document.querySelector('.swiper-button.next');
       const prevButton = document.querySelector('.swiper-button.prev');
       const scrollbarElement = document.querySelector('.swiper-scrollbar');
 
       console.log('Swiper element found:', !!swiperElement);
-      console.log('Pagination element found:', !!paginationElement);
       console.log('Navigation elements found:', !!nextButton, !!prevButton);
       console.log('Scrollbar element found:', !!scrollbarElement);
 
@@ -53,7 +53,7 @@ export default function MobileAppSection({
           }
 
           // Wait for all elements to be ready
-          if (!paginationElement || !nextButton || !prevButton || !scrollbarElement) {
+          if (!nextButton || !prevButton || !scrollbarElement) {
             console.log('Some Swiper elements not ready, retrying...');
             setTimeout(initializeSwiper, 300);
             return;
@@ -111,13 +111,6 @@ export default function MobileAppSection({
           };
 
           // Only add pagination if element exists
-          if (paginationElement) {
-            swiperConfig.pagination = {
-              el: paginationElement,
-              clickable: true,
-            };
-          }
-
           // Only add navigation if elements exist
           if (nextButton && prevButton) {
             swiperConfig.navigation = {
@@ -206,8 +199,6 @@ export default function MobileAppSection({
             </div>
 
             {/* Pagination */}
-            <div className="swiper-pagination"></div>
-
             {/* Navigation */}
             <div className="custom-scrollbar-nav d-flex align-items-center">
               <div className="swiper-scrollbar flex-grow-1 me-3"></div>

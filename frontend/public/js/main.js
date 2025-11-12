@@ -1,5 +1,16 @@
 ;(function($){
 
+  function initializeMainScripts() {
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    if (window.__AKOODE_MAIN_INITIALIZED) {
+      return;
+    }
+
+    window.__AKOODE_MAIN_INITIALIZED = true;
+
 $(document).ready(function(){
 
 //========== HEADER ACTIVE STRATS ============= //
@@ -403,7 +414,6 @@ $(window).on("load", function (event) {
 
   //=========================================== //
 //========== PARALLAX AREA ============= //
-})(jQuery);
 
 
 //========== GSAP AREA ============= //
@@ -512,3 +522,21 @@ if ($('.text-anime-style-1').length) {
   // Show animated elements
   animateElements();
   $(window).scroll(animateElements);
+
+  }
+
+  function scheduleMainScripts() {
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    if (window.__NEXT_HYDRATED) {
+      initializeMainScripts();
+    } else {
+      window.addEventListener("next-hydrated", initializeMainScripts, { once: true });
+    }
+  }
+
+  scheduleMainScripts();
+
+})(jQuery);
