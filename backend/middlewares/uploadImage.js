@@ -728,6 +728,38 @@ const testimonialImgResize = async (req) => {
   return processedFilenames;
 };
 
+const videoImgResize = async (req) => {
+  if (!req.file) return [];
+
+  const outputDir = path.join("public", "images", "video");
+  if (!fs.existsSync(outputDir)) {
+    fs.mkdirSync(outputDir, { recursive: true });
+  }
+
+  const filename = req.file.filename;
+  const ext = path.extname(req.file.originalname).toLowerCase();
+  const isSvg = ext === ".svg";
+  const outputPath = path.join(outputDir, filename);
+
+  try {
+    if (isSvg) {
+      fs.copyFileSync(req.file.path, outputPath);
+    } else {
+      await sharp(req.file.path)
+        .resize(1280, 720)
+        .toFormat("jpeg")
+        .jpeg({ quality: 90 })
+        .toFile(outputPath);
+    }
+
+    fs.unlinkSync(req.file.path); // delete original uploaded file
+    return [filename];
+  } catch (err) {
+    console.error(`❌ Error processing video thumbnail [${filename}]: ${err.message}`);
+    return [];
+  }
+};
+
 // const propertySelectedImgsResize = async (req) => {
 
 //   // if (!req.files.propertySelectedImgs || !Array.isArray(req.files.propertySelectedImgs)) return;
@@ -1540,4 +1572,4 @@ const processUploadedPDFsadd = async (req) => {
 
   return processedFilenames;
 };
-module.exports = { uploadPhoto, blogImgResize,builderImgResize,featuredImageResize,sitePlanResize,masterPlanResize,photoUploadMiddleware,testimonialImgResize,propertySelectedImgsResize ,cityImgResize,processFloorPlanImages,photoUploadMiddleware1,processFloorPlanImagesGet,amenityImgResize,bannerImageResize,aboutImageResize,gallerySelectedImgsResize,groupFilesByFieldname,groupFilesByFieldname2,processLandingPlanGet,processLandingPlan,processUploadedPDFs,processFloorPlanImagesAdd,featuredImageResizeAdd,featuredImageResizeAddSite,propertySelectedImgsResizeadd,processUploadedPDFsadd,featuredImageResizeAddMaster,categoryImgResize,casestudyImgResize,processCasestudy,processCasestudyGet,servicesImgResize,processServices,processServicesGet,servicesServices};
+module.exports = { uploadPhoto, blogImgResize,builderImgResize,featuredImageResize,sitePlanResize,masterPlanResize,photoUploadMiddleware,testimonialImgResize,videoImgResize,propertySelectedImgsResize ,cityImgResize,processFloorPlanImages,photoUploadMiddleware1,processFloorPlanImagesGet,amenityImgResize,bannerImageResize,aboutImageResize,gallerySelectedImgsResize,groupFilesByFieldname,groupFilesByFieldname2,processLandingPlanGet,processLandingPlan,processUploadedPDFs,processFloorPlanImagesAdd,featuredImageResizeAdd,featuredImageResizeAddSite,propertySelectedImgsResizeadd,processUploadedPDFsadd,featuredImageResizeAddMaster,categoryImgResize,casestudyImgResize,processCasestudy,processCasestudyGet,servicesImgResize,processServices,processServicesGet,servicesServices};

@@ -19,8 +19,16 @@ export const metadata = {
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import BlogArea from '@/components/blog/BlogArea';
+import { getBlogTableData } from '@/api/frontend/blog';
 
-export default function BlogPage() {
+export default async function BlogPage({ searchParams }) {
+  const page = parseInt(searchParams?.page) || 1;
+  const blogResponse = await getBlogTableData(page, 3);
+  
+  // Handle both new paginated format and old array format for backward compatibility
+  const blogs = blogResponse?.blogs || (Array.isArray(blogResponse) ? blogResponse : []);
+  const pagination = blogResponse?.pagination || null;
+
   return (
     <>
       <Header />
@@ -41,7 +49,7 @@ export default function BlogPage() {
         </div>
       </div>
 
-      <BlogArea />
+      <BlogArea blogs={blogs} pagination={pagination} currentPage={page} />
 
       <Footer />
     </>

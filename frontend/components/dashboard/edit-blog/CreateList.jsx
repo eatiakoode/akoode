@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useRouter, useParams } from "next/navigation";
 import { getBlogById, updateBlogAPI } from "../../../api/blog";
 import { getBlogcategoryTableData } from "../../../api/blogcategory";
+import { getEmployeeTableData } from "../../../api/employee";
 import { toast } from 'react-toastify';
 
 
@@ -29,8 +30,10 @@ const CreateList = () => {
       setLogoImage("")
       setLogo(e.target.files[0]);
   };
-  const [blogcategories, setBlogcategories] = useState([]);
+    const [blogcategories, setBlogcategories] = useState([]);
   const [selectedBlogcategory, setSelectedBlogcategory] = useState("");
+  const [employees, setEmployees] = useState([]);
+  const [selectedAuthor, setSelectedAuthor] = useState("");
     useEffect(() => {
       if (!id) return;      
       const fetchBlog = async () => {
@@ -46,7 +49,15 @@ const CreateList = () => {
           setMetatitle(data.data.metatitle)
           setMetaDescription(data.data.metadescription)
           
-          setSelectedBlogcategory(data.data.blogcategory)
+          // Handle both populated object and ID string for blogcategory
+          const blogcategoryId = typeof data.data.blogcategory === 'object' ? data.data.blogcategory._id : data.data.blogcategory;
+          setSelectedBlogcategory(blogcategoryId)
+          
+          if(data.data.author) {
+            // Handle both populated object and ID string for author
+            const authorId = typeof data.data.author === 'object' ? data.data.author._id : data.data.author;
+            setSelectedAuthor(authorId)
+          }
           if(data.data.logoimage) {
           setLogoImage(process.env.NEXT_PUBLIC_API_URL+data.data.logoimage)
           }
@@ -67,11 +78,24 @@ const CreateList = () => {
               console.error("Error fetching Blogcategory:", err);
             }
           };
+
+      const fetchEmployees = async () => {
+        try {
+          const response = await getEmployeeTableData();
+          setEmployees(Array.isArray(response) ? response : []);
+        } catch (err) {
+          console.error("Error fetching Employees:", err);
+        }
+      };
       
-          fetchBlogcategories();
+      fetchBlogcategories();
+      fetchEmployees();
     }, [id]);
     const handleBlogcategoryChange = (e) => {
       setSelectedBlogcategory(e.target.value);
+    };
+    const handleAuthorChange = (e) => {
+      setSelectedAuthor(e.target.value);
     };
   
     const handleSubmit = async (e) => {
@@ -82,6 +106,9 @@ const CreateList = () => {
         formData.append("slug", slug);
         formData.append("description", description);
         formData.append("blogcategory", selectedBlogcategory);
+        if (selectedAuthor) {
+          formData.append("author", selectedAuthor);
+        }
         formData.append("source", source);
         formData.append("date", date);
         formData.append("status", status);
@@ -205,6 +232,26 @@ const CreateList = () => {
           {error && <p className="text-red-500 text-sm mt-1">{error}</p>}
         </div>
       </div>
+      <div className="col-lg-6 col-xl-6">
+          <div className="my_profile_setting_input ui_kit_select_search form-group">
+            <label htmlFor="Author">Select Author</label>
+            <select
+              id="Author"
+              className="selectpicker form-select"
+              value={selectedAuthor}
+              onChange={handleAuthorChange}
+              data-live-search="true"
+              data-width="100%"
+            >
+              <option value="">-- Select Author --</option>
+              {employees.map((employee) => (
+                <option key={employee._id} value={employee._id}>
+                  {employee.name}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
       <div className="col-lg-12">
           <div className="my_profile_setting_textarea form-group">
             <label htmlFor="BlogDescription">Description</label>

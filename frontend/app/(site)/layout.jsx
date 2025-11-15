@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head suppressHydrationWarning>
-         <meta charSet="utf-8" />
+        <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
         <link rel="shortcut icon" href="/images/fav-logo1.png" type="image/x-icon" />

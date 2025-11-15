@@ -22,13 +22,13 @@ export const metadata = {
 async function getHomeData() {
   try {
     const [blogResponse, faqResponse, casestudyResponse] = await Promise.all([
-      getBlogTableData(),
+      getBlogTableData(1, 3),
       getFaqTableDataFeatured(),
       getCasestudyTableDataFeatured(),
     ]);
 
     return {
-      bloglist: blogResponse?.data || [],
+      bloglist: blogResponse?.blogs || (Array.isArray(blogResponse) ? blogResponse : []),
       faqlist: faqResponse?.data || [],
       casestudylist: casestudyResponse?.data || [],
     };

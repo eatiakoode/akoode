@@ -6865,10 +6865,10 @@ transition: all 0.4s;
 .vl-blog-details-section .blog-others-sidebar {
   position: relative;
   z-index: 1;
-  padding: 0 0 0 70px;
+  /* padding: 0 0 0 70px; */
 }
 .vl-blog-details-section .blog-others-sidebar.rightside {
-  padding: 0 70px 0 0 !important;
+  /* padding: 0 70px 0 0 !important; */
 }
 @media (max-width: 767px) {
   .vl-blog-details-section .blog-others-sidebar.rightside {

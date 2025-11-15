@@ -11,6 +11,7 @@ const CreateList = () => {
    const [title, setTitle] = useState("");
    const [description, setDescription] = useState("");
    const [designation, setDesignation] = useState("");
+   const [star, setStar] = useState(5);
    
     const [error, setError] = useState("");
     const [logo, setLogo] = useState(null);
@@ -38,6 +39,7 @@ const CreateList = () => {
         formData.append("title", title);
         formData.append("designation", designation);
         formData.append("description", description);
+        formData.append("star", star.toString());
         if (logo) {
           formData.append("logo", logo);
         }
@@ -102,6 +104,59 @@ const CreateList = () => {
         <div className="my_profile_setting_input form-group">
           <label htmlFor="Testimonialdesignation">Testimonial designation</label>
           <input type="text" className="form-control" id="Testimonialdesignation" value={designation}  onChange={(e) => setDesignation(e.target.value)}  />
+          {error && <p className="text-red-500 text-sm mt-1">{error}</p>}
+        </div>
+      </div>
+      {/* End .col */}
+      <div className="col-lg-6 col-xl-6">
+        <div className="my_profile_setting_input form-group">
+          <label htmlFor="TestimonialStar">Rating (Stars)</label>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '5px', marginTop: '8px' }}>
+            <div style={{ display: 'flex', gap: '5px' }}>
+              {[1, 2, 3, 4, 5].map((rating) => (
+                <span
+                  key={rating}
+                  onClick={() => setStar(rating)}
+                  onMouseEnter={(e) => {
+                    // Highlight stars on hover
+                    const container = e.currentTarget.parentElement;
+                    if (container) {
+                      const stars = container.children;
+                      Array.from(stars).forEach((starEl, index) => {
+                        if (index < rating) {
+                          starEl.style.color = '#ffc107';
+                        } else {
+                          starEl.style.color = '#ddd';
+                        }
+                      });
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    // Reset to selected rating
+                    const container = e.currentTarget.parentElement;
+                    if (container) {
+                      const stars = container.children;
+                      Array.from(stars).forEach((starEl, index) => {
+                        starEl.style.color = index < star ? '#ffc107' : '#ddd';
+                      });
+                    }
+                  }}
+                  style={{
+                    fontSize: '24px',
+                    color: rating <= star ? '#ffc107' : '#ddd',
+                    cursor: 'pointer',
+                    transition: 'color 0.2s',
+                    userSelect: 'none',
+                  }}
+                >
+                  ★
+                </span>
+              ))}
+            </div>
+            <span style={{ marginLeft: '10px', fontSize: '14px', color: '#666' }}>
+              ({star} {star === 1 ? 'Star' : 'Stars'})
+            </span>
+          </div>
           {error && <p className="text-red-500 text-sm mt-1">{error}</p>}
         </div>
       </div>

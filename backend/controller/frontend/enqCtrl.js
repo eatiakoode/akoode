@@ -7,15 +7,26 @@ const { enqueryContactMail } = require("../../middlewares/enqueryMail");
 const createEnquiry = asyncHandler(async (req, res) => {
   try {
     const newEnquiry = await Enquiry.create(req.body);
-    const emailsend  =await enqueryContactMail(req, res);
-    const message={
-      "status":"success",
-      "message":"Thank you for your message. It has been sent.",
-      "data":newEnquiry
+    
+    // Try to send email, but don't fail the request if email fails
+    const emailResult = await enqueryContactMail(req, res);
+    if (!emailResult.success) {
+      console.error("Email sending failed, but enquiry saved:", emailResult.message);
     }
-    res.json(message);
+    
+    const message = {
+      status: "success",
+      message: "Thank you for your message. It has been sent.",
+      data: newEnquiry
+    };
+    
+    return res.status(200).json(message);
   } catch (error) {
-    throw new Error(error);
+    return res.status(500).json({
+      status: "error",
+      message: "Failed to create enquiry. Please try again later.",
+      error: error.message
+    });
   }
 });
 const updateEnquiry = asyncHandler(async (req, res) => {

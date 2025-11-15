@@ -2,18 +2,18 @@ const mongoose = require("mongoose"); // Erase if already required
 
 // Declare the Schema of the Mongo model
 var enqSchema = new mongoose.Schema({
-    name: {
+    firstName: {
       type: String,
       required: true,
       trim: true,
       // maxlength: 100,
     },
-    // lastName: {
-    //   type: String,
-    //   required: true,
-    //   trim: true,
-    //   maxlength: 100,
-    // },
+    lastName: {
+      type: String,
+      required: true,
+      trim: true,
+      // maxlength: 100,
+    },
     email: {
       type: String,
       // required: true,

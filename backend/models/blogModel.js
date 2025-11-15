@@ -33,6 +33,10 @@ var blogSchema = new mongoose.Schema(
       ref: "Blogcategory", 
       required: true,
     },
+    author:{
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Employee",
+    },
     source:{
       type: String,
     },

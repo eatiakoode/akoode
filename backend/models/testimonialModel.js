@@ -28,6 +28,12 @@ var testimonialSchema = new mongoose.Schema(
       unique: true,
       index: true,
     },
+    star:{
+      type: Number,
+      min: 1,
+      max: 5,
+      default: 5,
+    },
     status: {
       type: Boolean,
       default: true,

@@ -17,7 +17,7 @@ const createTransporter = () =>
   });
 
 const enqueryPropertyMail =  async (req, res) => {
-  const { name, email,phone,budget, message,propertyname,buildername,builderemail } = req.body;
+  const { firstName , lastName, email,phone,budget, message,propertyname,buildername,builderemail } = req.body;
 
   try {
     // 1. Create transporter
@@ -115,7 +115,7 @@ let messagehtml =`<head>
                             <table width="100%" cellspacing="0" cellpadding="2" border="1" style="border-color: #ccc;" class="coin-bal-table">
                                 <tr>
                                     <th>Name</th>
-                                    <td>${name}
+                                    <td>${firstName} ${lastName}
                                     </td>
                                 </tr>
                                 <tr>
@@ -171,12 +171,12 @@ let messagehtml =`<head>
 </body>`
     // 2. Setup email data
     // const mailOptions = {
-    //   from: `"${name}" <${email}>`,
+    //   from: `"${firstName} ${lastName}" <${email}>`,
     //   to: 'eati@akoode.in', // Your business or support email
     //   subject: 'New Enquiry Form Submission',
     //   html: `
     //     <h3>New Enquiry</h3>
-    //     <p><strong>Name:</strong> ${name}</p>
+    //     <p><strong>Name:</strong> ${firstName} ${lastName}</p>
     //     <p><strong>Email:</strong> ${email}</p>
     //     <p><strong>Phone:</strong> ${phone}</p>
     //     <p><strong>Message:</strong></p>
@@ -184,7 +184,7 @@ let messagehtml =`<head>
     //   `,
     // };
     const mailOptions = {
-      from: `"${name}" <${email}>`,
+      from: `"${firstName} ${lastName}" <${email}>`,
       to: 'eati@akoode.in', // Your business or support email
       subject: 'New Enquiry Form property',
       html: `${messagehtml}`,
@@ -202,7 +202,7 @@ let messagehtml =`<head>
  
 };
 const enqueryPropertyMailSeller =  async (req, res) => {
-  const { name, email,phone,budget, message,propertyname,buildername,builderemail } = req.body;
+  const { firstName , lastName, email,phone,budget, message,propertyname,buildername,builderemail } = req.body;
 
   try {
     // 1. Create transporter
@@ -294,7 +294,7 @@ let messagehtml =`<head>
                             <table width="100%" cellspacing="0" cellpadding="2" border="1" style="border-color: #ccc;" class="coin-bal-table">
                                 <tr>
                                     <th>Name</th>
-                                    <td>${name}
+                                    <td>${firstName} ${lastName}
                                     </td>
                                 </tr>
                                 <tr>
@@ -346,12 +346,12 @@ let messagehtml =`<head>
 </body>`
     // 2. Setup email data
     // const mailOptions = {
-    //   from: `"${name}" <${email}>`,
+    //   from: `"${firstName} ${lastName}" <${email}>`,
     //   to: 'eati@akoode.in', // Your business or support email
     //   subject: 'New Enquiry Form Submission',
     //   html: `
     //     <h3>New Enquiry</h3>
-    //     <p><strong>Name:</strong> ${name}</p>
+    //     <p><strong>Name:</strong> ${firstName} ${lastName}</p>
     //     <p><strong>Email:</strong> ${email}</p>
     //     <p><strong>Phone:</strong> ${phone}</p>
     //     <p><strong>Message:</strong></p>
@@ -359,7 +359,7 @@ let messagehtml =`<head>
     //   `,
     // };
     const mailOptions = {
-      from: `"${name}" <${email}>`,
+      from: `"${firstName} ${lastName}" <${email}>`,
       to: `${builderemail}`, // Your business or support email
       // to: `eati@akoode.in`, // Your business or support email
       subject: 'New Enquiry Form akoode INFRAVENTURES property',
@@ -380,8 +380,8 @@ let messagehtml =`<head>
 const enqueryContactMail = async (req, res) => {
   console.log("📧 Enquiry mail triggered");
 
-  const { name, email, phone, message, date } = req.body;
-  console.log("Received Enquiry:", { name, email, phone, message, date });
+  const { firstName , lastName, email, phone, message, serviceType } = req.body;
+  console.log("Received Enquiry:", { firstName , lastName, email, phone, message, serviceType });
 
   try {
     // 1. Setup transporter
@@ -396,12 +396,12 @@ const enqueryContactMail = async (req, res) => {
 
     // 2. Prepare email content
     // const mailOptions = {
-    //   from: `"${name}" <${email}>`,
+    //   from: `"${firstName} ${lastName}" <${email}>`,
     //   to: 'eati@akoode.in',
     //   subject: 'New Enquiry Form Submission',
     //   html: `
     //     <h3>New Enquiry</h3>
-    //     <p><strong>Name:</strong> ${name}</p>
+    //     <p><strong>Name:</strong> ${firstName} ${lastName}</p>
     //     <p><strong>Email:</strong> ${email}</p>
     //     <p><strong>Phone:</strong> ${phone}</p>
     //     <p><strong>Meeting Date:</strong> ${date}</p>
@@ -478,7 +478,7 @@ const enqueryContactMail = async (req, res) => {
                             <table width="100%" cellspacing="0" cellpadding="2" border="1" style="border-color: #ccc;" class="coin-bal-table">
                                 <tr>
                                     <th>Name</th>
-                                    <td>${name}
+                                    <td>${firstName} ${lastName}
                                     </td>
                                 </tr>
                                 <tr>
@@ -490,8 +490,8 @@ const enqueryContactMail = async (req, res) => {
                                     <td>${phone}</td>
                                 </tr>
 <tr>
-                                    <th>Meeting Date</th>
-                                    <td>${date}</td>
+                                    <th>Service Type</th>
+                                    <td>${serviceType}</td>
                                 </tr>
 
                                 
@@ -525,25 +525,27 @@ const enqueryContactMail = async (req, res) => {
     </table>
 </body>`
 
-const mailOptions = {
-      from: `"${name}" <${email}>`,
+    const mailOptions = {
+      from: `"${firstName} ${lastName}" <${email}>`,
       to: 'eati@akoode.in',
       subject: 'New Enquiry Form Submission',
       html: `${messagehtml}`,
     };
-    // 3. Send email
+    // 3. Send email - don't send HTTP response, just return result
     await transporter.sendMail(mailOptions);
-    return res.status(200).json({ success: true, message: 'Enquiry sent successfully!' });
+    console.log("✅ Email sent successfully");
+    return { success: true, message: 'Email sent successfully' };
 
   } catch (error) {
     console.error("❌ Error sending email:", error);
-    return res.status(500).json({ success: false, message: 'Failed to send enquiry. Please try again later.' });
+    // Don't throw - let controller handle the response
+    return { success: false, message: 'Failed to send email', error: error.message };
   }
 };
 
 const enqueryBrochureMail = async (req, res) => {
 
-  const { name,  phone, propertyname } = req.body;
+  const { firstName , lastName,  phone, propertyname } = req.body;
 
   try {
     // 1. Setup transporter
@@ -567,12 +569,12 @@ const enqueryBrochureMail = async (req, res) => {
 
     // 2. Prepare email content
     // const mailOptions = {
-    //   from: `"${name}" <${email}>`,
+    //   from: `"${firstName} ${lastName}" <${email}>`,
     //   to: 'eati@akoode.in',
     //   subject: 'New Enquiry Form Submission',
     //   html: `
     //     <h3>New Enquiry</h3>
-    //     <p><strong>Name:</strong> ${name}</p>
+    //     <p><strong>Name:</strong> ${firstName} ${lastName}</p>
     //     <p><strong>Email:</strong> ${email}</p>
     //     <p><strong>Phone:</strong> ${phone}</p>
     //     <p><strong>Meeting Date:</strong> ${date}</p>
@@ -649,7 +651,7 @@ const enqueryBrochureMail = async (req, res) => {
                             <table width="100%" cellspacing="0" cellpadding="2" border="1" style="border-color: #ccc;" class="coin-bal-table">
                                 <tr>
                                     <th>Name</th>
-                                    <td>${name}
+                                    <td>${firstName} ${lastName}
                                     </td>
                                 </tr>
                                
@@ -688,7 +690,7 @@ const enqueryBrochureMail = async (req, res) => {
 </body>`
 
 const mailOptions = {
-      from: `"${name}" <${email}>`,
+      from: `"${firstName} ${lastName}" <${email}>`,
       to: 'eati@akoode.in',
       subject: 'New Enquiry Form Submission',
       html: `${messagehtml}`,
@@ -835,7 +837,7 @@ const mailOptions = {
 };
 const enqueryLandingMail = async (req, res) => {
 
-  const { name,  phone, pagename } = req.body;
+  const { firstName , lastName,  phone, pagename } = req.body;
 
   try {
     // 1. Setup transporter
@@ -916,7 +918,7 @@ const enqueryLandingMail = async (req, res) => {
                             <table width="100%" cellspacing="0" cellpadding="2" border="1" style="border-color: #ccc;" class="coin-bal-table">
                                 <tr>
                                     <th>Name</th>
-                                    <td>${name}
+                                    <td>${firstName} ${lastName}
                                     </td>
                                 </tr>
                                
@@ -955,7 +957,7 @@ const enqueryLandingMail = async (req, res) => {
 </body>`
 
 const mailOptions = {
-      from: `"${name}" <${email}>`,
+      from: `"${firstName} ${lastName}" <${email}>`,
       to: 'eati@akoode.in',
       subject: 'New Enquiry Form Submission',
       html: `${messagehtml}`,

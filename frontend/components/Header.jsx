@@ -322,8 +322,9 @@ export default function Header() {
                         </ul>
                       </li>
                       <li className="has-dropdown">
-                        <a href="javascript:void(0)">Case Study</a>
+                        <a href="/case-studies">Case Study</a>
                       </li>
+                      <li><a href="/career">Career</a></li>
                       <li>
                         <a href="/blog">Blogs</a>
                       </li>
@@ -333,7 +334,7 @@ export default function Header() {
                 </div>
               </div>
             </div>
-            <div className="row">
+            {/* <div className="row">
               <div className="col-lg-12">
                 <div className="vl-offcanvas-info">
                   <h3 className="vl-offcanvas-sm-title">Contact Us</h3>
@@ -346,7 +347,72 @@ export default function Header() {
                   </div>
                 </div>
               </div>
+            </div> */}
+            <div className="row">
+            <div className="row g-4 pb-5">
+              <div className="col-xl-6 col-md-6">
+                <div className="footer-short-info rounded-20 d-flex flex-column align-items-start">
+                  <h4>India Office -</h4>
+                  <div>
+                      <div className="icon d-flex align-items-center justify-content-center rounded-pill flex-shrink-0">
+                        <img src="/images/location1.svg" alt="footer-short-icon" width="30" height="30"/>
+                      </div>
+                      <div className="text">
+                          <a href="#">Tower B4, Spaze iTech Park, UN 616, Sohna - Gurgaon Rd, Block S, Sector 49, Gurugram, Haryana 122018</a>
+                      </div>
+                  </div>
+                  <div>
+                      <div className="icon d-flex align-items-center justify-content-center rounded-pill flex-shrink-0">
+                        <img src="/images/email1.svg" alt="footer-short-icon" width="30" height="30"/>
+                      </div>
+                      <div className="text">
+                          <a href="mailto:info@akoode.com">info@akoode.com</a>
+                      </div>
+                  </div>
+                  <div>
+                      <div className="icon d-flex align-items-center justify-content-center rounded-pill flex-shrink-0">
+                        <img src="/images/phn1.svg" alt="footer-short-icon" width="30" height="30"/>
+                      </div>
+                      <div className="text">
+                          <a href="tel:+91-9899300017">+91-9899300017</a>
+                      </div>
+                  </div>
+                </div>
+
+              </div>
+              <div className="col-xl-6 col-md-6">
+                <div className="footer-short-info rounded-20 d-flex flex-column align-items-start">
+                  <h4>USA Office -</h4>
+                  <div>
+                      <div className="icon d-flex align-items-center justify-content-center rounded-pill flex-shrink-0">
+                        <img src="/images/location1.svg" alt="footer-short-icon" width="30" height="30"/>
+                      </div>
+                      <div className="text">
+                          <a href="#">10816 South Olmsted St W
+                          Jenks, OK 74037, USA</a>
+                      </div>
+                  </div>
+                  <div>
+                      <div className="icon d-flex align-items-center justify-content-center rounded-pill flex-shrink-0">
+                        <img src="/images/email1.svg" alt="footer-short-icon" width="30" height="30"/>
+                      </div>
+                      <div className="text">
+                          <a href="mailto:info@akoode.com">info@akoode.com</a>
+                      </div>
+                  </div>
+                  <div>
+                      <div className="icon d-flex align-items-center justify-content-center rounded-pill flex-shrink-0">
+                        <img src="/images/phn1.svg" alt="footer-short-icon" width="30" height="30"/>
+                      </div>
+                      <div className="text">
+                          <a href="tel:1-712 214 1784">1-712 214 1784</a>
+                      </div>
+                  </div>
+                </div>
+
+              </div>
             </div>
+          </div>
           </div>
         </div>
       </div>

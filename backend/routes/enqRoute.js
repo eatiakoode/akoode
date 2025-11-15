@@ -1,18 +1,18 @@
 const express = require("express");
 const {
-  createEnquiry,
-  updateEnquiry,
+  // createEnquiry,
+  // updateEnquiry,
   deleteEnquiry,
-  getEnquiry,
+  // getEnquiry,
   getallEnquiry,
 } = require("../controller/enqCtrl.js");
 const { authMiddleware, isAdmin } = require("../middlewares/authMiddleware");
 const router = express.Router();
 
-router.post("/", createEnquiry);
-router.put("/:id", authMiddleware, isAdmin, updateEnquiry);
+// router.post("/", createEnquiry);
+// router.put("/:id", authMiddleware, isAdmin, updateEnquiry);
 router.delete("/:id", authMiddleware, isAdmin, deleteEnquiry);
-router.get("/:id", getEnquiry);
+// router.get("/:id", getEnquiry);
 router.get("/", getallEnquiry);
 
 module.exports = router;

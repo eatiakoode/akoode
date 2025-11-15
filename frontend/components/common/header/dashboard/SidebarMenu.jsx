@@ -56,9 +56,9 @@ const SidebarMenu = () => {
     { id: 1, name: "Add Builder", route: "/akoodeadmin/add-builder" },
     { id: 2, name: "Builder List", route: "/akoodeadmin/my-builder" }
   ];
-  const myAgent = [
-    { id: 1, name: "Add Agent", route: "/akoodeadmin/add-agent" },
-    { id: 2, name: "Agent List", route: "/akoodeadmin/my-agent" }
+  const myEmployee = [
+    { id: 1, name: "Add Employee", route: "/akoodeadmin/add-employee" },
+    { id: 2, name: "Employee List", route: "/akoodeadmin/my-employee" }
   ];
   const mySeller = [
     { id: 1, name: "Add Seller", route: "/akoodeadmin/add-seller" },
@@ -83,7 +83,9 @@ const SidebarMenu = () => {
   ];
   const myTestimonial = [
     { id: 1, name: "Add Testimonial", route: "/akoodeadmin/add-testimonial" },
-    { id: 2, name: "Testimonial List", route: "/akoodeadmin/my-testimonial" }
+    { id: 2, name: "Testimonial List", route: "/akoodeadmin/my-testimonial" },
+    {id: 3, name: "Add Video", route: "/akoodeadmin/add-video" },
+    {id: 4, name: "Video List", route: "/akoodeadmin/my-video" }
   ];
   
   const myFaq = [
@@ -351,6 +353,25 @@ const SidebarMenu = () => {
                 ))}
               </ul>
             </li> */}
+            <li
+              className={`treeview ${isParentPageActive(myEmployee, pathname) ? "active" : ""}`}
+              onClick={() => toggleMenu("employee")}
+              style={{ cursor: "pointer" }}
+            >
+              <a data-bs-toggle="collapse" href="#my-employee">
+                <i className="flaticon-home"></i> <span>My Employee</span>
+                <i className={`fa fa-angle-${openMenu === "employee" ? "up" : "down"} pull-right`}></i>
+              </a>
+              <ul className={`treeview-menu collapse ${openMenu === "employee" ? "show" : ""}`} id="my-employee">
+                {myEmployee.map((item) => (
+                  <li key={item.id}>
+                    <Link href={item.route}>
+                      <i className="fa fa-circle"></i> {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </li>
             {/* <li
               className={`treeview ${
                 isParentPageActive(myAgent, pathname) ? "active" : ""
@@ -468,6 +489,27 @@ const SidebarMenu = () => {
     ))}
   </ul>
 </li>
+
+<li
+  className={`treeview ${isParentPageActive(myTestimonial, pathname) ? "active" : ""}`}
+  onClick={() => toggleMenu("testimonial")}
+  style={{ cursor: "pointer" }}
+>
+  <a data-bs-toggle="collapse" href="#my-testimonial">
+    <i className="flaticon-home"></i> <span>My Testimonial</span>
+    <i className={`fa fa-angle-${openMenu === "testimonial" ? "up" : "down"} pull-right`}></i>
+  </a>
+  <ul className={`treeview-menu collapse ${openMenu === "testimonial" ? "show" : ""}`} id="my-testimonial">
+    {myTestimonial.map((item) => (
+      <li key={item.id}>
+        <Link href={item.route}>
+          <i className="fa fa-circle"></i> {item.name}
+        </Link>
+      </li>
+    ))}
+  </ul>
+</li>
+
 
 
             {/* <li

@@ -90,10 +90,11 @@ export default function Footer() {
               <h3>Quick Links</h3>
               <ul>
                 <li><a href="/aboutus">About Us</a></li>
-                <li><a href="#">Case Studies</a></li>
-                <li><a href="#">Our Clients</a></li>
-                <li><a href="#">Blogs</a></li>
-                <li><a href="#">Career</a></li>
+                <li><a href="/case-studies">Case Studies</a></li>
+                {/* <li><a href="#">Our Clients</a></li> */}
+                <li><a href="/career">Career</a></li>
+                <li><a href="/blog">Blogs</a></li>
+                <li><a href="/contactus">Contact Us</a></li>
               </ul>
             </div>
           </div>
@@ -102,10 +103,10 @@ export default function Footer() {
               <div className="space30 d-lg-none d-block"></div>
               <h3>Our Services</h3>
               <ul className="service-wiget">
-                <li><a href="#">Artificial Intelligence</a></li>
-                <li><a href="#">Digital Transformation</a></li>
+                <li><a href="/services/artificial-intelligence">Artificial Intelligence</a></li>
+                <li><a href="/services/digital-transformation">Digital Transformation</a></li>
                 <li><a href="/services/software-development">Software Development</a></li>
-                <li><a href="#">Mobile App Development</a></li>
+                <li><a href="/services/mobile-app-development">Mobile App Development</a></li>
                 <li><a href="/services/web-development-technology">Web Development</a></li>
                 <li><a href="#">eCommerce Solution</a></li>
                 <li><a href="#">IOT Development</a></li>

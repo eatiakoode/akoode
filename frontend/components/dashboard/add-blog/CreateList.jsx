@@ -5,6 +5,7 @@ import { addBlogAPI } from "../../../api/blog";
 import { useRouter, useParams } from "next/navigation";
 
 import { getBlogcategoryTableData } from "../../../api/blogcategory";
+import { getEmployeeTableData } from "../../../api/employee";
 import { toast } from 'react-toastify';
 const CreateList = () => {
   const router = useRouter();
@@ -17,6 +18,8 @@ const CreateList = () => {
     const [logo, setLogo] = useState(null);
     const [blogcategories, setBlogcategories] = useState([]);
   const [selectedBlogcategory, setSelectedBlogcategory] = useState("");
+  const [employees, setEmployees] = useState([]);
+  const [selectedAuthor, setSelectedAuthor] = useState("");
   const [metatitle, setMetatitle] = useState([]);
   const [metadescription, setMetaDescription] = useState([]);
    const [isSubmitting, setisSubmitting] = useState("");
@@ -31,7 +34,17 @@ useEffect(() => {
     }
   };
 
+  const fetchEmployees = async () => {
+    try {
+      const response = await getEmployeeTableData();
+      setEmployees(Array.isArray(response) ? response : []);
+    } catch (err) {
+      console.error("Error fetching Employees:", err);
+    }
+  };
+
   fetchBlogcategories();
+  fetchEmployees();
 }, []);
     // upload profile
     const uploadLogo = (e) => {
@@ -56,6 +69,9 @@ useEffect(() => {
     };
     const handleBlogcategoryChange = (e) => {
       setSelectedBlogcategory(e.target.value);
+    };
+    const handleAuthorChange = (e) => {
+      setSelectedAuthor(e.target.value);
     };
     const addBlog = async (e) => {
       e.preventDefault();
@@ -82,6 +98,9 @@ useEffect(() => {
         formData.append("metatitle", metatitle);
         formData.append("metadescription", metadescription);
         formData.append("blogcategory", selectedBlogcategory);
+        if (selectedAuthor) {
+          formData.append("author", selectedAuthor);
+        }
         if (logo) {
           formData.append("logo", logo);
         }
@@ -135,7 +154,6 @@ useEffect(() => {
                         </span>
                     </label>
                 </div>
-                <p>*minimum 260px x 260px</p>
             </div>
             {/* End .col */}
             <div className="col-lg-6 col-xl-6">
@@ -186,6 +204,26 @@ useEffect(() => {
           {error && <p className="text-red-500 text-sm mt-1">{error}</p>}
         </div>
       </div>
+      <div className="col-lg-6 col-xl-6">
+          <div className="my_profile_setting_input ui_kit_select_search form-group">
+            <label htmlFor="Author">Select Author</label>
+            <select
+              id="Author"
+              className="selectpicker form-select"
+              value={selectedAuthor}
+              onChange={handleAuthorChange}
+              data-live-search="true"
+              data-width="100%"
+            >
+              <option value="">-- Select Author --</option>
+              {employees.map((employee) => (
+                <option key={employee._id} value={employee._id}>
+                  {employee.name}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
       {/* End .col */}
       <div className="col-lg-12">
           <div className="my_profile_setting_textarea form-group">
